@@ -1,0 +1,24 @@
+{
+    "name": "tvt-wita2016",
+    "description": "Where is the agent?",
+    "version": "0.9.5",
+    "contributors": [
+        {
+            "name": "XiviD"
+        },
+        {
+            "name": "McDiod"
+        }
+    ],
+
+    "dependencies": {
+            "grad-loadout": "4.x",
+            "grad-listbuymenu": ">=0.0.3",
+            "grad-moneymenu": ">=0.0.1",
+            "grad-scoreboard": ">=0.0.1",
+            "grad-civs": ">=0.0.1",
+            "grad-gpstracker": ">=0.0.1",
+            "grad-fortifications": ">=0.0.1",
+            "grad-islandconfig": ">=0.0.1"
+    }
+}

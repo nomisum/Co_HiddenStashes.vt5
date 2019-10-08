@@ -1,0 +1,98 @@
+#define MODULES_DIRECTORY node_modules
+
+#include "cfgParams.hpp"
+#include "cfgCacheContents.hpp"
+#include "cfgCacheStories.hpp"
+#include "cfgCaches.hpp"
+#include "cfgCivilians.hpp"
+#include "cfgMission.hpp"
+#include "buyables\cfgBuyables.hpp"
+#include "loadouts\loadouts.hpp"
+
+#include "node_modules\grad-listBuymenu\grad_listBuymenu.hpp"
+#include "node_modules\grad-moneymenu\grad_moneymenu.hpp"
+#include "node_modules\grad-scoreboard\grad_scoreboard.hpp"
+#include "node_modules\grad-fortifications\grad_fortifications.hpp"
+#include "node_modules\grad-islandconfig\cfgGradIslands.hpp"
+
+onLoadMission = "";
+author="nomisum for Gruppe Adler";
+overviewText="Search for the stashes.";
+onLoadName="HIDDEN STASHES";
+loadScreen="";
+
+onLoadMissionTime = True;
+respawn = 3;
+respawnDelay = 9999;
+respawnTemplates[] = {"Base"};
+respawnOnStart = -1;
+respawnDialog = 0;
+disabledAI = 0;
+enableDebugConsole = 1;
+allowFunctionsRecompile = 1;
+
+class CfgFunctions
+{
+	#include "functions\cfgFunctions.hpp"
+	#include "buyables\cfgFunctions.hpp"
+	#include "node_modules\grad-loadout\cfgFunctions.hpp"
+	#include "node_modules\grad-listbuymenu\cfgFunctions.hpp"
+    #include "node_modules\grad-moneymenu\cfgFunctions.hpp"
+	#include "node_modules\grad-scoreboard\cfgFunctions.hpp"
+	#include "node_modules\grad-civs\cfgFunctions.hpp"
+	#include "node_modules\grad-gpsTracker\cfgFunctions.hpp"
+	#include "node_modules\grad-fortifications\cfgFunctions.hpp"
+};
+
+class CfgNotifications
+{
+    class wita_notification {
+        title = "%1";
+        iconPicture = "\A3\ui_f\data\map\markers\military\warning_CA.paa";
+        description = "%2";
+        duration = 5;
+        priority = 0;
+    };
+};
+
+
+class CfgGradMoneymenu {
+    canGiveDefault = 0;
+    canTransferToSidesDefault[] = {};
+    canTakeFromDeadDefault = 0;
+    canSendDirectlyDefault = 0;
+    canTakeFromSurrenderedDefault = 1;
+    startMoney = 0;
+    startBankBalance = 0;
+    atmObjects[] = {};
+};
+
+class CfgGradCivs {
+    autoInit = 0;
+    maxCivsOnFoot = 30;
+    maxCivsResidents = 40;
+    maxCivsInVehicles = 15;
+    spawnDistancesOnFoot[] = {1000,4500};
+    spawnDistancesInVehicles[] = {1000,4500};
+    debugCivState = 0;
+    debugFps = 0;
+    minCivUpdateTime = 3;
+	minFps = 35;
+    automaticVehicleGroupSize = 1;
+    exitOn = "";
+    onSpawn = "";
+    onHeldUp = "";
+    backpackProbability = 0.2;
+};
+
+class RscTitles {
+    #include "node_modules\grad-fortifications\dialog\hint\title.hpp"
+};
+
+class Extended_Killed_EventHandlers {
+    class CAManBase {
+        class grad_common_unitKilled {
+            killed = "_this call wita_common_fnc_handleUnitKilled";
+        };
+    };
+};

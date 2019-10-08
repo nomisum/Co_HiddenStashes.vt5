@@ -1,0 +1,8 @@
+#include "caches\cfgFunctions.hpp"
+#include "civs\cfgFunctions.hpp"
+#include "common\cfgFunctions.hpp"
+#include "endings\cfgFunctions.hpp"
+#include "init\cfgFunctions.hpp"
+#include "mission\cfgFunctions.hpp"
+#include "setup\cfgFunctions.hpp"
+#include "waverespawn\cfgFunctions.hpp"

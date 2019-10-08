@@ -1,0 +1,3 @@
+player setUnitLoadout [
+// todo
+];
