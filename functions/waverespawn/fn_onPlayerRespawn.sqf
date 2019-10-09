@@ -19,3 +19,5 @@ hint "";
 
 [] call wita_waverespawn_fnc_resetPlayerVars;
 [playerSide] call wita_waverespawn_fnc_respawnSelectorMarker;
+
+execVM "custom\loadout\equipAsSpecialForce.sqf";

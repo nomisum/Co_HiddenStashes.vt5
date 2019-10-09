@@ -12,7 +12,7 @@ params ["_indepPos","_bluforPos"];
 [{missionNamespace getVariable ["CBA_missionTime",0] > 10}, {[] call wita_endings_fnc_checkIndep}, []] call CBA_fnc_waitUntilAndExecute;
 [{
     missionNamespace setVariable ["WITA_TRACKINGSTARTED",true,true];
-    {if ([_x] call wita_common_fnc_isAgent) then {[_x] call wita_mission_fnc_agentMarker}; false} count playableUnits;
+    {if ([_x] call wita_common_fnc_isAgent) then {[_x] call wita_mission_fnc_agentMarker}; false} count (playableUnits + switchableUnits);
 }, [], [missionConfigFile >> "cfgMission","timeBeforeFirstTrack",0] call BIS_fnc_returnConfigEntry] call CBA_fnc_waitAndExecute;
 
 missionNamespace setVariable ["WITA_GAMESTARTED",true,true];

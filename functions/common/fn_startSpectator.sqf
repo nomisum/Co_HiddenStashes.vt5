@@ -7,5 +7,5 @@ if (_mode == "NORMAL") then {
 
 if (_mode == "RESTRICTED") then {
     ["Terminate"] call BIS_fnc_EGSpectator;
-    ["Initialize", [player, [playerside], false, false, false, true, true, true, true, true]] call BIS_fnc_EGSpectator;
+    ["Initialize", [player, [playerside], true, false, false, true, true, true, true, true]] call BIS_fnc_EGSpectator;
 };

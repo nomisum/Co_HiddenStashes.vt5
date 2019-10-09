@@ -33,6 +33,7 @@ allowFunctionsRecompile = 1;
 
 class CfgFunctions
 {
+    #include "node_modules\diwako_cbrn\cfgFunctions.hpp"
 	#include "functions\cfgFunctions.hpp"
 	#include "buyables\cfgFunctions.hpp"
 	#include "node_modules\grad-loadout\cfgFunctions.hpp"
@@ -55,6 +56,9 @@ class CfgNotifications
     };
 };
 
+class cfgSounds {
+    #include "node_modules\diwako_cbrn\sounds\cfgSounds.hpp"
+};
 
 class CfgGradMoneymenu {
     canGiveDefault = 0;
@@ -69,9 +73,9 @@ class CfgGradMoneymenu {
 
 class CfgGradCivs {
     autoInit = 0;
-    maxCivsOnFoot = 30;
-    maxCivsResidents = 40;
-    maxCivsInVehicles = 15;
+    maxCivsOnFoot = 0;
+    maxCivsResidents = 0;
+    maxCivsInVehicles = 0;
     spawnDistancesOnFoot[] = {1000,4500};
     spawnDistancesInVehicles[] = {1000,4500};
     debugCivState = 0;
@@ -87,6 +91,7 @@ class CfgGradCivs {
 
 class RscTitles {
     #include "node_modules\grad-fortifications\dialog\hint\title.hpp"
+    #include "node_modules\diwako_cbrn\rsctitles.hpp"
 };
 
 class Extended_Killed_EventHandlers {

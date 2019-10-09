@@ -2,5 +2,5 @@
 
 
 [] call wita_waverespawn_fnc_onPlayerKilled;
-player joinSilent (createGroup west);
+[player] joinSilent (createGroup west);
 /*[player, true] call TFAR_fnc_forceSpectator;*/

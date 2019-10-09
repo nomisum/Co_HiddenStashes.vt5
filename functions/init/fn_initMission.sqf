@@ -16,22 +16,22 @@ MISSION_STARTED = false;
 
         _indepPos = [] call wita_setup_fnc_independent;
         _bluforPos = [] call wita_setup_fnc_blufor;
-        [] call wita_setup_fnc_createCustomLocations;
+        // [] call wita_setup_fnc_createCustomLocations;
 
         missionNamespace setVariable ["WITA_INDEPPOS",_indepPos,true];
         missionNamespace setVariable ["WITA_BLUFORPOS",_bluforPos,true];
 
-        _carsHandle = [] spawn wita_civs_fnc_cars;
+        // _carsHandle = [] spawn wita_civs_fnc_cars;
         // _heliHandle = [] spawn wita_civs_fnc_helicopters;
-        _boatHandle = [] spawn wita_civs_fnc_boats;
-        _cacheHandle = [_indepPos] spawn wita_caches_fnc_spawnCaches;
+        // _boatHandle = [] spawn wita_civs_fnc_boats;
+        // _cacheHandle = [_indepPos] spawn wita_caches_fnc_spawnCaches;
 
         [{{!scriptDone _x} count (_this select 0) == 0},{
             [] call wita_init_fnc_waitServerFpsRecovery;
             [{missionNamespace getVariable ["WITA_INIT_SERVERFPSDONE",false]},{[_this select 1,_this select 2] call wita_setup_fnc_startGame},_this] call CBA_fnc_waitUntilAndExecute;
-        },[[_carsHandle,_boatHandle,_cacheHandle],_indepPos,_bluforPos]] call CBA_fnc_waitUntilAndExecute;
+        },[[],_indepPos,_bluforPos]] call CBA_fnc_waitUntilAndExecute;
 
-        [{[] call wita_init_fnc_initCivs},[],120] call CBA_fnc_waitAndExecute;
+        // [{[] call wita_init_fnc_initCivs},[],120] call CBA_fnc_waitAndExecute;
     };
 
     if (hasInterface) then {
