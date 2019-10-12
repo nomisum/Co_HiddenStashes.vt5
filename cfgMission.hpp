@@ -28,10 +28,10 @@ class cfgMission {
         4000
     };
 
-    timeBeforeFirstTrack = 30;
-    agentMarkerInterval[] = {120,180};
+    timeBeforeFirstTrack = 1;
+    agentMarkerInterval[] = {3,3};
     agentMarkerVariance = 100;
-    agentMarkerFadeout = 180;
+    agentMarkerFadeout = 3;
     agentMarkerIntervalBase = 1.1;
     agentMarkerVarianceBase = 10;
     agentMarkerFadeoutBase = 10;

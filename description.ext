@@ -58,6 +58,7 @@ class CfgNotifications
 
 class cfgSounds {
     #include "node_modules\diwako_cbrn\sounds\cfgSounds.hpp"
+    #include "custom\intro\cfgSounds.hpp"
 };
 
 class CfgGradMoneymenu {

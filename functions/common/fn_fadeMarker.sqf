@@ -11,7 +11,7 @@ private _step = (1-_threshold) / 10;
     _args params ["_markers","_step"];
 
     {
-        _x setMarkerAlpha ((markerAlpha _x) - _step);
+        _x setMarkerAlphaLocal ((markerAlpha _x) - _step);
         false
     } count _markers;
 
