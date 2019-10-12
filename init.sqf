@@ -11,3 +11,5 @@ enableSentences false;
 [{
     setaperture 3;
 }, [], 3] call CBA_fnc_waitAndExecute;
+
+// call diwako_cbrn_fnc_init;

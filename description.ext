@@ -33,7 +33,6 @@ allowFunctionsRecompile = 1;
 
 class CfgFunctions
 {
-    #include "node_modules\diwako_cbrn\cfgFunctions.hpp"
 	#include "functions\cfgFunctions.hpp"
 	#include "buyables\cfgFunctions.hpp"
 	#include "node_modules\grad-loadout\cfgFunctions.hpp"
@@ -43,6 +42,7 @@ class CfgFunctions
 	#include "node_modules\grad-civs\cfgFunctions.hpp"
 	#include "node_modules\grad-gpsTracker\cfgFunctions.hpp"
 	#include "node_modules\grad-fortifications\cfgFunctions.hpp"
+    #include "scripts\cbrn\funcs.hpp"
 };
 
 class CfgNotifications
@@ -57,8 +57,8 @@ class CfgNotifications
 };
 
 class cfgSounds {
-    #include "node_modules\diwako_cbrn\sounds\cfgSounds.hpp"
     #include "custom\intro\cfgSounds.hpp"
+    #include "scripts\cbrn\sounds\sounds.hpp"
 };
 
 class CfgGradMoneymenu {
@@ -91,8 +91,7 @@ class CfgGradCivs {
 };
 
 class RscTitles {
-    #include "node_modules\grad-fortifications\dialog\hint\title.hpp"
-    #include "node_modules\diwako_cbrn\rsctitles.hpp"
+    #include "scripts\cbrn\rsctitles.hpp"
 };
 
 class Extended_Killed_EventHandlers {
@@ -101,4 +100,14 @@ class Extended_Killed_EventHandlers {
             killed = "_this call wita_common_fnc_handleUnitKilled";
         };
     };
+};
+
+class Extended_PreInit_EventHandlers {
+    class cbrn_preInit {
+        init = "[] call compile preProcessFileLineNumbers 'scripts\cbrn\XEH_PreInit.sqf'";
+    };
+};
+
+class Extended_InitPost_EventHandlers {
+    #include "scripts\cbrn\XEH_InitPost_eh.hpp"
 };
