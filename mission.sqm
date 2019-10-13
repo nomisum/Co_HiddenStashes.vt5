@@ -17482,8 +17482,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3682.4175,3.8296542,540.16992};
-						angles[]={6.2620673,0,0.19206844};
+						position[]={3682.417,3.8298254,540.16998};
+						angles[]={6.2620668,0,0.19207348};
 					};
 					side="Independent";
 					flags=6;
@@ -17492,11 +17492,12 @@ class Mission
 						rank="CAPTAIN";
 						init="call{this setVariable [""wita_isAgent"",true]}";
 						description="Team Leader";
+						isPlayer=1;
 						isPlayable=1;
 					};
 					id=3006;
 					type="I_soldier_F";
-					atlOffset=0.1747601;
+					atlOffset=0.17499995;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18078,7 +18079,7 @@ class Mission
 			{
 			};
 			id=3004;
-			atlOffset=0.1747601;
+			atlOffset=0.17499995;
 		};
 		class Item364
 		{
