@@ -7,7 +7,7 @@ if (isNil "MISSION_ROOT") then {
 };
 
 if (isServer) then {
-    cbrn_zoneSimulationRange = 500;
+    cbrn_zoneSimulationRange = 4000;
     publicVariable "cbrn_zoneSimulationRange";
 };
 
@@ -88,7 +88,7 @@ cbrn_loadouteh = ["cba_events_loadoutEvent",{
         _unit setVariable ["cbrn_backpack_on", false, true];
     };
 
-    private _hasThreatMeter = [_unit, cbrn_threatMeteritem] call ace_common_fnc_hasItem;
+    private _hasThreatMeter = true; // [_unit, cbrn_threatMeteritem] call ace_common_fnc_hasItem;
     if (!(_unit getVariable ["cbrn_hasThreatMeter", false]) && {_hasThreatMeter}) then {
         _unit setVariable ["cbrn_hasThreatMeter", true, true];
     };

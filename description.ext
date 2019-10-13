@@ -43,6 +43,7 @@ class CfgFunctions
 	#include "node_modules\grad-gpsTracker\cfgFunctions.hpp"
 	#include "node_modules\grad-fortifications\cfgFunctions.hpp"
     #include "scripts\cbrn\funcs.hpp"
+    #include "custom\offroadLight\cfgFunctions.hpp"
 };
 
 class CfgNotifications
@@ -110,4 +111,5 @@ class Extended_PreInit_EventHandlers {
 
 class Extended_InitPost_EventHandlers {
     #include "scripts\cbrn\XEH_InitPost_eh.hpp"
+    #include "custom\offroadLight\XEH_InitPost_eh.hpp"
 };

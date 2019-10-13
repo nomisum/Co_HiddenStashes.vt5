@@ -60,6 +60,19 @@ if (_player getVariable ["cbrn_using_threat_meter", false]) then {
     private _needle = uiNamespace getVariable ["cbrn_threatNeedleCtrl", ctrlNull];
     private _dir = (linearConversion [0, 4, _max - 0.05 + (random 0.1), 90, -90, true]) mod 360;
     _needle ctrlSetAngle [_dir, 0.5, 0.5];
+
+    private _int = ceil _max;
+    if (_int > 0 && _int < 5) then {
+        private _sound = selectRandom [1,2,3,4];
+        playSound format ["geiger_%1_%2", _int, _sound];
+ 
+        [{
+            params ["_int"];
+            private _sound = selectRandom [1,2,3,4];
+            playSound format ["geiger_%1_%2", _int, _sound];
+        }, [_int], random 0.25] call CBA_fnc_waitAndExecute;
+    };
+
 } else {
     ctrlDelete (uiNamespace getVariable ["cbrn_threatBaseCtrl", ctrlNull]);
     ctrlDelete (uiNamespace getVariable ["cbrn_threatNeedleCtrl", ctrlNull]);
