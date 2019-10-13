@@ -21,9 +21,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={3934.083,47.474998,2578.5759};
-		dir[]={0.58974844,-0.50780278,0.62799621};
-		up[]={0.34763131,0.86146289,0.37017608};
-		aside[]={0.72897005,-6.8132067e-008,-0.68457198};
+		dir[]={0.53893209,-0.5009408,0.67720789};
+		up[]={0.31193444,0.86548156,0.39196762};
+		aside[]={0.78246355,-5.364418e-007,-0.62269646};
 	};
 };
 binarizationWanted=0;
@@ -23873,7 +23873,7 @@ class Mission
 				};
 			};
 			id=3011;
-			atlOffset=-0.89196014;
+			atlOffset=-0.89141464;
 		};
 		class Item369
 		{
@@ -38243,6 +38243,7 @@ class Mission
 					};
 					id=3495;
 					type="Sign_DangerMines_ACR";
+					atlOffset=-0.00087928772;
 				};
 				class Item75
 				{
@@ -38264,7 +38265,7 @@ class Mission
 				};
 			};
 			id=3015;
-			atlOffset=1.5413113;
+			atlOffset=1.5420628;
 		};
 		class Item373
 		{
@@ -53608,6 +53609,7 @@ class Mission
 			};
 			id=3501;
 			type="Land_NetFence_03_m_9m_F";
+			atlOffset=-1.9073486e-006;
 		};
 		class Item737
 		{
