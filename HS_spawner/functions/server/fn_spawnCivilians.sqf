@@ -69,6 +69,7 @@ private _zombie = _grp createUnit [_classname, _position, [], 0, "NONE"];
 _zombie enableDynamicSimulation true;
 _zombie setVariable ["RZ_vehicleClass","RyanZombieC_man_1"];
 _zombie setVariable ["RZ_isDemon", false];
+_zombie setVariable ["suomen_overwriteRZ", true];
 
 _zombie setposATL [(getposATL _zombie select 0), (getposATL _zombie select 1), 0];
 _zombie setVariable ["suomen_smells", true];

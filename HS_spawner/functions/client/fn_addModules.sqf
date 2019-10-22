@@ -1,6 +1,6 @@
 if (!hasInterface) exitWith {};
 
-["HS_Spawner", "Spawn Random Civilian Z", {
+["HS_Spawner", "Spawn Random Single Civilian Z", {
 
     params ["_position", "_object"];
 
@@ -9,8 +9,9 @@ if (!hasInterface) exitWith {};
                 "COMBO", 
                 ["Pick Speed", ""], [
                 [
-                    "slow","crawler","walker","fast"
+                    "random", "slow","crawler","walker","fast"
                 ], [
+                    ["Random", "Random"],
                     ["Slow", "Slow"],
                     ["Crawler", "Crawler"],
                     ["Walker", "Walker"],
@@ -29,9 +30,6 @@ if (!hasInterface) exitWith {};
         }, {hint "aborted";}, [_position]] call zen_dialog_fnc_create;
 
 }] call zen_custom_modules_fnc_register;
-
-
-
 
 
 /*
