@@ -45,6 +45,7 @@ class CfgFunctions
     #include "scripts\cbrn\funcs.hpp"
 
     #include "HS_spawner\cfgFunctions.hpp"
+    #include "grad-introCam\cfgFunctions.hpp"
 };
 
 class CfgNotifications

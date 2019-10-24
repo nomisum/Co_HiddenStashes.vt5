@@ -1,7 +1,9 @@
 params ["_zombie","_target"];
 
-_moveAttemptsSeconds = 0;
-_feasted = false;
+systemChat "feasting";
+
+private _moveAttemptsSeconds = 0;
+private _feasted = false;
 
 while {(_zombie distance _target < 80) && (alive _zombie) && !_feasted} do
 {

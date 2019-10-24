@@ -17,11 +17,12 @@ class HS_spawner {
         class enemies_feedOnTargetAny;
         class enemies_feedOnTargetOriginal;
         class enemies_findTargetLoopOriginal;
-        class enemies_overwriteRZfunction {postInit = 1;};
+        class enemies_overwriteRZfunction {preInit = 1;};
 
         class loadoutRussian;
         class spawnCivilians;
         class spawnCiviliansCrowd;
+        class spawnLightHouseFeed;
         class spawnListener {postInit = 1;};
     };
 };

@@ -21,9 +21,9 @@ RZ_fnc_zombie_engageTarget =
 
 		if(!isNil "_target" && {!isNull _target}) then {
 		 		if (_overwrite) then {
-					[_unit, _target] call HZ_spawner_fnc_enemies_engageTarget;
+					[_unit, _target] call HS_spawner_fnc_enemies_engageTarget;
 				} else {
-					[_unit, _target] call HZ_spawner_fnc_enemies_engageTargetOriginal;
+					[_unit, _target] call HS_spawner_fnc_enemies_engageTargetOriginal;
 				};
 		};
 	};
@@ -34,7 +34,7 @@ RZ_fnc_zombie_findTargetLoop = {
 	_overwrite = _unit getVariable ["suomen_overwriteRZ", false];
 
 	if (!_overwrite) then {
-		[_unit] call HZ_spawner_fnc_enemies_findTargetLoopOriginal;
+		[_unit] call HS_spawner_fnc_enemies_findTargetLoopOriginal;
 	};
 
 	sleep 10;
@@ -48,9 +48,9 @@ RZ_fnc_zombie_attackHuman =
 
 		if(!isNil "_target" && {!isNull _target}) then {
 				if (_overwrite) then {
-					[_unit, _target] call HZ_spawner_fnc_enemies_attackHuman;
+					[_unit, _target] call HS_spawner_fnc_enemies_attackHuman;
 				} else {
-					[_unit, _target] call HZ_spawner_fnc_enemies_attackHumanOriginal;
+					[_unit, _target] call HS_spawner_fnc_enemies_attackHumanOriginal;
 				};
 		};
 
@@ -63,9 +63,9 @@ RZ_fnc_zombie_feedOnTarget = {
 	
 	if(!isNil "_target" && {!isNull _target}) then {
 			if (_overwrite) then {
-				[_unit, _target] call HZ_spawner_fnc_enemies_feedOnTargetAny;
+				[_unit, _target] call HS_spawner_fnc_enemies_feedOnTargetAny;
 			} else {
-				[_unit, _target] call HZ_spawner_fnc_enemies_feedOnTargetOriginal;
+				[_unit, _target] call HS_spawner_fnc_enemies_feedOnTargetOriginal;
 			};
 	};
 };

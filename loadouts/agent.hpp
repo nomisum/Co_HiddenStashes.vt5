@@ -86,7 +86,7 @@ class agent {
 
         //team leader
 		class Soldier_TL_F: Soldier_F {
-
+            radio = "ACRE_PRC343";
 		};
 	};
 

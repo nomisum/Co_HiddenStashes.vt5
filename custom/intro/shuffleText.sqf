@@ -160,3 +160,6 @@ sleep 3;
 
 ctrlDelete _ctrl;
 ctrlDelete _ctrlTWO;
+
+
+playSound "intro2";

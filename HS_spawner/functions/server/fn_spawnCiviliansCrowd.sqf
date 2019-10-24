@@ -1,5 +1,11 @@
-params ["_position", "_speed", ["_count",9]];
-_position ﻿params ["_psx", "_psy"];
+params [
+    ["_position",[0,0]], 
+    ["_speed","random"], 
+    ["_count",9]
+];
+private _psx = _position select 0;
+private _psy = _position select 1;
+// _position ﻿params ["_psx", "_psy"];
 
 private _radius = 6;
 
