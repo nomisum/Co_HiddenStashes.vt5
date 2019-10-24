@@ -55,7 +55,7 @@ class agent {
 
 		};
 
-        //BODYGUARD
+        //
 		class Medic_F: Soldier_F {
             uniform = "U_BG_Guerrilla_6_1";
             vest = "V_TacVest_oli";
@@ -69,24 +69,13 @@ class agent {
             };
 		};
 
-        //AGENT
+        //Squad Leader
         class Soldier_SL_F: Soldier_F {
-            primaryWeaponOptics = "rhs_acc_pgs64";
-            uniform = "U_BG_Guerilla1_1";
-            vest = "V_BandollierB_oli";
-            headgear = "H_MilCap_dgtl";
-
-            addItemsToVest[] = {
-                LIST_4("rhs_30Rnd_545x39_AK"),
-                LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
-                LIST_1("ACE_HandFlare_White"),
-                LIST_1("rhs_mag_nspd")
-            };
+            radio = "ACRE_PRC343";
         };
 
         //team leader
-		class Soldier_TL_F: Soldier_F {
-            radio = "ACRE_PRC343";
+		class Soldier_TL_F: Soldier_SL_F {
 		};
 	};
 
