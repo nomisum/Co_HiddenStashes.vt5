@@ -17,7 +17,7 @@ for "_i" from 0 to _count do {
         private _rad = sqrt random 1.0;
         private _dsx = _radius * _rad * sin _ang;
         private _dsy = _radius * _rad * cos _ang;
-        private _randomPosInCircle = [_psx + _dsx * cos - _dsy * sin, _psy + _dsx * sin + _dsy * cos]
+        private _randomPosInCircle = [_psx + _dsx * cos - _dsy * sin, _psy + _dsx * sin + _dsy * cos];
 
         private _zombie = [_randomPosInCircle, _speed] call HS_spawner_fnc_spawnCivilians;
 

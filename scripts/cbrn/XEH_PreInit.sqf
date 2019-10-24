@@ -29,7 +29,13 @@ if !(hasInterface) exitWith {};
 cbrn_localZones = [];
 ["cbrn_createZone", {
     params ["_pos", "_threatLevel", "_size", "_falloffArea"];
+
     private _trg = createTrigger ["EmptyDetector", _pos, false];
+
+    // attach to object if necessary
+    if (typeName _pos == "OBJECT") then {
+        _trg attachTo [_pos];
+    };
     _trg setVariable ["cbrn_zone", true];
     _trg enableDynamicSimulation false;
     _trg setVariable ["cbrn_active", true];
