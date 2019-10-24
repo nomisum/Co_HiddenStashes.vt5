@@ -1,7 +1,7 @@
 params ["_shower"];
 
 if (local _shower) then {
-    _shower setVariable ["cbrn_water", 120, true];
+    _shower setVariable ["cbrn_water", 120000, true];
 };
 
 if !(hasInterface) exitWith {};

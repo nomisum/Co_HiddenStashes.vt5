@@ -1,7 +1,5 @@
 params ["_zombie","_target"];
 
-systemChat "feasting";
-
 private _moveAttemptsSeconds = 0;
 private _feasted = false;
 
