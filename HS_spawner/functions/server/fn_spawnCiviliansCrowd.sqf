@@ -1,25 +1,31 @@
 params [
-    ["_position",[0,0]], 
-    ["_speed","random"], 
+    ["_position",[0,0]],
+    ["_targetPosition", []],
+    ["_radius", 6],
+    ["_speed","random"],
     ["_count",9]
 ];
-private _psx = _position select 0;
-private _psy = _position select 1;
-// _position ﻿params ["_psx", "_psy"];
-
-private _radius = 6;
 
 for "_i" from 0 to _count do {
     
     [{
-        params ["_position", "_radius", "_speed", "_psx", "_psy"];
-        private _ang = random 360;
-        private _rad = sqrt random 1.0;
-        private _dsx = _radius * _rad * sin _ang;
-        private _dsy = _radius * _rad * cos _ang;
-        private _randomPosInCircle = [_psx + _dsx * cos - _dsy * sin, _psy + _dsx * sin + _dsy * cos];
+        params ["_position", "_targetPosition", "_radius", "_speed"];
+        private _zombie = [_position, _speed, _radius] call HS_spawner_fnc_spawnCivilians;
 
-        private _zombie = [_randomPosInCircle, _speed] call HS_spawner_fnc_spawnCivilians;
+        if (count _targetPosition > 0) then {
+             [{
+                params ["_zombie", "_targetPosition"];
 
-    }, [_position, _radius, _speed, _psx, _psy], random _count] call CBA_fnc_waitAndExecute;
+                private _randomizedPosition = [[[_targetPosition, 3]],[]] call BIS_fnc_randomPos;
+                if (!alive _zombie) exitWith {};
+                if !(local _zombie) then 
+                {
+                    [_zombie, _randomizedPosition] remoteExecCall ["fnc_RyanZombies_DoMoveLocalized"];
+                } else {
+                    _zombie domove _randomizedPosition;
+                };
+            }, [_zombie, _targetPosition], 5] call CBA_fnc_waitAndExecute;
+        };
+
+    }, [_position, _targetPosition, _radius, _speed], random _count] call CBA_fnc_waitAndExecute;
 };

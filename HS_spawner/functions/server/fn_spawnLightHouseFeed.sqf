@@ -11,7 +11,7 @@ _unit setVariable ["RZ_aggressiveSoundCount",round (random 5),true];
 [_unit, selectRandom ["Zombi","Zomboy", "Infected1", "Infected2"]] remoteExec ["setFace", 0, _unit];
 
 _grpTargetUnit = createGroup west;
-_targetUnit = _grpTargetUnit createUnit ["RDS_Worker3", _pos, [], 0, "NONE"];
+_targetUnit = _grpTargetUnit createUnit ["RDS_Worker3", _pos, [], 0, "CAN_COLLIDE"];
 _targetUnit setHit["legs",1];
 
 _unit reveal _targetUnit;

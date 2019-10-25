@@ -22,7 +22,6 @@ class HS_spawner {
         class loadoutRussian;
         class spawnCivilians;
         class spawnCiviliansCrowd;
-        class spawnIntroCrowd;
         class spawnLightHouseFeed;
         class spawnListener {postInit = 1;};
     };

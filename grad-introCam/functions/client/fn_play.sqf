@@ -3,9 +3,11 @@ if (didJIP) exitWith {};
 waitUntil {!isNull player};
 waitUntil {time > 0};
 player setVariable ["tf_voiceVolume", 0, true];
+STHud_UIMode = 0;
 diwako_dui_main_toggled_off = true;
 
 [] spawn GRAD_introCam_fnc_textEffects;
+player action ["WeaponOnBack", player];
 
 private _shots = missionNamespace getVariable ["GRAD_INTROCAM_SHOTS", []];
 
@@ -20,11 +22,12 @@ private _camera = "camera" camCreate (getpos player);
 _camera cameraeffect ["terminate", "back"];
 camDestroy _camera;
 
-STHud_UIMode = 1;
+
 
 10 fadeSound 1;
 titleText ["", "BLACK IN", 0];
 player setVariable ["tf_voiceVolume", 1, true];
+STHud_UIMode = 1;
 diwako_dui_main_toggled_off = false;
 
 call cbrn_fnc_init;

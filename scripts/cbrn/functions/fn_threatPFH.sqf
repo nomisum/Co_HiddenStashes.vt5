@@ -74,13 +74,13 @@ if (_player getVariable ["cbrn_using_threat_meter", false]) then {
         }, [_int], random 0.25] call CBA_fnc_waitAndExecute;
     };
     */
-    private _count = _max * _max;
+    private _count = ceil (_max * _max);
     for "_i" from 1 to _count do {
         [{
             params ["_max"];
             private _sound = selectRandom [1,2,3,4];
             playSound format ["geiger_%1_%2", ceil _max, _sound];
-        }, [_max], (_count/_i)*0.4 + random 0.1] call CBA_fnc_waitAndExecute;
+        }, [_max], ((_count/_i)*0.4) + random 0.1] call CBA_fnc_waitAndExecute;
     };
 
 } else {

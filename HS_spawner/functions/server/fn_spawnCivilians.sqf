@@ -1,4 +1,4 @@
-params ["_position", ["_type", "random"]];
+params ["_position", ["_type", "random"], ["_radius", 0]];
 
 private _allTypes = [
     "GRAD_CivilianZed_rds_schoolteacher",
@@ -60,11 +60,11 @@ switch (_type) do {
     default {};
 };
 
-hint (_classname + "   " + str _position);
+// hint (_classname + "   " + str _position);
 
 
 private _grp = creategroup east;
-private _zombie = _grp createUnit [_classname, _position, [], 0, "NONE"];
+private _zombie = _grp createUnit [_classname, _position, [], _radius, "NONE"];
 
 _zombie enableDynamicSimulation true;
 _zombie setVariable ["RZ_vehicleClass","RyanZombieC_man_1"];

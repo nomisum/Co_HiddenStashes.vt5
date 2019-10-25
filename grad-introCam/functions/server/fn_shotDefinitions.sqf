@@ -17,7 +17,8 @@ if (!isServer) exitWith {};
 private _camDefinitions = [
     ["FREE", getPos introCamPos1, getPos introCamPos2, introCamTarget1, introCamTarget2, 50, 0, 0.4, 0.2, [0,0,0], [0,0,0]],
     ["FREE", getPos introCamPos2, getPos introCamPos3, introCamTarget2, introCamTarget2, 30, 0, 0.2, 0.2, [0,0,0], [0,0,0]],
-    ["FREE", getPos introCamPos3, getPos introCamPos4, introCamTarget2, introCamTarget3, 30, 0, 0.2, 0.4, [0,0,0], [0,0,0]]
+    ["FREE", getPos introCamPos3, getPos introCamPos4, introCamTarget2, introCamTarget3, 30, 0, 0.2, 0.4, [0,0,0], [0,0,0]],
+    ["FREE", getPos introCamPos4, getPos introCamPos5, introCamTarget3, introCamTarget4, 20, 0, 0.4, 0.3, [0,0,0], [0,0,0]]
 ];
 
 /////// dont edit below
@@ -31,6 +32,11 @@ private _camDefinitions = [
 [{
     call GRAD_introCam_fnc_init;
 }, [], 5] call CBA_fnc_waitAndExecute;
+
+[{
+    [getPos introCamTarget4, getPos introCamPos5, 3, "slow", 16] call HS_spawner_fnc_spawnCiviliansCrowd;
+}, [], 115] call CBA_fnc_waitAndExecute;
+
 
 [{
     BRIEFING_DONE = true;

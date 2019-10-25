@@ -1,6 +1,6 @@
 enableDynamicSimulationSystem true;
 
-"Group" setDynamicSimulationDistance 1000;
-"Vehicle" setDynamicSimulationDistance 2000;
+"Group" setDynamicSimulationDistance 500;
+"Vehicle" setDynamicSimulationDistance 500;
 "EmptyVehicle" setDynamicSimulationDistance 250;
 "Prop" setDynamicSimulationDistance 50;

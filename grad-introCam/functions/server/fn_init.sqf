@@ -1,5 +1,9 @@
 [] remoteExec ["GRAD_introCam_fnc_play", [0,-2] select isDedicated, false];
 
+
+{
+    [_x] remoteExecCall ["GRAD_introCam_fnc_holsterWeapon", _x];
+} forEach (switchableUnits + playableUnits);
 /*
 setTimeMultiplier 100;
 

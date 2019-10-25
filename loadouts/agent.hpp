@@ -40,9 +40,13 @@ class agent {
             };
 		};
 
-        //autorifleman
+        //autorifleman == mp7
 		class Soldier_AR_F: Soldier_F {
-
+            primaryWeapon = "rhsusf_weap_MP7A2";
+            primaryWeaponMagazine = "rhsusf_mag_40Rnd_46x30_FMJ";
+            addItemsToVest[] = {
+                LIST_3("rhsusf_mag_40Rnd_46x30_FMJ")
+            };
 		};
 
         //light AT
@@ -50,32 +54,42 @@ class agent {
 
 		};
 
-        //ammo bearer
+        //ammo bearer == pumpgun
 		class Soldier_A_F: Soldier_F {
-
+            primaryWeapon = "rhs_weap_M590_5RD";
+            primaryWeaponMagazine = "rhsusf_5Rnd_00Buck";
+            addItemsToVest[] = {
+                LIST_3("rhsusf_5Rnd_00Buck")
+            };
 		};
 
-        //
-		class Medic_F: Soldier_F {
-            uniform = "U_BG_Guerrilla_6_1";
-            vest = "V_TacVest_oli";
-            headgear = "rhsusf_opscore_fg";
-
+        // medic == scorpion
+		class Medic_F: Soldier_F {          
+            primaryWeapon = "rhs_weap_savz61";
+            primaryWeaponMagazine = "rhsgref_20rnd_765x17_vz61";
             addItemsToVest[] = {
-                LIST_4("rhs_30Rnd_545x39_AK"),
-                LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
-                LIST_1("ACE_HandFlare_White"),
-                LIST_1("rhs_mag_nspd")
+                LIST_3("rhsgref_20rnd_765x17_vz61")
             };
 		};
 
         //Squad Leader
         class Soldier_SL_F: Soldier_F {
             radio = "ACRE_PRC343";
+            primaryWeapon = "sgun_HunterShotgun_01_sawedoff_F";
+            primaryWeaponMagazine = "2Rnd_12Gauge_Pellets";
+            addItemsToVest[] = {
+                LIST_3("2Rnd_12Gauge_Pellets")
+            };
         };
 
-        //team leader
+        //team leader == mosin
 		class Soldier_TL_F: Soldier_SL_F {
+            primaryWeapon = "rhs_weap_m38";
+            primaryWeaponMagazine = "rhsgref_5Rnd_762x54_m38";
+            addItemsToVest[] = {
+                LIST_3("rhsgref_5Rnd_762x54_m38")
+            };
+                
 		};
 	};
 
