@@ -124,8 +124,8 @@ for [{_i=0}, {_i<_array_1_length}, {_i=_i+1}] do
      // ((_array_1 select _randomIndex) != _newCharacter) && 
      if (_newCharacter != " " && count _newCharacter == 1) then {
          // systemChat (_newCharacter + " plop");
-         playSound selectRandom ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
-         sleep 2;
+         playSound selectRandom ["gong1", "gong2", "gong3", "gong4"];
+         sleep 2;        
      };
 };
 
@@ -147,6 +147,7 @@ _ctrlTWO ctrlCommit 0;
 _ctrlTWO ctrlSetFade 0;
 _ctrlTWO ctrlCommit 3;
 
+playSound "gong5";
 sleep 5;
 
 _ctrl ctrlSetFade 1;
