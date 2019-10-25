@@ -70,6 +70,7 @@ _zombie enableDynamicSimulation true;
 _zombie setVariable ["RZ_vehicleClass","RyanZombieC_man_1"];
 _zombie setVariable ["RZ_isDemon", false];
 _zombie setVariable ["suomen_overwriteRZ", true];
+[_zombie, selectRandom ["Zombi","Zomboy", "Infected1", "Infected2"]] remoteExec ["setFace", 0, _zombie];
 
 _zombie setposATL [(getposATL _zombie select 0), (getposATL _zombie select 1), 0];
 _zombie setVariable ["suomen_smells", true];
