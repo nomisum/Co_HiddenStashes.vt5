@@ -74,14 +74,14 @@ if (_player getVariable ["cbrn_using_threat_meter", false]) then {
         }, [_int], random 0.25] call CBA_fnc_waitAndExecute;
     };
     */
-    for "_i" from 0 to (ceil _max * 10) do {
+    private _count = _max * _max;
+    for "_i" from 1 to _count do {
         [{
-            params ["_int"];
+            params ["_max"];
             private _sound = selectRandom [1,2,3,4];
-            playSound format ["geiger_%1_%2", selectRandom [1,2], _sound];
-        }, [_int], random 0.5] call CBA_fnc_waitAndExecute;
+            playSound format ["geiger_%1_%2", ceil _max, _sound];
+        }, [_max], (_count/_i)*0.4 + random 0.1] call CBA_fnc_waitAndExecute;
     };
-        
 
 } else {
     ctrlDelete (uiNamespace getVariable ["cbrn_threatBaseCtrl", ctrlNull]);

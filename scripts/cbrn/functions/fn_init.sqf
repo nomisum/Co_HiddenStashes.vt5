@@ -83,6 +83,8 @@ cbrn_loadouteh = ["cba_events_loadoutEvent",{
     private _hasBackpack = (cbrn_backpacks findIf {_x isEqualTo _backpack}) > -1;
     if (!(_unit getVariable ["cbrn_backpack_on", false]) && {_hasBackpack}) then {
         _unit setVariable ["cbrn_backpack_on", true, true];
+
+        [["CBRN", "Sauerstoff"], 25, "", 25, "", true, true, true, true] call BIS_fnc_advHint;
     };
     if (_unit getVariable ["cbrn_backpack_on", false] && {!_hasBackpack}) then {
         _unit setVariable ["cbrn_backpack_on", false, true];

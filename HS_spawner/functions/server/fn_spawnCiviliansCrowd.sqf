@@ -12,7 +12,7 @@ private _radius = 6;
 for "_i" from 0 to _count do {
     
     [{
-        params ["_position", "_radius"];
+        params ["_position", "_radius", "_speed", "_psx", "_psy"];
         private _ang = random 360;
         private _rad = sqrt random 1.0;
         private _dsx = _radius * _rad * sin _ang;
@@ -21,5 +21,5 @@ for "_i" from 0 to _count do {
 
         private _zombie = [_randomPosInCircle, _speed] call HS_spawner_fnc_spawnCivilians;
 
-    }, [_position, _radius, _speed], random _count] call CBA_fnc_waitAndExecute;
+    }, [_position, _radius, _speed, _psx, _psy], random _count] call CBA_fnc_waitAndExecute;
 };

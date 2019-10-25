@@ -2,5 +2,10 @@
 
 
 [] call wita_waverespawn_fnc_onPlayerKilled;
-[player] joinSilent (createGroup west);
+
+if (!(player getVariable ["HS_killedOnce", false])) then {
+    player setVariable ["HS_killedOnce", true, true];
+    [player] joinSilent (createGroup west);
+    player setVariable ["ace_map_hideBlueForceMarker", false, true];
+};
 /*[player, true] call TFAR_fnc_forceSpectator;*/
