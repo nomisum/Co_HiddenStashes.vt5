@@ -14,7 +14,8 @@ _shot params [
 	["_offset2",[0,0,0]],
 	["_angle",1],
 	["_radius",100],
-	["_cclockwise", false]
+	["_cclockwise", false],
+	["_durationEnd", 0]
 ];
 
 private _isLastShot = _index isEqualTo (count (missionNamespace getVariable ["GRAD_INTROCAM_SHOTS", []]));
@@ -28,17 +29,17 @@ if (_isLastShot) then {
 switch _type do {
 	case "FREE": {
 		// posStart, posEnd
-		[_start, _end, _target1, _target2, _duration, _transition, _zoom1, _zoom2, _offset1, _offset2] call GRAD_introCam_fnc_camFree;
+		[_start, _end, _target1, _target2, _duration, _transition, _zoom1, _zoom2, _offset1, _offset2, _durationEnd] call GRAD_introCam_fnc_camFree;
 	};
 
 	case "ATTACHED": {
 		// posStart, posEnd
-		[_start, _end, _target1, _target2, _duration, _transition, _zoom1, _zoom2, _offset1, _offset2] call GRAD_introCam_fnc_camAttached;
+		[_start, _end, _target1, _target2, _duration, _transition, _zoom1, _zoom2, _offset1, _offset2, _durationEnd] call GRAD_introCam_fnc_camAttached;
 	};
 	
 	case "ROTATE": {
 		// angleStart, angleEnd
-		[_start, _end, _target1, _target2, _duration, _transition, _zoom1, _zoom2, _offset1, _offset2, _radius, _cclockwise] call GRAD_introCam_fnc_camRotate;
+		[_start, _end, _target1, _target2, _duration, _transition, _zoom1, _zoom2, _offset1, _offset2, _radius, _cclockwise, _durationEnd] call GRAD_introCam_fnc_camRotate;
 	};
 	default {};
 };
