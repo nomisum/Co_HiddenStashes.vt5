@@ -7,6 +7,7 @@ class GRAD_introCam {
             class camCommands;
             class camFree;
             class camRotate;
+            class holsterWeapon;
             class marchStart;
             class play;
             class textEffects;

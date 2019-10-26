@@ -24,10 +24,16 @@ camDestroy _camera;
 
 
 
-10 fadeSound 1;
+
 titleText ["", "BLACK IN", 0];
 player setVariable ["tf_voiceVolume", 1, true];
+
+call cbrn_fnc_init;
 STHud_UIMode = 1;
 diwako_dui_main_toggled_off = false;
 
-call cbrn_fnc_init;
+10 fadeSound 0;
+sleep 10;
+
+playSound "";
+10 fadeSound 1;
