@@ -7,20 +7,22 @@ class Vehicles {
         displayName = "Offroad";
         description = "Seats: 6";
         price = 1000;
-        stock = 10;
+        stock = 20;
     };
 
     class I_E_APC_tracked_03_cannon_F {
         displayName = "OH6 Littlebird";
         description = "Seats: 2<br/><br/>";
         price = 2000;
-        stock = 2;
+        stock = 1;
+permissionLevel = 2;
     };
 
     class I_E_Heli_light_03_unarmed_F {
         displayName = "Wildcat";
         description = "Seats: 8<br/><br/>";
         price = 2000;
-        stock = 2;
+        stock = 4;
+permissionLevel = 3;
     };
 };
