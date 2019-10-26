@@ -4,7 +4,7 @@ params ["_object"];
 
 [
     _object,
-    "blu_us_army",
+    "blu_ldf",
     _object,
     _object,
     "COMMAND CENTER",

@@ -37,15 +37,15 @@ class CfgFunctions
 	#include "buyables\cfgFunctions.hpp"
 	#include "node_modules\grad-loadout\cfgFunctions.hpp"
 	#include "node_modules\grad-listbuymenu\cfgFunctions.hpp"
-    #include "node_modules\grad-moneymenu\cfgFunctions.hpp"
+  #include "node_modules\grad-moneymenu\cfgFunctions.hpp"
 	#include "node_modules\grad-scoreboard\cfgFunctions.hpp"
 	#include "node_modules\grad-civs\cfgFunctions.hpp"
 	#include "node_modules\grad-gpsTracker\cfgFunctions.hpp"
 	#include "node_modules\grad-fortifications\cfgFunctions.hpp"
-    #include "scripts\cbrn\funcs.hpp"
+  #include "scripts\cbrn\funcs.hpp"
 
-    #include "HS_spawner\cfgFunctions.hpp"
-    #include "grad-introCam\cfgFunctions.hpp"
+  #include "HS_spawner\cfgFunctions.hpp"
+  #include "grad-introCam\cfgFunctions.hpp"
 };
 
 class CfgNotifications
@@ -139,7 +139,7 @@ class CfgGradCivs {
     debugCivState = 0;
     debugFps = 0;
     minCivUpdateTime = 3;
-	minFps = 35;
+	  minFps = 35;
     automaticVehicleGroupSize = 1;
     exitOn = "";
     onSpawn = "";
