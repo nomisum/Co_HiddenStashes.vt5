@@ -72,9 +72,11 @@ _zombie setVariable ["RZ_isDemon", false];
 _zombie setVariable ["suomen_overwriteRZ", true];
 [_zombie, selectRandom ["Zombi","Zomboy", "Infected1", "Infected2"]] remoteExec ["setFace", 0, _zombie];
 
-_zombie setposATL [(getposATL _zombie select 0), (getposATL _zombie select 1), 0];
-_zombie setVariable ["suomen_smells", true];
+_zombie setVariable ["RZ_aggressiveSoundCount",round (random 5),true];
 
-[_zombie, "AmovPercMstpSnonWnonDnon_SaluteOut"] remoteExec ["switchMove", 0];
+_zombie setposATL [(getposATL _zombie select 0), (getposATL _zombie select 1), 0];
+// _zombie setVariable ["suomen_smells", true];
+
+_zombie playMoveNow "AmovPercMstpSnonWnonDnon_SaluteOut";
 
 _zombie

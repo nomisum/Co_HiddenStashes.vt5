@@ -2,7 +2,7 @@ params ["_pos"];
 
 _grpUnit = createGroup independent;
 _unit = _grpUnit createUnit ["GRAD_CivilianZed_rds_uniform_citizen2_walker", _pos, [], 0, "NONE"];
-
+_unit setVariable ["ace_map_hideBlueForceMarker", true, true];
 _unit setVariable ["suomen_overwriteRZ", true];
 _unit setVariable ["RZ_isDemon", false];
 _unit setVariable ["RZ_vehicleClass","RyanZombieC_man_1"];

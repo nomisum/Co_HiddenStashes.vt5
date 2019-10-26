@@ -7,7 +7,7 @@ private _maxDamage = cbrn_maxDamage;
 
 if ((_curDamage / _maxDamage) > 0.5 && {!(_unit getVariable ["cbrn_autoDamage", false])}) then {
     _unit setVariable ["cbrn_autoDamage", true];
-    "WARNING!" hintC ["Your CBRN exposure is now rising automatically!!","SEEK DECONTAMINATION IMMIDIATELY!!","FIND DECONTAMINATION SHOWERS!"];
+    [["CBRN", "Verstrahlt"], 25, "", 25, "", true, true, true, true] call BIS_fnc_advHint;
     [{
         params ["_args", "_idPFH"];
         _args params ["_unit"];
