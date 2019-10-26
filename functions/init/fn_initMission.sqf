@@ -6,9 +6,8 @@
 
 wita_missionParam_WAVERESPAWNTIMEBLU = "WAVERESPAWNTIMEBLU" call BIS_fnc_getParamValue;
 wita_missionParam_RESPAWNTIME = "RESPAWNTIME" call BIS_fnc_getParamValue;
-MISSION_STARTED = false;
 
-[{(!isNull player || isDedicated) && MISSION_STARTED},{
+[{(!isNull player || isDedicated)},{
     [] call wita_waverespawn_fnc_initWaveRespawn;
 
     if (isServer) then {

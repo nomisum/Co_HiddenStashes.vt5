@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=4444;
+		nextID=4484;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={245.75218,27.052015,434.18649};
-		dir[]={0.27199176,-0.52026027,-0.80956858};
-		up[]={0.16569795,0.8539924,-0.49318933};
-		aside[]={-0.94795299,-7.2683906e-007,-0.31848302};
+		pos[]={286.15945,40.071342,407.67871};
+		dir[]={-0.29425603,-0.60062951,0.74348241};
+		up[]={-0.22104557,0.79950547,0.55850315};
+		aside[]={0.92986745,-6.6775829e-007,0.36802247};
 	};
 };
 binarizationWanted=0;
@@ -45088,8 +45088,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={268.61288,22.047676,406.24313};
-				angles[]={0.008214185,4.1846027,6.2506628};
+				position[]={268.61264,22.047832,406.24359};
+				angles[]={0.0082205003,4.1846013,6.2506695};
 			};
 			side="Empty";
 			flags=4;
@@ -45098,7 +45098,29 @@ class Mission
 			};
 			id=3037;
 			type="I_E_APC_tracked_03_cannon_F";
-			atlOffset=-0.00015068054;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item363
 		{

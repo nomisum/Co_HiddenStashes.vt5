@@ -74,8 +74,8 @@ if (_player getVariable ["cbrn_using_threat_meter", false]) then {
         }, [_int], random 0.25] call CBA_fnc_waitAndExecute;
     };
     */
-    private _count = linearConversion [0, 4, _max, 0.1, 20, true]);
-for "_i" from 1 to _count do {
+    private _count = linearConversion [0, 4, _max, 0.1, 20, true];
+    for "_i" from 1 to _count do {
         [{
             params ["_max"];
             private _sound = selectRandom [1,2,3,4];

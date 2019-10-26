@@ -1,3 +1,3 @@
-class blu_ger_heer {
+class blu_ldf {
     #include "vehicles.hpp"
 };

@@ -28,7 +28,6 @@ camDestroy _camera;
 titleText ["", "BLACK IN", 0];
 player setVariable ["tf_voiceVolume", 1, true];
 
-call cbrn_fnc_init;
 STHud_UIMode = 1;
 diwako_dui_main_toggled_off = false;
 
@@ -37,3 +36,6 @@ sleep 10;
 
 playSound "";
 10 fadeSound 1;
+
+call cbrn_fnc_init;
+["cba_events_loadoutEvent", [player, getUnitLoadout player]] call CBA_fnc_localEvent; // fake event to trigger gasmask stuff
