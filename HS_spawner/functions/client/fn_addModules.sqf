@@ -36,7 +36,7 @@ if (!hasInterface) exitWith {};
 ["HS_BluforBuyOptions", "Allow APC", {
     params ["_position", "_object"];
 
-    {[player, 1] call grad_lbm_fnc_setPermissionLevel} remoteExec ["call",WEST,"wita_fnc_unlockBluforVehicles"];
+    {[player, 1] call grad_lbm_fnc_setPermissionLevel} remoteExec ["call",WEST,true];
     ["wita_notification",["VEHICLES UNLOCKED","BLUFOR now has access to lvl 1 vehicles."]] remoteExec ["bis_fnc_showNotification",west,false];
     systemChat "level 1 unlocked";
 
@@ -45,7 +45,7 @@ if (!hasInterface) exitWith {};
 ["HS_BluforBuyOptions", "Allow Heli", {
     params ["_position", "_object"];
 
-    {[player, 2] call grad_lbm_fnc_setPermissionLevel} remoteExec ["call",WEST,"wita_fnc_unlockBluforVehicles"];
+    {[player, 2] call grad_lbm_fnc_setPermissionLevel} remoteExec ["call",WEST,true];
     ["wita_notification",["VEHICLES UNLOCKED","BLUFOR now has access to lvl 2 vehicles."]] remoteExec ["bis_fnc_showNotification",west,false];
     systemChat "level 2 unlocked";
 

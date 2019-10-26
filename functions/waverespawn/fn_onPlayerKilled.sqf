@@ -22,7 +22,7 @@ player allowDamage false;
 [{alive player},{
     setPlayerRespawnTime 9999;
     player enableSimulation false;
-    TF_max_voice_volume call TFAR_fnc_setVoiceVolume;
+    // TF_max_voice_volume call TFAR_fnc_setVoiceVolume;
     [playerSide,player] remoteExec ["wita_waverespawn_fnc_addToWaitGroup",2,false];
 },[]] call CBA_fnc_waitUntilAndExecute;
 

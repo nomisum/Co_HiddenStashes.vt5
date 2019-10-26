@@ -10,8 +10,9 @@ openMap [false, false];
 
 (findDisplay 46) displayRemoveEventHandler ["KeyUp", missionNamespace getVariable ["mcd_onRespawnKeyDown",-1]];
 
-[player, false] call TFAR_fnc_forceSpectator;
-30 call TFAR_fnc_setVoiceVolume;
+[false] call acre_api_fnc_setSpectator;
+// [player, false] call TFAR_fnc_forceSpectator;
+// 30 call TFAR_fnc_setVoiceVolume;
 
 setPlayerRespawnTime 99999;
 player enableSimulation true;

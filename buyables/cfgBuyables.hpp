@@ -1,4 +1,5 @@
 class CfgGradBuymenu {
+    vehicleMarkers = 1;
     tracking = 1;
     trackingTag = "XIV_SS2_TRACKINGDATA";
 

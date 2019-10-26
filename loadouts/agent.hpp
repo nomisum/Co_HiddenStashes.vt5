@@ -30,7 +30,7 @@ class agent {
             primaryWeapon = "rhs_weap_scorpion";
             primaryWeaponMagazine = "rhsgref_20rnd_765x17_vz61";
             vest = "rds_pistol_holster";
-            addItemsToVest[] = {LIST_2("rhsgref_20rnd_765x17_vz61");};            
+            addItemsToVest[] = { LIST_2("rhsgref_20rnd_765x17_vz61"); };            
             uniform[] = {"rds_uniform_citizen1", "rds_uniform_citizen4", "rds_uniform_Functionary2", "rds_uniform_Profiteer3", "rds_uniform_Rocker2", "rds_uniform_schoolteacher", "rds_uniform_Villager3", "rds_uniform_Woodlander4", "U_C_ConstructionCoverall_Blue_F", "U_C_Mechanic_01_F", "U_I_C_Soldier_Bandit_3_F", "U_I_C_Soldier_Bandit_5_F", "U_C_Uniform_Scientist_01_F", "U_I_L_Uniform_01_tshirt_skull_F", "U_C_E_LooterJacket_01_F", "U_I_L_Uniform_01_tshirt_black_F", "U_I_L_Uniform_01_tshirt_olive_F"};
             headgear[] = {"H_Bandanna_cbr","H_Bandanna_sgg","H_Watchcap_blk","H_Booniehat_khk","H_Cap_oli","H_Cap_tan","H_MilCap_gry","H_Shemag_olive","H_Beret_EAF_01_F","H_Booniehat_mgrn","rhsgref_hat_m43cap_heer1_tilted","rhsgref_hat_M1951","rds_rocker_hair1","rds_rocker_hair2","rds_rocker_hair3","rds_Woodlander_cap3","rds_worker_cap2","H_HeadBandage_stained_F", "H_HeadBandage_bloody_F", "H_Hat_Safari_sand_F","H_Hat_grey"};
             goggles = "G_RegulatorMask_F";

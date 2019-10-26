@@ -37,5 +37,5 @@ sleep 10;
 playSound "";
 10 fadeSound 1;
 
-call cbrn_fnc_init;
+[true] call cbrn_fnc_init;
 ["cba_events_loadoutEvent", [player, getUnitLoadout player]] call CBA_fnc_localEvent; // fake event to trigger gasmask stuff

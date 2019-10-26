@@ -1,3 +1,5 @@
+params ["_clientExecution"];
+
 if (isNil "MISSION_ROOT") then {
     if(isDedicated) then {
         MISSION_ROOT = "mpmissions\__CUR_MP." + worldName + "\";
@@ -6,7 +8,7 @@ if (isNil "MISSION_ROOT") then {
     };
 };
 
-if (isServer) then {
+if (!_clientExecution) then {
     cbrn_zoneSimulationRange = 4000;
     publicVariable "cbrn_zoneSimulationRange";
 } else {

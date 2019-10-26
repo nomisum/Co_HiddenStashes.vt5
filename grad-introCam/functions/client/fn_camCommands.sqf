@@ -12,10 +12,10 @@ _shot params [
 	"_zoom2",
 	["_offset1",[0,0,0]],
 	["_offset2",[0,0,0]],
+	["_durationEnd", 0],
 	["_angle",1],
 	["_radius",100],
-	["_cclockwise", false],
-	["_durationEnd", 0]
+	["_cclockwise", false]
 ];
 
 private _isLastShot = _index isEqualTo (count (missionNamespace getVariable ["GRAD_INTROCAM_SHOTS", []]));

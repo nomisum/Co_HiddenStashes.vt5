@@ -19,23 +19,23 @@ if (didJIP) then {
 };
 
 // [true, true] call acre_api_fnc_setupMission;
+[ 
+[west, "English", "French"], [east, "Russian"], [civilian, "French"] ] call acre_api_fnc_babelSetupMission;
 
 ["en","English"] call acre_api_fnc_babelAddLanguageType;
 ["fi","Finnish"] call acre_api_fnc_babelAddLanguageType;
 ["ru","Russian"] call acre_api_fnc_babelAddLanguageType;
-["nk","NorthKorean"] call acre_api_fnc_babelAddLanguageType;
 
-/*
 [ 
     [west, "English"],
     [independent, "Finnish"],
     [east, "Russian"], 
-    [civilian, "NorthKorean"]
+    [civilian, "Russian"]
 ] call acre_api_fnc_babelSetupMission;
-*/
+
 
 if (player getVariable ["HS_isTranslator", false]) then {
-    ["en", "fi", "ru", "nk"] call acre_api_fnc_babelSetSpokenLanguages;
+    ["en", "fi", "ru"] call acre_api_fnc_babelSetSpokenLanguages;
 } else {
     ["fi"] call acre_api_fnc_babelSetSpokenLanguages;
 };

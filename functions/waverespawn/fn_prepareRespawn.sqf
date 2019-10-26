@@ -8,7 +8,8 @@ if (player getVariable ["wr_interrupted", false]) exitWith {
     player allowDamage true;
     player setDamage 1;
     setPlayerRespawnTime 99999;
-    [player, true] call TFAR_fnc_forceSpectator;
+    [true] call acre_api_fnc_setSpectator;
+    // [player, true] call TFAR_fnc_forceSpectator;
     [] call wita_common_fnc_startSpectator;
 
     _explanation = switch (true) do {
