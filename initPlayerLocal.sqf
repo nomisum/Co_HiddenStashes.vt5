@@ -8,7 +8,7 @@ if (isMultiplayer && !didJIP) then {
     0 fadeSound 0;
 };
 
-if (didJIP) then {
+if (didJIP || !isMultiplayer) then {
     waitUntil {
       !isNull player
     };
