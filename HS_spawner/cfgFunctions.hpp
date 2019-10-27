@@ -28,6 +28,8 @@ class HS_spawner {
         class enemies_findTargetLoopOriginal;
         class enemies_overwriteRZfunction {preInit = 1;};
 
+        class equipWithGasMask;
+
         class loadoutLDF;
         class loadoutRussian;
         class spawnCivilians;

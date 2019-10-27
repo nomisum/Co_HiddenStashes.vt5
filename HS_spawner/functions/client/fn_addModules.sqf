@@ -228,6 +228,13 @@ if (!hasInterface) exitWith {};
 
 }] call zen_custom_modules_fnc_register;
 
+["HS_Ambient", "Equip Unit with Gasmask", {
+    params ["_position", "_object"];
+
+    [_object] remoteExecCall ["HS_spawner_fnc_equipWithGasMask",2];
+
+}] call zen_custom_modules_fnc_register;
+
 
 {
     _x addEventHandler ["CuratorWaypointPlaced", {
