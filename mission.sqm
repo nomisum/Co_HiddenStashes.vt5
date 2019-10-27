@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=4759;
+		nextID=4778;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3239.4878,93.915581,3447.5491};
-		dir[]={-0.12512353,-0.69812536,0.70500338};
-		up[]={-0.12199963,0.7159546,0.68740392};
-		aside[]={0.98464131,2.6859925e-007,0.17475317};
+		pos[]={3281.6052,71.543068,3438.9546};
+		dir[]={0.065213203,-0.70764917,0.70362973};
+		up[]={0.065309197,0.70652878,0.70465904};
+		aside[]={0.99578416,-1.204462e-007,-0.092291124};
 	};
 };
 binarizationWanted=0;
@@ -3350,7 +3350,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=640;
+		items=659;
 		class Item0
 		{
 			dataType="Marker";
@@ -83849,6 +83849,724 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item640
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3279.8262,47.857594,3459.1643};
+				angles[]={0,2.4330399,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""]; if (local this) then { [this,atomtruck2] call BIS_fnc_attachToRelative;};}";
+			};
+			id=4759;
+			type="gm_barrel";
+			atlOffset=1.6173859;
+		};
+		class Item641
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3278.6567,48.403698,3459.3464};
+				angles[]={0.018657569,2.2661703,6.2663255};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{[this, 3.9, 20, 100] call cbrn_fnc_createZone;}";
+				name="atomtruck2";
+			};
+			id=4760;
+			type="rhs_kamaz5350_flatbed_msv";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rhs_decalNumber_type";
+					expression="_this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', [5,6,7,8], _value]]] call rhs_fnc_decalsInit";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Default";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="VehicleCustomization";
+					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"ARRAY"
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"ARRAY"
+											};
+										};
+										class value
+										{
+											items=16;
+											class Item0
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="bench_hide";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1;
+												};
+											};
+											class Item2
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="cover_hide";
+												};
+											};
+											class Item3
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1;
+												};
+											};
+											class Item4
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Door_LF";
+												};
+											};
+											class Item5
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0;
+												};
+											};
+											class Item6
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Door_RF";
+												};
+											};
+											class Item7
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0;
+												};
+											};
+											class Item8
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Hatch";
+												};
+											};
+											class Item9
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0;
+												};
+											};
+											class Item10
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="spare_hide";
+												};
+											};
+											class Item11
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0;
+												};
+											};
+											class Item12
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="back_door";
+												};
+											};
+											class Item13
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1;
+												};
+											};
+											class Item14
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="cover_end_hide";
+												};
+											};
+											class Item15
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1;
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="rhs_decalPlatoon_type";
+					expression="_this setVariable ['rhs_decalPlatoon_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="rhs_decalArmy_type";
+					expression="_this setVariable ['rhs_decalArmy_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="rhs_decalArmy";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', [9],  _this getVariable ['rhs_decalArmy_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="rhs_decalPlatoon";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', [10],  _this getVariable ['rhs_decalPlatoon_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				nAttributes=7;
+			};
+		};
+		class Item642
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3279.3835,47.878757,3458.6384};
+				angles[]={0,5.0129776,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""]; if (local this) then { [this,atomtruck2] call BIS_fnc_attachToRelative;};}";
+			};
+			id=4761;
+			type="gm_barrel";
+			atlOffset=1.6213036;
+		};
+		class Item643
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3278.9309,47.878544,3458.073};
+				angles[]={0,2.183737,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""]; if (local this) then { [this,atomtruck2] call BIS_fnc_attachToRelative;};}";
+			};
+			id=4762;
+			type="gm_barrel";
+			atlOffset=1.606472;
+		};
+		class Item644
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3278.4482,47.880569,3458.614};
+				angles[]={0,2.2381122,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""]; if (local this) then { [this,atomtruck2] call BIS_fnc_attachToRelative;};}";
+			};
+			id=4763;
+			type="gm_barrel";
+			atlOffset=1.6102257;
+		};
+		class Item645
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3278.9009,47.873184,3459.1794};
+				angles[]={0,5.517293,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""]; if (local this) then { [this,atomtruck2] call BIS_fnc_attachToRelative;};}";
+			};
+			id=4764;
+			type="gm_barrel";
+			atlOffset=1.6176605;
+		};
+		class Item646
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3279.3435,47.85944,3459.7053};
+				angles[]={0,2.4330399,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""]; if (local this) then { [this,atomtruck2] call BIS_fnc_attachToRelative;};}";
+			};
+			id=4765;
+			type="gm_barrel";
+			atlOffset=1.6211967;
+		};
+		class Item647
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3277.303,47.835762,3459.4724};
+				angles[]={0,2.2381122,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""]; if (local this) then { [this,atomtruck2] call BIS_fnc_attachToRelative;};}";
+			};
+			id=4766;
+			type="gm_barrel";
+			atlOffset=1.5633049;
+		};
+		class Item648
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3277.7556,47.829281,3460.0378};
+				angles[]={0,5.517293,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""]; if (local this) then { [this,atomtruck2] call BIS_fnc_attachToRelative;};}";
+			};
+			id=4767;
+			type="gm_barrel";
+			atlOffset=1.5707741;
+		};
+		class Item649
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3278.1982,47.815807,3460.5637};
+				angles[]={0,2.4330399,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""]; if (local this) then { [this,atomtruck2] call BIS_fnc_attachToRelative;};}";
+			};
+			id=4768;
+			type="gm_barrel";
+			atlOffset=1.574276;
+		};
+		class Item650
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3278.6809,47.814018,3460.0227};
+				angles[]={0,2.4330399,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""]; if (local this) then { [this,atomtruck2] call BIS_fnc_attachToRelative;};}";
+			};
+			id=4769;
+			type="gm_barrel";
+			atlOffset=1.5705299;
+		};
+		class Item651
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3278.2383,47.834618,3459.4968};
+				angles[]={0,5.0129776,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""]; if (local this) then { [this,atomtruck2] call BIS_fnc_attachToRelative;};}";
+			};
+			id=4770;
+			type="gm_barrel";
+			atlOffset=1.5743828;
+		};
+		class Item652
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3277.7856,47.833729,3458.9314};
+				angles[]={0,2.183737,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""]; if (local this) then { [this,atomtruck2] call BIS_fnc_attachToRelative;};}";
+			};
+			id=4771;
+			type="gm_barrel";
+			atlOffset=1.5595512;
+		};
+		class Item653
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3277.0388,47.837421,3460.3523};
+				angles[]={0,5.0129776,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""]; if (local this) then { [this,atomtruck2] call BIS_fnc_attachToRelative;};}";
+			};
+			id=4772;
+			type="gm_barrel";
+			atlOffset=1.5743713;
+		};
+		class Item654
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3276.6382,47.835674,3459.8018};
+				angles[]={0,2.183737,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""]; if (local this) then { [this,atomtruck2] call BIS_fnc_attachToRelative;};}";
+			};
+			id=4773;
+			type="gm_barrel";
+			atlOffset=1.5595551;
+		};
+		class Item655
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3277.0508,47.818909,3461.4341};
+				angles[]={0,2.4330399,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""]; if (local this) then { [this,atomtruck2] call BIS_fnc_attachToRelative;};}";
+			};
+			id=4774;
+			type="gm_barrel";
+			atlOffset=1.5742836;
+		};
+		class Item656
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3277.5334,47.81712,3460.8931};
+				angles[]={0,2.4330399,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""]; if (local this) then { [this,atomtruck2] call BIS_fnc_attachToRelative;};}";
+			};
+			id=4775;
+			type="gm_barrel";
+			atlOffset=1.5705338;
+		};
+		class Item657
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3276.5176,47.83572,3460.9248};
+				angles[]={0,5.0129776,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""]; if (local this) then { [this,atomtruck2] call BIS_fnc_attachToRelative;};}";
+			};
+			id=4776;
+			type="gm_barrel";
+			atlOffset=1.5743675;
+		};
+		class Item658
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3275.999,47.850063,3460.3904};
+				angles[]={0,5.0129776,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""]; if (local this) then { [this,atomtruck2] call BIS_fnc_attachToRelative;};}";
+			};
+			id=4777;
+			type="gm_barrel";
+			atlOffset=1.5743752;
 		};
 	};
 	class Connections
