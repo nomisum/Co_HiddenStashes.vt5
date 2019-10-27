@@ -169,42 +169,42 @@ if (!hasInterface) exitWith {};
 ["HS_Tasks_Independent", "Task 1 (Polizeistation)", {
     params ["_position", "_object"];
 
-    [] call HS_spawner_fnc_createTask1;
+    [] remoteExecCall ["HS_spawner_fnc_createTask1",2];
 
 }] call zen_custom_modules_fnc_register;
 
 ["HS_Tasks_Independent", "Task 2 (Hospital)", {
     params ["_position", "_object"];
 
-    [] call HS_spawner_fnc_createTask2;
+    [] remoteExecCall ["HS_spawner_fnc_createTask2",2];
 
 }] call zen_custom_modules_fnc_register;
 
 ["HS_Tasks_Independent", "Task 3 (Friedhof)", {
     params ["_position", "_object"];
 
-    [] call HS_spawner_fnc_createTask3;
+    [] remoteExecCall ["HS_spawner_fnc_createTask3",2];
 
 }] call zen_custom_modules_fnc_register;
 
 ["HS_Tasks_Independent", "Task 4 (Schrottplatz)", {
     params ["_position", "_object"];
 
-    [] call HS_spawner_fnc_createTask4;
+    [] remoteExecCall ["HS_spawner_fnc_createTask4",2];
 
 }] call zen_custom_modules_fnc_register;
 
 ["HS_Tasks_Independent", "Task 5 (AKW Müll)", {
     params ["_position", "_object"];
 
-    [] call HS_spawner_fnc_createTask5;
+    [] remoteExecCall ["HS_spawner_fnc_createTask5",2];
 
 }] call zen_custom_modules_fnc_register;
 
 ["HS_Tasks_Independent", "Task 6 (Flugzeug)", {
     params ["_position", "_object"];
 
-    [] call HS_spawner_fnc_createTask6;
+    [] remoteExecCall ["HS_spawner_fnc_createTask6",2];
 
 }] call zen_custom_modules_fnc_register;
 

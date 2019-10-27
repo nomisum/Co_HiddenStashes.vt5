@@ -10,3 +10,5 @@ player setUnitLoadout [
     "H_HelmetB_plain_wdl","Mask_M40",[],
     ["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]
 ];
+
+[] call HS_spawner_fnc_assignTaskLDF;

@@ -1,3 +1,5 @@
+if (!isServer) exitWith {};
+
 [
     independent, 
     ["ind_task1"], 
