@@ -210,7 +210,16 @@ if (!hasInterface) exitWith {};
 
 
 
+["HS_Police", "Equip Police Car with Gasmasks and Beacons", {
+    params ["_position", "_object"];
 
+    if (_object isKindOf "C_Offroad_01_F") then {
+        [_object] remoteExecCall ["HS_spawner_fnc_spawnPoliceCar",2];
+    } else {
+        systemChat "error: execute on Offroad instead";
+    };
+
+}] call zen_custom_modules_fnc_register;
 
 
 {
