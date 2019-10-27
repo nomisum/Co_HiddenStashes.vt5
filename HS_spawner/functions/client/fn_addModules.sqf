@@ -210,6 +210,9 @@ if (!hasInterface) exitWith {};
 
 
 
+
+
+
 {
     _x addEventHandler ["CuratorWaypointPlaced", {
         params ["_curator", "_group", "_waypointID"];
