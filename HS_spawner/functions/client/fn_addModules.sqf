@@ -166,6 +166,50 @@ if (!hasInterface) exitWith {};
 }] call zen_custom_modules_fnc_register;
 
 
+["HS_Tasks_Independent", "Task 1 (Polizeistation)", {
+    params ["_position", "_object"];
+
+    [] call HS_spawner_fnc_createTask1;
+
+}] call zen_custom_modules_fnc_register;
+
+["HS_Tasks_Independent", "Task 2 (Hospital)", {
+    params ["_position", "_object"];
+
+    [] call HS_spawner_fnc_createTask2;
+
+}] call zen_custom_modules_fnc_register;
+
+["HS_Tasks_Independent", "Task 3 (Friedhof)", {
+    params ["_position", "_object"];
+
+    [] call HS_spawner_fnc_createTask3;
+
+}] call zen_custom_modules_fnc_register;
+
+["HS_Tasks_Independent", "Task 4 (Schrottplatz)", {
+    params ["_position", "_object"];
+
+    [] call HS_spawner_fnc_createTask4;
+
+}] call zen_custom_modules_fnc_register;
+
+["HS_Tasks_Independent", "Task 5 (AKW Müll)", {
+    params ["_position", "_object"];
+
+    [] call HS_spawner_fnc_createTask5;
+
+}] call zen_custom_modules_fnc_register;
+
+["HS_Tasks_Independent", "Task 6 (Flugzeug)", {
+    params ["_position", "_object"];
+
+    [] call HS_spawner_fnc_createTask6;
+
+}] call zen_custom_modules_fnc_register;
+
+
+
 {
     _x addEventHandler ["CuratorWaypointPlaced", {
         params ["_curator", "_group", "_waypointID"];

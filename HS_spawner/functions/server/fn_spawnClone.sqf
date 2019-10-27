@@ -18,6 +18,8 @@ params ["_deadBody", "_position", "_goggles", "_headgear", "_vest", "_backpack",
 
     _zombie setVariable ["RZ_aggressiveSoundCount",round (random 5),true];
 
+    [_zombie] joinSilent _grp;
+
     _zombie setposATL [(getposATL _zombie select 0), (getposATL _zombie select 1), 0];
     // _zombie setVariable ["suomen_smells", true];
 

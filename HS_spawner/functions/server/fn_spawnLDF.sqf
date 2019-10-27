@@ -46,6 +46,10 @@ _zombie setVariable ["suomen_overwriteRZ", false];
 _zombie setVariable ["RZ_aggressiveSoundCount",round (random 5),true];
 
 _zombie setposATL [(getposATL _zombie select 0), (getposATL _zombie select 1), 0];
+
+[_zombie] joinSilent _grp;
+
+[_zombie] call HS_spawner_fnc_loadoutLDF;
 // _zombie setVariable ["suomen_smells", true];
 // _zombie playMoveNow "AmovPercMstpSnonWnonDnon_SaluteOut";
 
