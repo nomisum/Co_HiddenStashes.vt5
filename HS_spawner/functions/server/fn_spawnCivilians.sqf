@@ -56,7 +56,7 @@ switch (_type) do {
         _classname = (_uniform + _format);
     };
     case "fast" : {
-        private _format = format ["%1", "_fast"];
+        private _format = format ["%1", ""]; // fast has no ending?
         _classname = (_uniform + _format);
     };
     case "spider" : {
@@ -87,8 +87,6 @@ _zombie setposATL [(getposATL _zombie select 0), (getposATL _zombie select 1), 0
 // _zombie setVariable ["suomen_smells", true];
 
 [_zombie] joinSilent _grp;
-
-_zombie playMoveNow "AmovPercMstpSnonWnonDnon_SaluteOut";
 
 {
     _x addCuratorEditableObjects [[_zombie],true];

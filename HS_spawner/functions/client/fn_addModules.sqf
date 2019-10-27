@@ -165,6 +165,26 @@ if (!hasInterface) exitWith {};
 
 }] call zen_custom_modules_fnc_register;
 
+
+{
+    _x addEventHandler ["CuratorWaypointPlaced", {
+        params ["_curator", "_group", "_waypointID"];
+
+        private _unit = ((units _group) select 0);
+        private _position = waypointPosition [_group, _waypointID];
+
+        if (_unit isKindOf "RyanZombieCivilian_F")  then {
+            if !(local _zombie) then 
+            {
+                [_zombie, _position] remoteExecCall ["fnc_RyanZombies_DoMoveLocalized"];
+            } else {
+                _zombie domove _position;
+            }; 
+        };
+    }];
+} forEach  allCurators;
+
+
 /*
 _dialogValues params ["_speed", "_args"];
 

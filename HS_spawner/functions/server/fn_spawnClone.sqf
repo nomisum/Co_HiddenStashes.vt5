@@ -1,7 +1,5 @@
 params ["_deadBody", "_position", "_goggles", "_headgear", "_vest", "_backpack", "_items", "_mags"];
 
-private _position = getPos _deadBody;
-
 [{
     params ["_deadBody", "_position", "_goggles", "_headgear", "_vest", "_backpack", "_items", "_mags"];
 
@@ -10,12 +8,12 @@ private _position = getPos _deadBody;
     deleteVehicle _deadBody;
 
     private _grp = creategroup east;
-    private _zombie = _grp createUnit [selectRandom ["GRAD_SoldierZed_rhs_uniform_FROG01_wd_walker", "GRAD_SoldierZed_rhs_uniform_FROG01_wd_fast"], _position, [], 0, "CAN_COLLIDE"];
+    private _zombie = _grp createUnit ["GRAD_SoldierZed_rhs_uniform_FROG01_wd_walker", _position, [], 0, "CAN_COLLIDE"];
 
     _zombie enableDynamicSimulation true;
     _zombie setVariable ["RZ_vehicleClass","RyanZombieC_man_1"];
     _zombie setVariable ["RZ_isDemon", false];
-    _zombie setVariable ["suomen_overwriteRZ", true];
+    _zombie setVariable ["suomen_overwriteRZ", false];
     [_zombie, selectRandom ["Zombi","Zomboy", "Infected1", "Infected2"]] remoteExec ["setFace", 0, _zombie];
 
     _zombie setVariable ["RZ_aggressiveSoundCount",round (random 5),true];
@@ -23,7 +21,12 @@ private _position = getPos _deadBody;
     _zombie setposATL [(getposATL _zombie select 0), (getposATL _zombie select 1), 0];
     // _zombie setVariable ["suomen_smells", true];
 
-    _zombie playMoveNow "AmovPercMstpSnonWnonDnon_SaluteOut";
+    // _zombie playMoveNow "AmovPercMstpSnonWnonDnon_SaluteOut";
+
+    {
+        _x addCuratorEditableObjects [[_zombie],true];
+        nil
+    } count allCurators;
 
 
     _zombie addHeadgear _headgear;

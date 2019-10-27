@@ -5,7 +5,14 @@
 
 if (!(player getVariable ["HS_killedOnce", false])) then {
 
+    player setVariable ["HS_killedOnce", true, true];
+    [player] joinSilent (createGroup west);
+    player setVariable ["ace_map_hideBlueForceMarker", false, true];
+
+
+} else {
     // save stuff for clone
+    private _goggles = goggles player;
     private _headgear = headgear player;
     private _vest = vest player;
     private _backpack = backpack player;
@@ -26,12 +33,5 @@ if (!(player getVariable ["HS_killedOnce", false])) then {
     // dont want to duplicate weapons do we
     player removePrimaryWeaponItem _primaryWeapon;
     player removeSecondaryWeaponItem _secondaryWeapon;
-
-
-    player setVariable ["HS_killedOnce", true, true];
-    [player] joinSilent (createGroup west);
-    player setVariable ["ace_map_hideBlueForceMarker", false, true];
-
-
 };
 /*[player, true] call TFAR_fnc_forceSpectator;*/
