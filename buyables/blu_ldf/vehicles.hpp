@@ -17,6 +17,7 @@ class Vehicles {
         price = 2000;
         stock = 3;
         permissionLevel = 1;
+        code = "if (isServer) then {(_this select 2) disableTIEquipment true};";
     };
 
     class I_E_APC_tracked_03_cannon_F {
@@ -25,5 +26,6 @@ class Vehicles {
         price = 3000;
         stock = 1;
         permissionLevel = 2;
+        code = "if (isServer) then {(_this select 2) disableTIEquipment true};";
     };    
 };
