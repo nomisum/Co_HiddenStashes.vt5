@@ -6,7 +6,7 @@ if (!isServer) exitWith {};
 ] call BIS_fnc_deleteTask;
 
 
-"radioTransmision" remoteExecCall ["playSound", independent];
+["radioTransmission"] remoteExecCall ["playSound", independent];
 
 [{
     [

@@ -147,7 +147,7 @@ if (!hasInterface) exitWith {};
 
 }] call zen_custom_modules_fnc_register;
 
-["HS_BluforBuyOptions", "Allow APC", {
+["HS_BluforBuyOptions", "Allow Heli (LVL 1)", {
     params ["_position", "_object"];
 
     {[player, 1] call grad_lbm_fnc_setPermissionLevel} remoteExec ["call",WEST,true];
@@ -156,7 +156,7 @@ if (!hasInterface) exitWith {};
 
 }] call zen_custom_modules_fnc_register;
 
-["HS_BluforBuyOptions", "Allow Heli", {
+["HS_BluforBuyOptions", "Allow APC (LVL 2)", {
     params ["_position", "_object"];
 
     {[player, 2] call grad_lbm_fnc_setPermissionLevel} remoteExec ["call",WEST,true];

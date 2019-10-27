@@ -18,4 +18,4 @@ private _map = "Land_Map_Enoch_F" createVehicle _pos;
     0,                                                  // Priority
     true,                                               // Remove on completion
     false                                               // Show in unconscious state 
-] remoteExec ["BIS_fnc_holdActionAdd", 0, _myLaptop];   // MP compatible implementation
+] remoteExec ["BIS_fnc_holdActionAdd", 0, _map];   // MP compatible implementation
