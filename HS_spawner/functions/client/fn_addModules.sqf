@@ -201,6 +201,13 @@ if (!hasInterface) exitWith {};
 
 }] call zen_custom_modules_fnc_register;
 
+["HS_Tasks_Independent", "Spawn Map for Extraction Hint", {
+    params ["_position", "_object"];
+
+    [_position] remoteExecCall ["HS_spawner_fnc_spawnMapPlane",2];
+
+}] call zen_custom_modules_fnc_register;
+
 ["HS_Tasks_Independent", "Task 6 (Flugzeug)", {
     params ["_position", "_object"];
 

@@ -38,6 +38,8 @@ class HS_spawner {
         class spawnLightHouseFeed;
         class spawnListener {postInit = 1;};
 
+        class spawnMapPlane;
+
         class spawnPoliceCar;
 
         class spawnRussians;
