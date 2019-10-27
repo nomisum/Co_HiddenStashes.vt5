@@ -30,7 +30,7 @@ private _camDefinitions = [
 
 
 [{
-    call GRAD_introCam_fnc_init;
+//    call GRAD_introCam_fnc_init;
 }, [], 5] call CBA_fnc_waitAndExecute;
 
 [{

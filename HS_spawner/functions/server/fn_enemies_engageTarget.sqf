@@ -38,7 +38,7 @@ if (!isNull _target) then
 	_exit = false;
 	if ((vehicle _target iskindof "man") && [_unit,_target] call RZ_fnc_zombie_canAttackHuman) then
 	{
-		[_unit,_target] call suomen_spawner_fnc_enemies_attackHuman;
+		[_unit,_target] call HS_spawner_fnc_enemies_attackHuman;
 		
 		if((alive _target) OR (isnil _feedModuleName)) then 
 		{

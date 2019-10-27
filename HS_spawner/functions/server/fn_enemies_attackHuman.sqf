@@ -22,7 +22,7 @@ if ([_unit,_target] call RZ_fnc_zombie_canAttackHuman) then
 
 	if (isClass(configFile >> "CfgPatches" >> "ace_medical")) then 
 	{
-		[_target,_damageDealt] call suomen_spawner_fnc_enemies_aceDamage;
+		[_target,_damageDealt] call HS_spawner_fnc_enemies_aceDamage;
 	} else {
 		_target setdamage (damage _target + _damageDealt);
 	};

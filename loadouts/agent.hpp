@@ -45,8 +45,8 @@ class agent {
             };
 		};
 
-        //autorifleman == mp7
-        class survivor_F: Soldier_F {
+        // translator == Handgun only
+        class crew_F: Soldier_F {
             primaryWeapon = "";
             primaryWeaponMagazine = "";
             addItemsToVest[] = {};

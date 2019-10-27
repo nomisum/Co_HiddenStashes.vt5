@@ -22,7 +22,12 @@ class HS_spawner {
         class loadoutRussian;
         class spawnCivilians;
         class spawnCiviliansCrowd;
+        class spawnClone;
+        class spawnLDF;
+
         class spawnLightHouseFeed;
         class spawnListener {postInit = 1;};
+
+        class spawnRussians;
     };
 };

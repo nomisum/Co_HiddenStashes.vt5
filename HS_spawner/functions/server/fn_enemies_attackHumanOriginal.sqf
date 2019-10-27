@@ -26,7 +26,7 @@ if ([_zombie,_target] call RZ_fnc_zombie_canAttackHuman) then
 	if (isClass(configFile >> "CfgPatches" >> "ace_medical")) then 
 	{
 		// [_target,_aceDamageType] execVM "\ryanzombies\acedamage.sqf";
-		[_target, _normalDamage] call suomen_spawner_fnc_enemies_aceDamage;
+		[_target, _normalDamage] call HS_spawner_fnc_enemies_aceDamage;
 	} else {
 		_target setdamage (damage _target + _normalDamage);
 	};
