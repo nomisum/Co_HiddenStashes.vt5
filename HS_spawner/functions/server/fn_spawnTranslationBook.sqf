@@ -9,7 +9,7 @@ _book setObjectTextureGlobal [0, "pic\book.paa"];
 
 [
     _book,                                          // Object the action is attached to
-    "Read Translation Book",                                      // Title of the action
+    "Buch lesen",                                      // Title of the action
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa", // Idle icon shown on screen
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa", // Progress icon shown on screen
     "_this distance _target < 3",                       // Condition for the action to be shown
