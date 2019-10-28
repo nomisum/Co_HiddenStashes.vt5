@@ -1,6 +1,6 @@
 params ["_pos"];
 
-private _map = "Land_Map_Enoch_F" createVehicle _pos;
+private _map = createVehicle ["Land_Map_Enoch_F", _pos, [], 0, "CAN_COLLIDE"];
 
 [
     _map,                                          // Object the action is attached to

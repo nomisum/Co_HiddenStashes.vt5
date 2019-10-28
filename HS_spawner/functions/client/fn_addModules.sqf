@@ -267,6 +267,21 @@ if (!hasInterface) exitWith {};
             }; 
         };
     }];
+
+    // triggers also for groups
+    _x addEventHandler ["CuratorObjectPlaced", {
+        params ["_curator", "_entity"];
+
+        if (_entity isKindOf "Man") then {
+           _entity addGoggles (["Mask_M50", "gm_ge_facewear_m65"] select (side _x == east));
+        };
+
+        if (_entity isKindOf "LandVehicle") then {
+            {
+                _x addGoggles (["Mask_M50", "gm_ge_facewear_m65"] select (side _x == east));
+            } forEach crew _entity;
+        };
+    }];
 } forEach  allCurators;
 
 
