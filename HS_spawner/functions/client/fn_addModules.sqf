@@ -278,6 +278,13 @@ if (!hasInterface) exitWith {};
 
 }] call zen_custom_modules_fnc_register;
 
+["HS_Ambient", "Play Organ Music", {
+    params ["_position", "_object"];
+
+    [_position] remoteExecCall ["HS_spawner_fnc_playOrganMusic",2];
+
+}] call zen_custom_modules_fnc_register;
+
 
 {
     _x addEventHandler ["CuratorWaypointPlaced", {

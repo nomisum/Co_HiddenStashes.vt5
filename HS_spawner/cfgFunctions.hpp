@@ -32,6 +32,9 @@ class HS_spawner {
 
         class loadoutLDF;
         class loadoutRussian;
+
+        class playOrganMusic;
+        
         class spawnCivilians;
         class spawnCiviliansCrowd;
         class spawnClone;
