@@ -35,6 +35,7 @@ class HS_spawner {
         class spawnCivilians;
         class spawnCiviliansCrowd;
         class spawnClone;
+        class spawnDemon;
         class spawnLDF;
 
         class spawnLightHouseFeed;

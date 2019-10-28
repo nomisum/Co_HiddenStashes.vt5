@@ -18,3 +18,12 @@ TFAR_fnc_activeLRRadio = {""};
     params ["_args", "_handle"];
     setaperture 3;
 }, 5, []] call CBA_fnc_addPerFrameHandler;
+
+ryanzombiesglow = 1;
+ryanzombiesstartinganim = 1;
+Ryanzombiescanthrowdemon = 1
+Ryanzombiescanthrowdistancedemon = 30;
+Ryanzombiescanthrowtank = 1;
+Ryanzombiesfeed = 1;
+ryanzombiescivilianattacks = true;
+Ryanzombieslogicroam = 1;

@@ -24,3 +24,10 @@ if (!isServer) exitWith {};
     [_position, _speed] call HS_spawner_fnc_spawnLDF;
 
 }] call CBA_fnc_addEventhandler;
+
+["HS_SpawnerDemon", {
+    params ["_position", "_side"];
+
+    [_position, _side] call HS_spawner_fnc_spawnDemon;
+
+}] call CBA_fnc_addEventhandler;

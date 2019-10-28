@@ -1,5 +1,10 @@
 params ["_unit"];
 
+_googles = [
+    "gm_ge_facewear_m65",
+    ""
+];
+
 _headgear = [
     "rhs_fieldcap_digi",
     "rhs_fieldcap_helm_digi",
@@ -35,3 +40,4 @@ _backpacks = [
 _unit addHeadgear selectRandom _headgear;
 _unit addVest selectRandom _vests;
 _unit addBackpack selectRandom _backpacks;
+_unit addGoggles selectRandom _googles;
