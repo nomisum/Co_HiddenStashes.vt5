@@ -273,12 +273,12 @@ if (!hasInterface) exitWith {};
         params ["_curator", "_entity"];
 
         if (_entity isKindOf "Man") then {
-           _entity addGoggles (["Mask_M50", "gm_ge_facewear_m65"] select (side _x == east));
+           [_entity] call HS_spawner_fnc_equipWithGasMask;
         };
 
         if (_entity isKindOf "LandVehicle") then {
             {
-                _x addGoggles (["Mask_M50", "gm_ge_facewear_m65"] select (side _x == east));
+                [_x] call HS_spawner_fnc_equipWithGasMask;
             } forEach crew _entity;
         };
     }];
