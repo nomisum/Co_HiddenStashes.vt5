@@ -41,9 +41,11 @@ class HS_spawner {
         class spawnListener {postInit = 1;};
 
         class spawnMapPlane;
+        class spawnNuclearWasteTruck;
 
         class spawnPoliceCar;
 
         class spawnRussians;
+        class spawnTranslationBook;
     };
 };

@@ -187,10 +187,25 @@ if (!hasInterface) exitWith {};
 
 }] call zen_custom_modules_fnc_register;
 
+["HS_Tasks_Independent", "Spawn Translation Book", {
+    params ["_position", "_object"];
+
+    [_position] remoteExecCall ["HS_spawner_fnc_spawnTranslationBook",2];
+
+}] call zen_custom_modules_fnc_register;
+
 ["HS_Tasks_Independent", "Task 4 (Schrottplatz)", {
     params ["_position", "_object"];
 
     [] remoteExecCall ["HS_spawner_fnc_createTask4",2];
+
+}] call zen_custom_modules_fnc_register;
+
+
+["HS_Tasks_Independent", "Spawn Nuclear Waste Truck", {
+    params ["_position", "_object"];
+
+    [_position] remoteExecCall ["HS_spawner_fnc_spawnNuclearWasteTruck",2];
 
 }] call zen_custom_modules_fnc_register;
 
