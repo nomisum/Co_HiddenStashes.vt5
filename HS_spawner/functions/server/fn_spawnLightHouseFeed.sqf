@@ -1,5 +1,8 @@
 params ["_pos"];
 
+if (missionNamespace getVariable ["lightHouseFeed", false]) exitWith {};
+missionNamespace setVariable ["lightHouseFeed", true, true];
+
 private _grpUnit = createGroup independent;
 _unit = _grpUnit createUnit ["GRAD_CivilianZed_rds_uniform_citizen2_walker", _pos, [], 0, "NONE"];
 _grpUnit setVariable ["ace_map_hideBlueForceMarker", true, true];

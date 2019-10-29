@@ -31,21 +31,25 @@ _args set [0, _time];
 
 // private _dir = (linearConversion [0, 4, _max - 0.05 + (random 0.1), 90, -90, true]) mod 360;
 
-private _output = _max - 0.05 + (random 0.1);
-private _ui = uiNamespace getVariable "RscWeaponChemicalDetector";
-private _obj = _ui displayCtrl 101;
- 
-_obj ctrlAnimateModel ["Threat_Level_Source", _output, true];
+if (visibleWatch) then {
+    private _output = _max - 0.05 + (random 0.1);
+    private _ui = uiNamespace getVariable "RscWeaponChemicalDetector";
+    private _obj = _ui displayCtrl 101;
+     
+    _obj ctrlAnimateModel ["Threat_Level_Source", _output, true];
 
-private _count = 1 max linearConversion [0, 4, _max, 0.01, 20, true];
-for "_i" from 1 to _count do {
-    [{
-        params ["_max"];
-        private _sound = selectRandom [1,2,3,4];
-        playSound format ["geiger_%1_%2", ceil (random _max), _sound];
-    }, [_max], ((_count/_i)*0.45) + random 0.1] call CBA_fnc_waitAndExecute;
+    private _count = 1 max linearConversion [0, 4, _max, 0.01, 20, true];
+
+    if (_count == 1 && random 1 > 0.2) exitWith {};
+
+    for "_i" from 1 to _count do {
+        [{
+            params ["_max"];
+            private _sound = selectRandom [1,2,3,4];
+            playSound format ["geiger_%1_%2", 4 min (ceil (random _max)), _sound];
+        }, [_max], ((_count/_i)*0.45) + random 0.1] call CBA_fnc_waitAndExecute;
+    };
 };
-
 /*
 if (_player getVariable ["cbrn_using_threat_meter", false]) then {
     if (isNull (uiNamespace getVariable ["cbrn_threatBaseCtrl", objNull])) then {

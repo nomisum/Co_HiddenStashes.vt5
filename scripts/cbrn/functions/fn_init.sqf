@@ -183,6 +183,7 @@ if (!_clientExecution) then {
         },{},[], [0,0,0], 3] call ace_interact_menu_fnc_createAction;
         ["CAManBase", 1, ["ACE_SelfActions","ACE_Equipment"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
+        "Geigerzaehler" cutRsc ["RscWeaponChemicalDetector", "PLAIN", 1, false];
         cbrn_threatPfh = [cbrn_fnc_threatPFH, 0.5, [cba_missiontime]] call CBA_fnc_addPerFrameHandler;
 
         [{
