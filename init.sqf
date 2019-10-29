@@ -21,7 +21,7 @@ TFAR_fnc_activeLRRadio = {""};
 
 ryanzombiesglow = 1;
 ryanzombiesstartinganim = 1;
-Ryanzombiescanthrowdemon = 1
+Ryanzombiescanthrowdemon = 1;
 Ryanzombiescanthrowdistancedemon = 30;
 Ryanzombiescanthrowtank = 1;
 Ryanzombiesfeed = 1;

@@ -18,6 +18,7 @@ class agent {
 		binoculars = "";
 		map = "ItemMap";
 		gps = "";
+        watch = "ChemicalDetector_01_watch_F";
 		compass = "ItemCompass";
         addItemsToUniform[] = {};
         addItemsToVest[] = {};

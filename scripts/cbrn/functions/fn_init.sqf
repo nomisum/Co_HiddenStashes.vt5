@@ -211,7 +211,7 @@ if (!_clientExecution) then {
                 "cbrn_gasmask_overlay" cutFadeOut 1;
                 terminate cbrn_breath_handle;
             };
-            _unit setVariable ["cbrn_using_threat_meter", false, true];
+            // _unit setVariable ["cbrn_using_threat_meter", false, true];
         }];
 
         player addEventHandler ["Respawn", {
@@ -237,6 +237,7 @@ if (!_clientExecution) then {
         },{true},{},[], [0,0,0], 3] call ace_interact_menu_fnc_createAction;
         ["CAManBase", 1, ["ACE_SelfActions","Medical"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
+        /*
         _action = ["cbrn_turn_on_threatmeter", "Turn on threatmeter","",{
             ace_player setVariable ["cbrn_using_threat_meter", true, true];
         },{
@@ -249,6 +250,7 @@ if (!_clientExecution) then {
             ace_player getVariable ["cbrn_using_threat_meter", false]
         },{},[], [0,0,0], 3] call ace_interact_menu_fnc_createAction;
         ["CAManBase", 1, ["ACE_SelfActions","ACE_Equipment"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+        */
 
         ["cbrn_turnOnShower", {
             params ["_shower"];

@@ -28,6 +28,25 @@ private _delta = _time - _lastIteration;
 _args set [0, _time];
 [_player, _max, _delta] call cbrn_fnc_handleDamage;
 
+
+// private _dir = (linearConversion [0, 4, _max - 0.05 + (random 0.1), 90, -90, true]) mod 360;
+
+private _output = _max - 0.05 + (random 0.1);
+private _ui = uiNamespace getVariable "RscWeaponChemicalDetector";
+private _obj = _ui displayCtrl 101;
+ 
+_obj ctrlAnimateModel ["Threat_Level_Source", _output, true];
+
+private _count = 1 max linearConversion [0, 4, _max, 0.01, 20, true];
+for "_i" from 1 to _count do {
+    [{
+        params ["_max"];
+        private _sound = selectRandom [1,2,3,4];
+        playSound format ["geiger_%1_%2", ceil (random _max), _sound];
+    }, [_max], ((_count/_i)*0.45) + random 0.1] call CBA_fnc_waitAndExecute;
+};
+
+/*
 if (_player getVariable ["cbrn_using_threat_meter", false]) then {
     if (isNull (uiNamespace getVariable ["cbrn_threatBaseCtrl", objNull])) then {
         private _display = findDisplay 46;
@@ -61,19 +80,6 @@ if (_player getVariable ["cbrn_using_threat_meter", false]) then {
     private _dir = (linearConversion [0, 4, _max - 0.05 + (random 0.1), 90, -90, true]) mod 360;
     _needle ctrlSetAngle [_dir, 0.5, 0.5];
 
-    /*
-    private _int = ceil _max;
-    if (_int > 0 && _int < 5) then {
-        private _sound = selectRandom [1,2,3,4];
-        playSound format ["geiger_%1_%2", _int, _sound];
- 
-        [{
-            params ["_int"];
-            private _sound = selectRandom [1,2,3,4];
-            playSound format ["geiger_%1_%2", _int, _sound];
-        }, [_int], random 0.25] call CBA_fnc_waitAndExecute;
-    };
-    */
     private _count = linearConversion [0, 4, _max, 0.1, 20, true];
     for "_i" from 1 to _count do {
         [{
@@ -88,3 +94,4 @@ if (_player getVariable ["cbrn_using_threat_meter", false]) then {
     ctrlDelete (uiNamespace getVariable ["cbrn_threatNeedleCtrl", ctrlNull]);
     ctrlDelete (uiNamespace getVariable ["cbrn_threatOverlayCtrl", ctrlNull]);
 };
+*/
