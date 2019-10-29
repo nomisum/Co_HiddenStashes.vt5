@@ -61,13 +61,13 @@ _ctrlTWO ctrlSetFade 0;
 _ctrlTWO ctrlCommit 3;
 
 private _camPos3 = (_vehicle getPos [200,270]);
-_camPos3 set [2,300];
+_camPos3 set [2,500];
 
 _camera camPreparePos _camPos3;
 _camera camPrepareTarget _vehicle;
 _camera camPrepareFOV 0.2;
 
-_camera camCommitPrepared 20;
+_camera camCommitPrepared 40;
 
 sleep 10;
 

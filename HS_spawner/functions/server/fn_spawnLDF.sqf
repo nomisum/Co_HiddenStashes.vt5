@@ -37,6 +37,8 @@ switch (_type) do {
 private _grp = creategroup east;
 private _zombie = _grp createUnit [_classname, _position, [], _radius, "NONE"];
 
+_zombie setObjectTextureGlobal [0, "\A3\Characters_F_Beta\INDEP\Data\ia_soldier_01_clothing_co.paa"];
+
 _zombie enableDynamicSimulation true;
 _zombie setVariable ["RZ_vehicleClass","RyanZombieC_man_1"];
 _zombie setVariable ["RZ_isDemon", false];

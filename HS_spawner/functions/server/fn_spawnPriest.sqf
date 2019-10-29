@@ -36,7 +36,7 @@ switch (_type) do {
 // systemChat (_classname + " " + str _position + " " + str _type + " " + str _radius);
 
 private _grp = creategroup east;
-private _zombie = _grp createUnit [_classname, _position, [], _radius, "NONE"];
+private _zombie = _grp createUnit [_classname, _position, [], 0, "NONE"];
 
 
 _zombie enableDynamicSimulation true;
