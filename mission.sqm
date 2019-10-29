@@ -50791,7 +50791,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{[position this] call HS_spawner_fnc_spawnLightHouseFeed;}";
+						init="call{if (isServer) then { [position this] call HS_spawner_fnc_spawnLightHouseFeed;};}";
 					};
 					id=3824;
 					type="Land_ClutterCutter_small_F";
