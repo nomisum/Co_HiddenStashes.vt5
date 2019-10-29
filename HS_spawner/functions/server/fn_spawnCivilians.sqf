@@ -40,7 +40,7 @@ private _classname = _uniform; // default
 
 switch (_type) do { 
     case "random" : {
-        private _format = format ["%1", selectRandom ["_slow", "_walker", "_crawler", "_fast", "_spider"]];
+        private _format = format ["%1", selectRandom ["_slow", "_walker", "_crawler", "", "_spider"]];
         _classname = (_uniform + _format);
     };
     case "slow" : {

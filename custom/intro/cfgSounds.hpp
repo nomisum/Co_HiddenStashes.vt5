@@ -62,3 +62,10 @@ class organ
     sound[] = {"custom\intro\organ.ogg", 0.5, 1, 4};
     titles[] = {};
 };
+
+class outro
+{
+    name = "outro";
+    sound[] = {"custom\intro\outro.ogg", 0.5, 1, 4};
+    titles[] = {};
+};

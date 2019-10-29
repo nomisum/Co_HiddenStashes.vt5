@@ -8,11 +8,11 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=4797;
+		nextID=4805;
 	};
 	class MarkerIDProvider
 	{
-		nextID=39;
+		nextID=40;
 	};
 	class LayerIndexProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3161.2593,20.914263,2190.9492};
-		dir[]={0.24819463,-0.65928298,0.70985508};
-		up[]={0.21761897,0.75184023,0.62240279};
-		aside[]={0.94403201,2.0070001e-007,-0.33007172};
+		pos[]={313.52481,28.84531,427.77399};
+		dir[]={-0.60672396,-0.30239809,0.73516738};
+		up[]={-0.19248903,0.95317709,0.2332388};
+		aside[]={0.77127445,-2.5867485e-007,0.63652259};
 	};
 };
 binarizationWanted=0;
@@ -1076,7 +1076,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=37;
+									items=39;
 									class Item0
 									{
 										class data
@@ -1595,6 +1595,34 @@ class CustomAttributes
 											value="acre_sys_core_interference";
 										};
 									};
+									class Item37
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="diwako_dui_enable_compass";
+										};
+									};
+									class Item38
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="diwako_dui_indicators_show";
+										};
+									};
 								};
 							};
 						};
@@ -1611,7 +1639,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=37;
+									items=39;
 									class Item0
 									{
 										class data
@@ -3277,6 +3305,96 @@ class CustomAttributes
 											};
 										};
 									};
+									class Item37
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item38
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
 								};
 							};
 						};
@@ -3351,7 +3469,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=643;
+		items=646;
 		class Item0
 		{
 			dataType="Marker";
@@ -84031,6 +84149,31 @@ class Mission
 			id=4795;
 			type="Land_WaterTank_F";
 			atlOffset=0.12509489;
+		};
+		class Item643
+		{
+			dataType="Marker";
+			position[]={3666.8848,13.415327,4703.8442};
+			name="mrk_outro1";
+			type="Empty";
+			id=4798;
+		};
+		class Item644
+		{
+			dataType="Marker";
+			position[]={4728.1753,13.283963,2065.4575};
+			name="mrk_outro2";
+			type="Empty";
+			id=4799;
+		};
+		class Item645
+		{
+			dataType="Marker";
+			position[]={6184.9854,-15.098863,-2747.6396};
+			name="mrk_outro3";
+			type="Empty";
+			id=4803;
+			atlOffset=16.836136;
 		};
 	};
 	class Connections
