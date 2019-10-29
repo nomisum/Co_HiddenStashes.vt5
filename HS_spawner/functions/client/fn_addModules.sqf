@@ -139,7 +139,7 @@ if (!hasInterface) exitWith {};
             _dialogValues params ["_speed"];
 
             // hint str _position;
-            ["HS_SpawnerRandomLDF", [_position, _speed]] call CBA_fnc_globalEvent;
+            ["HS_SpawnerRandomCivilian", [_position, _speed]] call CBA_fnc_globalEvent;
             
         }, {hint "aborted";}, [_position]] call zen_dialog_fnc_create;
 
@@ -283,6 +283,28 @@ if (!hasInterface) exitWith {};
 
     [_position] remoteExecCall ["HS_spawner_fnc_playOrganMusic",2];
 
+}] call zen_custom_modules_fnc_register;
+
+["HS_Ambient", "Spawn Priest", {
+    params ["_position", "_object"];
+
+    [_position] remoteExecCall ["HS_spawner_fnc_spawnPriest",2];
+
+}] call zen_custom_modules_fnc_register;
+
+
+["HS_MissionEnd", "Mission WON Outro", {
+    params ["_position", "_object"];
+
+    [[getMarkerPos "mrk_outro1", getMarkerPos "mrk_outro2", getMarkerPos "mrk_outro3"], "custom\intro\outroServerWin.sqf"] remoteExec ["BIS_fnc_execVM",2];
+    
+}] call zen_custom_modules_fnc_register;
+
+["HS_MissionEnd", "Mission LOST Outro", {
+    params ["_position", "_object"];
+
+    [[], "custom\intro\outroServerLost.sqf"] remoteExec ["BIS_fnc_execVM",2];
+    
 }] call zen_custom_modules_fnc_register;
 
 

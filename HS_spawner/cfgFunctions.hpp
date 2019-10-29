@@ -49,6 +49,7 @@ class HS_spawner {
 
         class spawnPoliceCar;
 
+        class spawnPriest;
         class spawnRussians;
         class spawnTranslationBook;
     };
