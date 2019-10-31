@@ -12,3 +12,6 @@ player setUnitLoadout [
 ];
 
 [] call HS_spawner_fnc_assignTaskLDF;
+
+player setPos (getMarkerPos "mrk_blufor_hq");
+player setVariable ["ace_map_hideBlueForceMarker",false,true];
