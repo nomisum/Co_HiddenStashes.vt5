@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=4980;
+		nextID=4990;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=480;
+		nextID=506;
 	};
 	class Camera
 	{
-		pos[]={3238.1885,86.925331,3427.2937};
-		dir[]={0.23120286,-0.76284242,0.60403281};
-		up[]={0.2727161,0.64643842,0.71250451};
-		aside[]={0.93398881,1.0711956e-006,-0.3574937};
+		pos[]={2551.8313,26.271557,2014.1243};
+		dir[]={-0.75275171,-0.29079747,0.59060144};
+		up[]={-0.22878636,0.95678365,0.17950311};
+		aside[]={0.61727679,-9.6129952e-008,0.78675026};
 	};
 };
 binarizationWanted=0;
@@ -243,13 +243,14 @@ addons[]=
 	"A3_Structures_F_Enoch_Industrial_Farms",
 	"CUP_CAStructures_E_Misc",
 	"A3_Structures_F_Ind_PowerLines",
-	"A3_Structures_F_Mil_Fortification"
+	"A3_Structures_F_Mil_Fortification",
+	"CUP_CAStructures_A_CraneCon"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=121;
+		items=122;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -1018,6 +1019,11 @@ class AddonsMetaData
 		{
 			className="CUP_CAStructures_E_Misc";
 			name="CUP_CAStructures_E_Misc";
+		};
+		class Item121
+		{
+			className="CUP_CAStructures_A_CraneCon";
+			name="CUP_CAStructures_A_CraneCon";
 		};
 	};
 };
@@ -3479,7 +3485,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=764;
+		items=768;
 		class Item0
 		{
 			dataType="Marker";
@@ -83878,6 +83884,7 @@ class Mission
 			};
 			id=4783;
 			type="DeconShower_01_F";
+			atlOffset=0.00025558472;
 		};
 		class Item635
 		{
@@ -84289,6 +84296,7 @@ class Mission
 			};
 			id=4825;
 			type="Land_dp_transformer_F";
+			atlOffset=3.8146973e-006;
 		};
 		class Item655
 		{
@@ -84305,6 +84313,7 @@ class Mission
 			};
 			id=4826;
 			type="Land_dp_transformer_F";
+			atlOffset=3.8146973e-006;
 		};
 		class Item656
 		{
@@ -84321,6 +84330,7 @@ class Mission
 			};
 			id=4827;
 			type="Land_dp_transformer_F";
+			atlOffset=3.8146973e-006;
 		};
 		class Item657
 		{
@@ -84337,6 +84347,7 @@ class Mission
 			};
 			id=4828;
 			type="Land_dp_transformer_F";
+			atlOffset=3.8146973e-006;
 		};
 		class Item658
 		{
@@ -84385,6 +84396,7 @@ class Mission
 			};
 			id=4836;
 			type="Land_DPP_01_mainFactory_F";
+			atlOffset=-3.8146973e-006;
 		};
 		class Item661
 		{
@@ -84418,6 +84430,7 @@ class Mission
 			};
 			id=4838;
 			type="Land_dp_transformer_F";
+			atlOffset=3.8146973e-006;
 		};
 		class Item663
 		{
@@ -85387,6 +85400,7 @@ class Mission
 			};
 			id=4930;
 			type="Land_coneLight";
+			atlOffset=0.00033569336;
 		};
 		class Item723
 		{
@@ -86070,6 +86084,468 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item764
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3252.1069,48.566231,3466.3662};
+				angles[]={0.013336525,2.6374094,6.2559896};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{[this, 3.9, 20, 100] call cbrn_fnc_createZone;}";
+				name="atomtruck_1";
+			};
+			id=4980;
+			type="rhs_kamaz5350_flatbed_msv";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rhs_decalNumber_type";
+					expression="_this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', [5,6,7,8], _value]]] call rhs_fnc_decalsInit";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Default";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="VehicleCustomization";
+					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"ARRAY"
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"ARRAY"
+											};
+										};
+										class value
+										{
+											items=16;
+											class Item0
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="bench_hide";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1;
+												};
+											};
+											class Item2
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="cover_hide";
+												};
+											};
+											class Item3
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1;
+												};
+											};
+											class Item4
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Door_LF";
+												};
+											};
+											class Item5
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0;
+												};
+											};
+											class Item6
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Door_RF";
+												};
+											};
+											class Item7
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0;
+												};
+											};
+											class Item8
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Hatch";
+												};
+											};
+											class Item9
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0;
+												};
+											};
+											class Item10
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="spare_hide";
+												};
+											};
+											class Item11
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0;
+												};
+											};
+											class Item12
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="back_door";
+												};
+											};
+											class Item13
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1;
+												};
+											};
+											class Item14
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="cover_end_hide";
+												};
+											};
+											class Item15
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1;
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="rhs_decalPlatoon_type";
+					expression="_this setVariable ['rhs_decalPlatoon_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="rhs_decalArmy_type";
+					expression="_this setVariable ['rhs_decalArmy_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="rhs_decalArmy";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', [9],  _this getVariable ['rhs_decalArmy_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="rhs_decalPlatoon";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', [10],  _this getVariable ['rhs_decalPlatoon_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				nAttributes=7;
+			};
+		};
+		class Item765
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3251.8704,48.05899,3465.3982};
+				angles[]={0,1.1971889,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""];}";
+			};
+			id=4981;
+			type="gm_barrel";
+			atlOffset=1.620018;
+		};
+		class Item766
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3252.7571,48.032383,3465.5845};
+				angles[]={0,6.2785034,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""pic\barrel.paa""];}";
+			};
+			id=4982;
+			type="gm_barrel";
+			atlOffset=1.620018;
+		};
+		class Item767
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3281.3992,63.651619,3488.7354};
+				angles[]={6.2747636,3.3768809,6.2788181};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=4989;
+			type="Land_A_CraneCon";
 		};
 	};
 	class Connections
