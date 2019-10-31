@@ -5,7 +5,7 @@ if (player getVariable "wr_isFreeRespawn") exitWith {player setVariable ["wr_wav
 
 INFO("Player countdown done. Starting wave countdown...");
 
-[player, playerSide] remoteExec ["wita_waverespawn_fnc_addToWave",2,false];
+[player, side player] remoteExec ["wita_waverespawn_fnc_addToWave",2,false];
 
 [{
 
@@ -32,6 +32,6 @@ INFO("Player countdown done. Starting wave countdown...");
         player setVariable ["wr_waveCountdownDone", true];
     };
 
-    [playerSide] call wita_waverespawn_fnc_respawnHint;
+    [side player] call wita_waverespawn_fnc_respawnHint;
 
 }, 1, _this] call CBA_fnc_addPerFrameHandler;

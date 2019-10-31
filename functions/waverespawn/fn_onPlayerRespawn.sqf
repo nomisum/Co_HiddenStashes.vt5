@@ -2,7 +2,7 @@
 
 private ["_pos"];
 
-[player,playerSide] remoteExec ["wita_waverespawn_fnc_removeFromWave",2,false];
+[player,side player] remoteExec ["wita_waverespawn_fnc_removeFromWave",2,false];
 
 openMap [false, false];
 [false] call wita_waverespawn_fnc_blockMap;
@@ -19,6 +19,6 @@ player enableSimulation true;
 hint "";
 
 [] call wita_waverespawn_fnc_resetPlayerVars;
-[playerSide] call wita_waverespawn_fnc_respawnSelectorMarker;
+[side player] call wita_waverespawn_fnc_respawnSelectorMarker;
 
 execVM "custom\loadout\equipAsSpecialForce.sqf";

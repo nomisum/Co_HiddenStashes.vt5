@@ -13,13 +13,13 @@ if (player getVariable ["wr_interrupted", false]) exitWith {
     [] call wita_common_fnc_startSpectator;
 
     _explanation = switch (true) do {
-        case (playerSide == WEST && !wita_missionParam_BLUFORRESPAWNENABLED): {"Respawn disabled."};
-        case (playerSide == WEST): {"Commandvehicle destroyed!"};
+        case (side player == WEST && !wita_missionParam_BLUFORRESPAWNENABLED): {"Respawn disabled."};
+        case (side player == WEST): {"Commandvehicle destroyed!"};
         case (!wita_missionParam_OPFORRESPAWNENABLED): {"Respawn disabled."};
         default {"Dealer was killed!"};
     };
     _explanation = parseText format ["<t align='center' size='1.4'>%1</t>", _explanation];
-    [playerSide, _explanation] call wita_waverespawn_fnc_respawnHint;
+    [side player, _explanation] call wita_waverespawn_fnc_respawnHint;
     [{hint ""}, [], 3] call CBA_fnc_waitAndExecute;
 };
 
