@@ -38,15 +38,30 @@ if (visibleWatch) then {
      
     _obj ctrlAnimateModel ["Threat_Level_Source", _output, true];
 
-    private _count = 1 max linearConversion [0, 4, _max, 0.01, 20, true];
+    private _count = 1 max linearConversion [0, 4, _max, 0.1, 20, true];
 
-    if (_count == 1 && random 1 > 0.2) exitWith {};
+    if (_max < 1 && random 1 > 0.2) exitWith {};
+    if (_max < 2 && random 1 > 0.5) exitWith {};
+    if (_max < 3 && random 1 > 0.8) exitWith {};
 
     for "_i" from 1 to _count do {
         [{
             params ["_max"];
-            private _sound = selectRandom [1,2,3,4];
-            playSound format ["geiger_%1_%2", 4 min (ceil (random _max)), _sound];
+            private _soundPick = selectRandom [1,2,3,4];
+            private _soundStrength = 1;
+            if (_max > 1) then {
+                _soundStrength = selectRandom [1,2];
+            };
+            if (_max > 2) then {
+                _soundStrength = selectRandom [2,3];
+            };
+            if (_max > 3) then {
+                _soundStrength = selectRandom [3,4];
+            };
+            
+            private _string = format ["geiger_%1_%2", _soundStrength, _soundPick];
+            // diag_log format ["soundstring %1", _string];
+            playSound _string;
         }, [_max], ((_count/_i)*0.45) + random 0.1] call CBA_fnc_waitAndExecute;
     };
 };

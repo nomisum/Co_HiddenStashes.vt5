@@ -281,7 +281,15 @@ if (!hasInterface) exitWith {};
 ["HS_Ambient", "Play Organ Music", {
     params ["_position", "_object"];
 
-    [_position] remoteExecCall ["HS_spawner_fnc_playOrganMusic",2];
+    private _helper = createVehicle ["Land_ClutterCutter_small_F", _position, [], 0, "CAN_COLLIDE"];
+    [_helper] remoteExecCall ["HS_spawner_fnc_playOrganMusic",2];
+
+    [{
+        params ["_helper"];
+        if (!isNull _helper) then {
+            deleteVehicle _helper;
+        };
+    }, [_helper], 72] call CBA_fnc_waitAndExecute;
 
 }] call zen_custom_modules_fnc_register;
 

@@ -8,7 +8,7 @@ if (!isServer) exitWith {};
 [
     independent, 
     ["ind_task3"], 
-    ["Friedhof aufsuchen", "Friedhof", ""], 
+    ["Friedhof aufsuchen und Minen/AT bergen.", "Friedhof", ""], 
     getMarkerPos "mrk_graveyard",
     1, 
     2, 
