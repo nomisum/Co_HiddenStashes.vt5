@@ -1,7 +1,7 @@
 #include "component.hpp"
 
-switch (side player) do {
-    case (WEST): {
+switch (PLAYERSIDE) do {
+    case (INDEPENDENT): {
         player setVariable ["wr_waitCondition", {!WAVERESPAWNBLU}];
         player setVariable ["wr_interruptCondition", {false}];
         player setVariable ["wr_playersLeft", {WAVERESPAWNPLAYERSLEFTBLU}];

@@ -31,7 +31,7 @@ for [{_h=0}, {_h<3}, {_h=_h+1}] do {
         {
             _nearEnemy = _x;
             if (_checkPos distance2D _nearEnemy < 70) exitWith {_tooCloseFound = true};
-        } forEach (allUnits select {side _x == WEST && alive _x});
+        } forEach (allUnits select {side _x == INDEPENDENT && alive _x});
 
         _sectorID = [_checkPos] call wita_sectors_fnc_getSector;
         _enemySector = !(_sectorID == -1) && !([_sectorID] call wita_sectors_fnc_checkSector);

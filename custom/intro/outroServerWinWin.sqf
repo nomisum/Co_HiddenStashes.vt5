@@ -4,7 +4,7 @@ _pos set [2,40];
 _targetPos set [2,50];
 _endPos set [2,100];
 
-private _vehicle = createVehicle ["RHS_AN2", _pos, [], 0, "FLY"];
+private _vehicle = createVehicle ["RHS_C130J", _pos, [], 0, "FLY"];
 _vehicle setDir (_vehicle getRelDir _targetPos);
 _vehicle setVelocityModelSpace [0, 250, 100];
 _vehicle flyInHeight 100;
@@ -31,20 +31,17 @@ for "_i" from 0 to 30 do {
 };
 
 for "_i" from 0 to 4 do {
-     private _offroad = "I_E_Offroad_01_comms_F" createVehicle getMarkerPos "mrk_russia";
-     _offroad setDir (Random 360);
-     createVehicleCrew _offroad;
-     _offroad setPilotLight true;
-     _offroad animate ["BeaconsStart", 1];
-     _offroad animate ["Beacons", 1];
-     _offroad animate ["StartBeaconLight", 1];
+     private _vehicle = "rhs_tigr_msv" createVehicle getMarkerPos "mrk_russia";
+     _vehicle setDir (Random 360);
+     createVehicleCrew _vehicle;
+     _vehicle setPilotLight true;
      {
         [_x] call HS_spawner_fnc_equipWithGasMask;
          moveOut _x;
          unassignVehicle _x;
-     } forEach crew _offroad;
+     } forEach crew _vehicle;
 };
 
-// playSound3D ["rhsgref\addons\rhsgref_air\AN2\data\sound\AN2_engine_low_ext.wss", _vehicle, false, getPos _vehicle, 1,1,0];
 
-[[_vehicle, _targetPos, _zombie], "custom\intro\outroClientWin.sqf"] remoteExec ["BIS_fnc_execVM", 0];
+
+[[_vehicle, _targetPos, _zombie], "custom\intro\outroClientWinWin.sqf"] remoteExec ["BIS_fnc_execVM", 0];

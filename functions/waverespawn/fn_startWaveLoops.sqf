@@ -2,7 +2,7 @@
 
 //BLUFOR =======================================================================
 [{
-    ["WAVERESPAWNSTATUSBLU",[WEST] call wita_waverespawn_fnc_getStatus] call CBA_fnc_publicVariable;
+    ["WAVERESPAWNSTATUSBLU",[INDEPENDENT] call wita_waverespawn_fnc_getStatus] call CBA_fnc_publicVariable;
 
     //dont execute while respawning is possible
     if (WAVERESPAWNBLU) exitWith {};
@@ -16,8 +16,8 @@
     };
 
     //enable respawning when wave is full
-    if (["WEST"] call wita_waverespawn_fnc_canRespawn) then {
-        _newGroups = [WEST] call wita_waverespawn_fnc_organizeInGroup;
+    if (["INDEPENDENT"] call wita_waverespawn_fnc_canRespawn) then {
+        _newGroups = [INDEPENDENT] call wita_waverespawn_fnc_organizeInGroup;
         {
             _x call wita_waverespawn_fnc_autoChooseRespawn;
             false
@@ -28,7 +28,7 @@
         INFO("Respawning now possible for Blufor.");
 
         [{
-            _newGroups = [WEST] call wita_waverespawn_fnc_organizeInGroup;
+            _newGroups = [INDEPENDENT] call wita_waverespawn_fnc_organizeInGroup;
             {
                 _x call wita_waverespawn_fnc_autoChooseRespawn;
                 false

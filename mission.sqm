@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=129;
 	class ItemIDProvider
 	{
-		nextID=5035;
+		nextID=5038;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5126.0835,30.504507,2395.5833};
-		dir[]={0.13522503,-0.62482458,0.76903582};
-		up[]={0.10820966,0.78075552,0.6153965};
-		aside[]={0.98493779,-4.5952038e-007,-0.17318805};
+		pos[]={3694.259,28.451763,536.979};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -246,13 +246,14 @@ addons[]=
 	"CUP_CAStructures_A_CraneCon",
 	"CUP_CAStructuresLand_Ind_Stack_Big",
 	"rhs_c_a2port_car",
-	"CUP_Editor_Buildings_Config"
+	"CUP_Editor_Buildings_Config",
+	"RHS_US_A2_AirImport"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=124;
+		items=125;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -1036,6 +1037,13 @@ class AddonsMetaData
 		{
 			className="CUP_Editor_Buildings_Config";
 			name="CUP_Editor_Buildings_Config";
+		};
+		class Item124
+		{
+			className="RHS_US_A2_AirImport";
+			name="RHSUSF A2 Air Ports";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
 		};
 	};
 };
@@ -2801,7 +2809,7 @@ class CustomAttributes
 																"BOOL"
 															};
 														};
-														value=0;
+														value=1;
 													};
 												};
 												class Item1
@@ -3615,7 +3623,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=776;
+		items=777;
 		class Item0
 		{
 			dataType="Marker";
@@ -4207,7 +4215,7 @@ class Mission
 			};
 			id=975;
 			type="Land_FieldToilet_F";
-			atlOffset=0.0065765381;
+			atlOffset=0.0065498352;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47573,7 +47581,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; this setVariable [""HS_isTranslator"", true]; }; }";
+						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; this setVariable [""HS_isTranslator"", true, true]; };}";
 						description="Translator (Handgun only)";
 						isPlayable=1;
 					};
@@ -48323,7 +48331,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; this setVariable [""HS_isTranslator"", true]; }; }";
+						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; this setVariable [""HS_isTranslator"", true, true]; };}";
 						description="Translator (Handgun only)";
 						isPlayable=1;
 					};
@@ -49074,7 +49082,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; this setVariable [""HS_isTranslator"", true]; }; }";
+						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; this setVariable [""HS_isTranslator"", true, true]; };}";
 						description="Translator (Handgun only)";
 						isPlayable=1;
 					};
@@ -49825,7 +49833,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; this setVariable [""HS_isTranslator"", true]; }; }";
+						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; this setVariable [""HS_isTranslator"", true, true]; };}";
 						description="Translator (Handgun only)";
 						isPlayable=1;
 					};
@@ -87213,7 +87221,7 @@ class Mission
 			};
 			id=5029;
 			type="land_gm_euro_furniture_shelf_09";
-			atlOffset=0.55000019;
+			atlOffset=0.55051231;
 		};
 		class Item771
 		{
@@ -87229,7 +87237,7 @@ class Mission
 			};
 			id=5030;
 			type="land_gm_euro_furniture_shelf_09";
-			atlOffset=0.55000019;
+			atlOffset=0.55051231;
 		};
 		class Item772
 		{
@@ -87293,6 +87301,86 @@ class Mission
 			};
 			id=5034;
 			type="CUP_Dhangar_knihovna";
+		};
+		class Item776
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={169.08788,26.034838,679.21808};
+				angles[]={0,2.6267729,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+				reportOwnPosition=1;
+			};
+			id=5036;
+			type="RHS_C130J";
+			atlOffset=-0.042976379;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit"",""Medikit""],[2,20,4]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[30,8,2,2,4]],[[""ToolKit""],[1]],[[""B_Parachute""],[14]]],false]";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="door_1";
+					expression="_this animateDoor ['door_1',_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=3;
+			};
 		};
 	};
 	class Connections

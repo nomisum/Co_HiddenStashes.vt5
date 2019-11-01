@@ -4,7 +4,7 @@ params ["_group","_pos"];
 
 _group setVariable ["wita_waverespawn_groupIsRespawned",true,true];
 
-if (side _group == WEST) then {
+if (side _group == INDEPENDENT) then {
     {
         [{
             params ["_unit","_pos"];

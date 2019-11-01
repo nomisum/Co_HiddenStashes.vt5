@@ -3,7 +3,7 @@ private _offroad = objNull;
 [] spawn {
     for "_i" from 0 to 40 do {
         _zombie = [getMarkerPos "mrk_russia", east, "fast"] call HS_spawner_fnc_spawnDemon;
-        sleep 1;
+        sleep 0.5;
     };
 };
 

@@ -2,7 +2,7 @@
 
 params ["_searchPos", "_searchDistance", "_originalSide"];
 
-_allRespawnObjects = if (_originalSide == "WEST") then {missionNamespace getVariable ["wita_cv_allCVs",[]]} else {[wita_DEALER]};
+_allRespawnObjects = if (_originalSide == "INDEPENDENT") then {missionNamespace getVariable ["wita_cv_allCVs",[]]} else {[wita_DEALER]};
 
 _nearestDistance = 999999;
 _nearestObject = objNull;

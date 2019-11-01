@@ -3,7 +3,7 @@
 params ["_unit","_side"];
 
 switch (_side) do {
-    case (WEST): {
+    case (INDEPENDENT): {
         if (_unit in deadPlayersBlu) then {
             deadPlayersBlu deleteAt (([deadPlayersBlu,_unit] call BIS_fnc_arrayFindDeep) select 0);
             INFO_1("Player %1 respawned and has been removed from deadPlayersBlu.", name _unit);
@@ -17,7 +17,7 @@ switch (_side) do {
         };
     };
 
-    default {ERROR_1("Player %1 is neither WEST nor EAST.", name _unit)};
+    default {ERROR_1("Player %1 is neither INDEPENDENT nor EAST.", name _unit)};
 };
 
 [{

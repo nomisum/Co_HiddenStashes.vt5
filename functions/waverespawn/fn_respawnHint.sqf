@@ -9,6 +9,7 @@ _lineBreak = parseText "<br />";
 if (isNil "_status") then {
     _status = switch (_side) do {
         case (WEST): {WAVERESPAWNSTATUSBLU};
+        case (INDEPENDENT): {WAVERESPAWNSTATUSBLU};
         case (EAST): {WAVERESPAWNSTATUSOPF};
         default {"ERROR - UNKOWN SIDE"};
     };

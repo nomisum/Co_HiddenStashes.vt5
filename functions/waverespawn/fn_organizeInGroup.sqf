@@ -2,7 +2,7 @@
 
 params ["_side"];
 
-_deadPlayers = if (_side == WEST) then {deadPlayersBlu} else {deadPlayersOpf};
+_deadPlayers = if (_side == INDEPENDENT) then {deadPlayersBlu} else {deadPlayersOpf};
 _deadPlayersGroup = createGroup _side;
 _deadPlayers joinSilent _deadPlayersGroup;
 _deadPlayers resize 0;

@@ -3,8 +3,6 @@ params ["_vehicle", "_targetPos", "_zombie", "_isLost"];
 cutText ["","BLACK OUT", 5];
 sleep 5;
 
-setViewDistance 2500;
-setObjectViewDistance 2000;
 // remove mask overlay and breathing sounds
 player setVariable ["cbrn_mask_on", false, true];
 cbrn_mask_abberation ppEffectEnable true;
@@ -15,6 +13,9 @@ terminate cbrn_breath_handle;
 
 // clear any CBRN zones for outro
 player setVariable ["cbrn_zones", []];
+
+setViewDistance 2500;
+setObjectViewDistance 2000;
 
 cutText ["","BLACK IN", 5];
 

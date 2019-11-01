@@ -13,7 +13,7 @@ if (_oldHandle > 0) then {
 deleteMarkerLocal "wita_respawnSelectorMarker";
 
 
-if (_side == WEST) then {
+if (_side == INDEPENDENT) then {
     if (isNil "_selected") then {_selected = objNull};
 
     if (isNull _selected || !(_selected getVariable ["wita_respawnObject_isActive", false])) exitWith {
@@ -32,7 +32,7 @@ if (_side == WEST) then {
         _args params ["_marker","_selected"];
 
         if !(_selected getVariable ["wita_respawnObject_isActive", false]) exitWith {
-            [WEST,objNull] call wita_waverespawn_fnc_respawnSelectorMarker;
+            [INDEPENDENT,objNull] call wita_waverespawn_fnc_respawnSelectorMarker;
         };
 
         _marker setMarkerPosLocal (getPos _selected);

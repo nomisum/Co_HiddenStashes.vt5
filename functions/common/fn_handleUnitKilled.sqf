@@ -6,7 +6,7 @@ if (!local _unit) exitWith {};
 
 private _dmgSource = _unit getVariable ["ACE_medical_lastDamageSource",_unit];
 private _dmgSide = side (group _dmgSource);
-private _unitSide = if (_unit == player) then {side player} else {side (group _unit)};
+private _unitSide = if (_unit == player) then {PLAYERSIDE} else {side (group _unit)};
 private _params = [_unit,_unitSide,player == _unit,_dmgSource,_dmgSide,isPlayer _killer,CBA_missionTime];
 
 

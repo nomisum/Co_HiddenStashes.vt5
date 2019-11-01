@@ -10,14 +10,14 @@ if !(isClass _cfgOpticsModes) exitWith {};
 
 //check if scope is in sniper scopes
 if (isNil "wita_caches_sniperScopes") then {
-    wita_caches_sniperScopes = [missionConfigFile >> "cfgCacheContents","sniperScopesWest",[]] call BIS_fnc_returnConfigEntry;
+    wita_caches_sniperScopes = [missionConfigFile >> "cfgCacheContents","sniperScopesINDEPENDENT",[]] call BIS_fnc_returnConfigEntry;
     wita_caches_sniperScopes append ([missionConfigFile >> "cfgCacheContents","sniperScopesEast",[]] call BIS_fnc_returnConfigEntry);
 };
 if !(_itemType in wita_caches_sniperScopes) exitWith {};
 
 //check if weapon is allowed to have magnifying
 if (isNil "wita_caches_snipers") then {
-    wita_caches_snipers = [missionConfigFile >> "cfgCacheContents","sniperWest",[]] call BIS_fnc_returnConfigEntry;
+    wita_caches_snipers = [missionConfigFile >> "cfgCacheContents","sniperINDEPENDENT",[]] call BIS_fnc_returnConfigEntry;
     wita_caches_snipers append ([missionConfigFile >> "cfgCacheContents","sniperEast",[]] call BIS_fnc_returnConfigEntry);
 };
 if ((primaryWeapon _unit) in wita_caches_snipers) exitWith {};

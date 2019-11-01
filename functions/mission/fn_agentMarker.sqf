@@ -43,9 +43,9 @@ _agent setVariable ["wita_mission_currentAgentMarkerInterval",_markerIntervalMin
     private _markerPos = [getPos _agent,[0,_currentVariance],[0,360],""] call wita_common_fnc_findRandomPos;
 
 
-    // [_markerPos] remoteExec ["wita_mission_fnc_showTracker",WEST,false];
+    // [_markerPos] remoteExec ["wita_mission_fnc_showTracker",INDEPENDENT,false];
 
-    [_agent, _markerPos, _currentVariance, _cumulatedAddedDistance, _currentFadeout] remoteExec ["WITA_mission_fnc_createMarkerLocal", west];
+    [_agent, _markerPos, _currentVariance, _cumulatedAddedDistance, _currentFadeout] remoteExec ["WITA_mission_fnc_createMarkerLocal", INDEPENDENT];
 
 } , 1, [_agent,_markerVarianceDefault,_markerIntervalMin,_markerIntervalRandom,_markerFadeoutDefault,_markerVarianceBase,_markerIntervalBase,_markerFadeoutBase]] call CBA_fnc_addPerFrameHandler;
 

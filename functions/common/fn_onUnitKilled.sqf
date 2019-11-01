@@ -15,7 +15,7 @@ if (_killerSide == INDEPENDENT) then {
         [_pointsForCivKill,_agentUID] call wita_mission_fnc_addPoints;
     };
 
-    if (_victimSide == WEST) then {
+    if (_victimSide == INDEPENDENT) then {
         _pointsForBluKill = [missionConfigFile >> "cfgMission","pointsForBluKill",0] call BIS_fnc_returnConfigEntry;
         [_pointsForBluKill,_agentUID] call wita_mission_fnc_addPoints;
     };

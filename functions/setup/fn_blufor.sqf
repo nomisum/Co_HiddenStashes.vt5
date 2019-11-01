@@ -10,18 +10,18 @@ INFO_1("BLUFOR will spawn in %1m distance.",_spawnDistance);
 
 private _startPosition = [0,0,0];
 while {_startPosition isEqualTo [0,0,0] || isOnRoad _startPosition || !([_startPosition] call wita_common_fnc_isInsideMap)} do {
-    _startPosition = [_indepPos,[_spawnDistance,_spawnDistance+_spawnVariance],[0,360],"CUP_A2_wf_uav_terminal_west"] call wita_common_fnc_findRandomPos;
+    _startPosition = [_indepPos,[_spawnDistance,_spawnDistance+_spawnVariance],[0,360],"CUP_A2_wf_uav_terminal_INDEPENDENT"] call wita_common_fnc_findRandomPos;
     _startPosition = [_startPosition, 0, 50, 10, 0, 0.065, 0, [], [[0,0,0],[0,0,0]]] call BIS_fnc_findSafePos;
 };
 */
 private _startPosition = getMarkerPos "mrk_blufor_hq";
 
-private _baseTerminal = "CUP_A2_wf_uav_terminal_west" createVehicle [0,0,0];
+private _baseTerminal = "CUP_A2_wf_uav_terminal_INDEPENDENT" createVehicle [0,0,0];
 _baseTerminal setDir random 360;
 _baseTerminal setPos _startPosition;
 [_baseTerminal] remoteExec ["wita_setup_fnc_bluforBuyAction",0,true];
 
-"respawn_west" setMarkerPos (_startPosition vectorAdd [10,0,0]);
+"respawn_INDEPENDENT" setMarkerPos (_startPosition vectorAdd [10,0,0]);
 // "respawn_guerrila" setMarkerPos (_startPosition vectorAdd [10,0,0]);
 
 //create area
@@ -30,8 +30,8 @@ WITA_BLUFORBASEAREA setTriggerArea [_baseAreaSize,_baseAreaSize,0,false];
 
 /*
 //create markers
-["wita_blufor_startPosition",_startPosition,"ICON",[1,1],"PERSIST","TYPE:","b_hq","COLOR:","COLORWEST"] call CBA_fnc_createMarker;
-["wita_blufor_baseArea",_startPosition,"ELLIPSE",[_baseAreaSize,_baseAreaSize],"PERSIST","BRUSH:","Border","COLOR:","COLORWEST"] call CBA_fnc_createMarker;
+["wita_blufor_startPosition",_startPosition,"ICON",[1,1],"PERSIST","TYPE:","b_hq","COLOR:","COLORINDEPENDENT"] call CBA_fnc_createMarker;
+["wita_blufor_baseArea",_startPosition,"ELLIPSE",[_baseAreaSize,_baseAreaSize],"PERSIST","BRUSH:","Border","COLOR:","COLORINDEPENDENT"] call CBA_fnc_createMarker;
 */
 missionNamespace setVariable ["WITA_SETUP_BLUFORDONE",true,true];
 

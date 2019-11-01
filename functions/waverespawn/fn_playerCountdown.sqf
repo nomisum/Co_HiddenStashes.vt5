@@ -29,7 +29,7 @@ INFO("Starting player countdown...");
 
     _playerTimeLeft = (player getVariable "wr_playerRespawnTimeLeft") - 1;
     player setVariable ["wr_playerRespawnTimeLeft", _playerTimeLeft];
-    [side player,"Waiting for player-countdown."] call wita_waverespawn_fnc_respawnHint;
+    [PLAYERSIDE,"Waiting for player-countdown."] call wita_waverespawn_fnc_respawnHint;
 
     if (_playerTimeLeft <= 0) exitWith {
         [_this select 1] call CBA_fnc_removePerFrameHandler;

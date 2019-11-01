@@ -3,9 +3,9 @@
 params ["_indepPos","_bluforPos"];
 
 // [_indepPos,INDEPENDENT] call wita_setup_fnc_teleportSide;
-// [_bluforPos,WEST] call wita_setup_fnc_teleportSide;
+// [_bluforPos,INDEPENDENT] call wita_setup_fnc_teleportSide;
 
-[WEST] call wita_setup_fnc_setMoney;
+[INDEPENDENT] call wita_setup_fnc_setMoney;
 // [] call wita_setup_fnc_createTasks;
 [] call wita_mission_fnc_unlockBluforVehicles;
 
