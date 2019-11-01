@@ -2,6 +2,8 @@ params ["_vehicle"];
 
 cutText ["","BLACK OUT", 5];
 sleep 5;
+setViewDistance 2500;
+setObjectViewDistance 2000;
 cutText ["","BLACK IN", 5];
 
 playSound "outro";

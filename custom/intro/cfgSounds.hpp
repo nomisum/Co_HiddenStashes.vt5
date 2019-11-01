@@ -52,7 +52,11 @@ class radiotransmission
 {
     name = "radiotransmission";
     sound[] = {"custom\intro\radiotransmission.ogg", 0.5, 1, 4};
-    titles[] = { 1, "This is Egor. Is anyone listening? I am trapped at the scrapyard. The dead are everywhere... Please. If anyone hears this, help me at the scrapyard. I can offer you ammunition, oxygen... even an AT launcher." };
+    titles[] = { 
+        0, "This is Lee-Gor. Is anyone listening? I am trapped at the scrapyard.",
+        6, "The dead are everywhere... Please. If anyone hears this, help me at the scrapyard.?!",
+        14, "I can offer you ammunition, oxygen... even an AT launcher." 
+    };
 };
 
 

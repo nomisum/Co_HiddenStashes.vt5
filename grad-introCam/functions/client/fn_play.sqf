@@ -31,11 +31,17 @@ player setVariable ["tf_voiceVolume", 1, true];
 STHud_UIMode = 1;
 diwako_dui_main_toggled_off = false;
 
+[true] call cbrn_fnc_init;
+
 10 fadeSound 0;
 sleep 10;
 
-playSound "";
+// try to delete sound // playsound 
+private _sound = ASLToAGL [0,0,0] nearestObject "#soundonvehicle";
+if (!isNull _sound) then {
+	deleteVehicle _sound;
+};
+
 10 fadeSound 1;
 
-[true] call cbrn_fnc_init;
 ["cba_events_loadoutEvent", [player, getUnitLoadout player]] call CBA_fnc_localEvent; // fake event to trigger gasmask stuff
