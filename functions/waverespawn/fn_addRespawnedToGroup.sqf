@@ -37,7 +37,7 @@ _allGroupNames = [
 
 //check player side
 if (_side == "UNKNOWN") exitWith {INFO_1("Player %1's side is unknown.", _player)};
-if (_side == "INDEPENDENT") then {
+if (_side == "INDEPENDENT" || _side == "WEST") then {
     newBluSpawns pushBack _player;
 };
 

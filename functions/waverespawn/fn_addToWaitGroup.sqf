@@ -2,7 +2,7 @@
 
 params ["_side","_unit"];
 
-if (_side == INDEPENDENT) then {
+if (_side == INDEPENDENT || _side == WEST) then {
     if (isNull DEADPLAYERSBLU_GROUP) then {
         DEADPLAYERSBLU_GROUP = createGroup civilian;
         publicVariable "DEADPLAYERSBLU_GROUP";
