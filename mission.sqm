@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=5019;
+		nextID=5035;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3152.7122,20.44862,2189.4026};
-		dir[]={0.72455311,-0.57407022,0.38147593};
-		up[]={0.50798768,0.8187865,0.26745272};
-		aside[]={0.46588585,-1.7508864e-007,-0.88487971};
+		pos[]={5126.0835,30.504507,2395.5833};
+		dir[]={0.13522503,-0.62482458,0.76903582};
+		up[]={0.10820966,0.78075552,0.6153965};
+		aside[]={0.98493779,-4.5952038e-007,-0.17318805};
 	};
 };
 binarizationWanted=0;
@@ -245,13 +245,14 @@ addons[]=
 	"A3_Structures_F_Mil_Fortification",
 	"CUP_CAStructures_A_CraneCon",
 	"CUP_CAStructuresLand_Ind_Stack_Big",
-	"rhs_c_a2port_car"
+	"rhs_c_a2port_car",
+	"CUP_Editor_Buildings_Config"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=123;
+		items=124;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -1030,6 +1031,11 @@ class AddonsMetaData
 			name="A2 ported cars";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
+		};
+		class Item123
+		{
+			className="CUP_Editor_Buildings_Config";
+			name="CUP_Editor_Buildings_Config";
 		};
 	};
 };
@@ -3609,7 +3615,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=766;
+		items=776;
 		class Item0
 		{
 			dataType="Marker";
@@ -87128,6 +87134,165 @@ class Mission
 			};
 			id=5017;
 			atlOffset=0.00012397766;
+		};
+		class Item766
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5142.0615,12.145661,2411.3875};
+				angles[]={-0,1.9661034,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5021;
+			type="land_gm_euro_furniture_chair_01";
+		};
+		class Item767
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5141.9609,12.145661,2412.7371};
+				angles[]={-0,1.167443,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5022;
+			type="land_gm_euro_furniture_chair_01";
+		};
+		class Item768
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5140.5073,12.577129,2412.2966};
+				angles[]={-0,0.68203944,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5026;
+			type="Land_SurvivalRadio_F";
+		};
+		class Item769
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5140.248,12.070314,2412.4722};
+				angles[]={-0,3.9499347,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5027;
+			type="Land_CampingTable_white_F";
+		};
+		class Item770
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5146.1724,11.602782,2416.6975};
+				angles[]={0,0.73829168,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5029;
+			type="land_gm_euro_furniture_shelf_09";
+			atlOffset=0.55000019;
+		};
+		class Item771
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5145.606,11.642488,2417.1985};
+				angles[]={0,0.73829168,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5030;
+			type="land_gm_euro_furniture_shelf_09";
+			atlOffset=0.55000019;
+		};
+		class Item772
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5139.7432,14.015878,2415.5273};
+				angles[]={0,5.5783029,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5031;
+			type="land_gm_euro_furniture_clock_01";
+			atlOffset=2.3571157;
+		};
+		class Item773
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5146.1782,11.574177,2415.833};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5032;
+			type="CUP_flower_02";
+			atlOffset=0.55000019;
+		};
+		class Item774
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5145.2539,12.497087,2412.1909};
+				angles[]={0,5.5860653,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=5033;
+			type="CUP_picture_f";
+			atlOffset=0.83832455;
+		};
+		class Item775
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5144.3809,11.658762,2411.8137};
+				angles[]={-0,2.3689489,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5034;
+			type="CUP_Dhangar_knihovna";
 		};
 	};
 	class Connections

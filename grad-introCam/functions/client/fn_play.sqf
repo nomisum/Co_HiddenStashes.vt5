@@ -23,7 +23,7 @@ _camera cameraeffect ["terminate", "back"];
 camDestroy _camera;
 
 
-
+[1] call acre_api_fnc_setGlobalVolume;
 
 titleText ["", "BLACK IN", 0];
 player setVariable ["tf_voiceVolume", 1, true];
@@ -33,8 +33,10 @@ diwako_dui_main_toggled_off = false;
 
 [true] call cbrn_fnc_init;
 
-10 fadeSound 0;
-sleep 10;
+5 fadeSound 0;
+sleep 5;
+
+
 
 // try to delete sound // playsound 
 private _sound = ASLToAGL [0,0,0] nearestObject "#soundonvehicle";
