@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=532;
+		nextID=558;
 	};
 	class Camera
 	{
@@ -1098,7 +1098,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=39;
+									items=41;
 									class Item0
 									{
 										class data
@@ -1645,6 +1645,34 @@ class CustomAttributes
 											value="diwako_dui_indicators_show";
 										};
 									};
+									class Item39
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="diwako_dui_main_hide_ui_by_default";
+										};
+									};
+									class Item40
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="diwako_dui_namelist";
+										};
+									};
 								};
 							};
 						};
@@ -1661,7 +1689,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=39;
+									items=41;
 									class Item0
 									{
 										class data
@@ -3417,6 +3445,96 @@ class CustomAttributes
 											};
 										};
 									};
+									class Item39
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item40
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
 								};
 							};
 						};
@@ -4083,7 +4201,7 @@ class Mission
 			};
 			id=975;
 			type="Land_FieldToilet_F";
-			atlOffset=0.0065498352;
+			atlOffset=0.0065765381;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -83861,6 +83979,7 @@ class Mission
 			};
 			id=4813;
 			type="Land_ClutterCutter_medium_F";
+			atlOffset=9.5367432e-007;
 		};
 		class Item633
 		{

@@ -1,4 +1,4 @@
-// if (playerSide == INDEPENDENT) exitWith {[] call wita_common_fnc_startSpectator};
+// if (side player == INDEPENDENT) exitWith {[] call wita_common_fnc_startSpectator};
 
 
 [] call wita_waverespawn_fnc_onPlayerKilled;
