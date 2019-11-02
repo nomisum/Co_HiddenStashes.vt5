@@ -45,7 +45,7 @@ private _allTypes = [
 ];
 
 for "_i" from 0 to 3 do {
-    private _unit = _grpUnit createUnit [selectRAndom _allTypes, _position, [], 0, "NONE"];
+    private _unit = _grpUnit createUnit [selectRandom _allTypes, _position, [], 0, "NONE"];
     _grpUnit setVariable ["ace_map_hideBlueForceMarker", true, true];
     _unit setVariable ["suomen_overwriteRZ", true];
     _unit setVariable ["RZ_isDemon", false];
@@ -60,7 +60,8 @@ for "_i" from 0 to 3 do {
     } count allCurators;
 
     _unit reveal _object;
-    [_unit, _object] spawn RZ_fnc_zombie_feedOnTargetAny;
+    [_unit, "AinvPercMstpSnonWnonDnon"] remoteExecCall ["fnc_RyanZombies_PlayMoveNow"]; 
+    _unit disableAI "ANIM";
 };
 
 _object setDamage 1;

@@ -22,7 +22,7 @@ for "_i" from 0 to (1 max (random 4)) do {
 
      private _item = selectRandom ["RoadBarrier_long", "RoadBarrier_light", "Land_Razorwire_F"] createVehicle _position;
     {
-        _x addCuratorEditableObjects [crew _offroad + _offroad + _item,true];
+        _x addCuratorEditableObjects [(crew _offroad + _offroad + _item),true];
         nil
     } count allCurators;
 
