@@ -52,6 +52,7 @@ class HS_spawner {
 
         class spawnPriest;
         class spawnRussians;
+        class spawnStreetBlock;
         class spawnTranslationBook;
     };
 };

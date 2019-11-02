@@ -3,7 +3,7 @@
 private ["_startPosition"];
 
 private _startPosition = getMarkerPos "mrk_independent_hq"; // [] call wita_setup_fnc_selectStartLocation;
-INFO_1("%1 selected as start location for independent.", _startLocation);
+INFO_1("%1 selected as start location for independent.", _startPosition);
 
 /*
 {

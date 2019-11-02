@@ -50,3 +50,7 @@ player setVariable ["originalSide", "INDEPENDENT", true];
             ["fi"] call acre_api_fnc_babelSetSpokenLanguages;
         };
 }, [], 30] call CBA_fnc_waitAndExecute;
+
+
+player setVehiclePosition [getMarkerPos "mrk_independent_hq", [], 10];
+player setDir (player getRelDir getMarkerPos "mrk_independent_hq");

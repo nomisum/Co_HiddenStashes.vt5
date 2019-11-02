@@ -13,8 +13,8 @@ wita_missionParam_RESPAWNTIME = "RESPAWNTIME" call BIS_fnc_getParamValue;
     if (isServer) then {
         WITA_SCOREARRAY_CURRENT = [[],["UNKNOWN PLAYER","UNKNOWN MAP",0]] call CBA_fnc_hashCreate;
 
-        _indepPos = [] call wita_setup_fnc_independent;
-        _bluforPos = [] call wita_setup_fnc_blufor;
+        private _indepPos = [] call wita_setup_fnc_independent;
+        private _bluforPos = [] call wita_setup_fnc_blufor;
         // [] call wita_setup_fnc_createCustomLocations;
 
         missionNamespace setVariable ["WITA_INDEPPOS",_indepPos,true];

@@ -19,10 +19,10 @@ private _startPosition = getMarkerPos "mrk_blufor_hq";
 private _baseTerminal = "CUP_A2_wf_uav_terminal_INDEPENDENT" createVehicle [0,0,0];
 _baseTerminal setDir random 360;
 _baseTerminal setPos _startPosition;
-[_baseTerminal] remoteExec ["wita_setup_fnc_bluforBuyAction",0,true];
+// [_baseTerminal] remoteExec ["wita_setup_fnc_bluforBuyAction",0,true];
 
-"respawn_INDEPENDENT" setMarkerPos (_startPosition vectorAdd [10,0,0]);
-// "respawn_guerrila" setMarkerPos (_startPosition vectorAdd [10,0,0]);
+"respawn_guerrila" setMarkerPos (_startPosition vectorAdd [10,0,0]);
+"respawn_west" setMarkerPos (_startPosition vectorAdd [10,0,0]);
 
 //create area
 WITA_BLUFORBASEAREA = createTrigger ["EmptyDetector", _startPosition, false];

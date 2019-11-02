@@ -271,6 +271,20 @@ if (!hasInterface) exitWith {};
 
 }] call zen_custom_modules_fnc_register;
 
+["HS_Police", "Spawn Road Block WEST", {
+    params ["_position", "_object"];
+
+    [_position, WEST] remoteExecCall ["HS_spawner_fnc_spawnStreetBlock",2];
+
+}] call zen_custom_modules_fnc_register;
+
+["HS_Police", "Spawn Road Block EAST", {
+    params ["_position", "_object"];
+    
+    [_position, EAST] remoteExecCall ["HS_spawner_fnc_spawnStreetBlock",2];
+
+}] call zen_custom_modules_fnc_register;
+
 ["HS_Ambient", "Equip Unit with Gasmask", {
     params ["_position", "_object"];
 

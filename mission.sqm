@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=5064;
+		nextID=5071;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2531.0298,26.580191,2012.022};
-		dir[]={0.26319793,-0.5464583,0.79515457};
-		up[]={0.17173037,0.83744824,0.51882029};
-		aside[]={0.94941777,-9.1106631e-007,-0.31425947};
+		pos[]={3135.5642,32.908386,1746.5891};
+		dir[]={0.74366033,-0.56991172,-0.34982389};
+		up[]={0.51575637,0.82165408,-0.24261658};
+		aside[]={-0.42570418,-5.0480594e-007,-0.90496677};
 	};
 };
 binarizationWanted=0;
@@ -3623,7 +3623,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=800;
+		items=801;
 		class Item0
 		{
 			dataType="Marker";
@@ -87735,17 +87735,34 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2525.8518,18.735573,2027.4626};
-				angles[]={0,3.1732793,0};
+				position[]={2525.022,20.306059,2026.094};
+				angles[]={0,3.0736296,0};
 			};
 			side="Empty";
-			flags=1;
+			flags=5;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=5064;
+			type="Land_LampShabby_F";
+			atlOffset=-1.9073486e-006;
+		};
+		class Item800
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2711.2151,18.36796,1995.2722};
+				angles[]={6.0885487,3.2025669,0.01557166};
+			};
+			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
-			id=5063;
-			type="land_gm_ge_lamp_06_02";
-			atlOffset=0.59139633;
+			id=5069;
+			type="rhs_magazine_rhs_30Rnd_545x39_7N6_green_AK";
 		};
 	};
 	class Connections
