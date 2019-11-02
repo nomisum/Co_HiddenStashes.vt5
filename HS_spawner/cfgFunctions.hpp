@@ -34,6 +34,7 @@ class HS_spawner {
         class loadoutRussian;
 
         class playOrganMusic;
+        class policeFeed;
         
         class spawnCivilians;
         class spawnCiviliansCrowd;

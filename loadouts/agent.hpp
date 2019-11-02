@@ -83,10 +83,10 @@ class agent {
             backpack = "ga_dlc_low_messenger_coyote_medic";
             addItemsToVest[] = {};
             addItemsToBackpack[] = { 
-                LIST_30("ACE_fieldDressing"),
+                LIST_20("ACE_fieldDressing"),
                 LIST_10("ACE_morphine"),
                 LIST_10("ACE_epinephrine"),
-                LIST_4("ACE_bloodIV_250")
+                LIST_2("ACE_bloodIV_250")
             };
         };
 

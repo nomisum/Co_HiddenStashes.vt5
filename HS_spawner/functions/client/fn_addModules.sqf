@@ -282,7 +282,7 @@ if (!hasInterface) exitWith {};
     params ["_position", "_object"];
 
     private _helper = createVehicle ["Land_ClutterCutter_small_F", _position, [], 0, "CAN_COLLIDE"];
-    [_helper] remoteExecCall ["HS_spawner_fnc_playOrganMusic",2];
+    [_helper] remoteExec ["HS_spawner_fnc_playOrganMusic",2];
 
     [{
         params ["_helper"];
