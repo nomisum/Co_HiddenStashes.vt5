@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=636;
+		nextID=662;
 	};
 	class Camera
 	{
-		pos[]={3659.5476,30.25654,1043.0944};
-		dir[]={0.39705056,-0.62685543,0.67047846};
-		up[]={0.31942889,0.77910405,0.53940177};
-		aside[]={0.86049938,-2.0151492e-007,-0.50958049};
+		pos[]={3581.9109,50.445099,1491.2809};
+		dir[]={0.10686981,-0.60950232,-0.78556186};
+		up[]={0.082161158,0.79277962,-0.60393971};
+		aside[]={-0.99087822,2.0200969e-007,-0.13480051};
 	};
 };
 binarizationWanted=0;
@@ -46889,7 +46889,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{if (local this) then { this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
+				init="call{this setVariable [""ace_map_hideBlueForceMarker"", true];}";
 				combatMode="BLUE";
 				behaviour="CARELESS";
 			};
@@ -47639,7 +47639,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{if (local this) then { this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
+				init="call{this setVariable [""ace_map_hideBlueForceMarker"", true];}";
 				behaviour="CARELESS";
 				speedMode="LIMITED";
 			};
@@ -49140,7 +49140,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{if (local this) then { this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
+				init="call{this setVariable [""ace_map_hideBlueForceMarker"", true];}";
 				behaviour="CARELESS";
 				speedMode="LIMITED";
 			};
@@ -49891,7 +49891,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{if (local this) then { this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
+				init="call{this setVariable [""ace_map_hideBlueForceMarker"", true];}";
 				behaviour="CARELESS";
 				speedMode="LIMITED";
 			};
@@ -87822,7 +87822,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
-				init="call{if (isServer) then { [this] call HS_spawner_fnc_spawnPoliceCar; this limitSpeed 21; this allowDamage false; };}";
+				init="call{if (isServer) then { [this] call HS_spawner_fnc_spawnPoliceCar; this limitSpeed 24; this allowDamage false; };}";
 			};
 			id=5073;
 			type="B_GEN_Offroad_01_gen_F";

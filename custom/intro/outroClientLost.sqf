@@ -64,7 +64,7 @@ _ctrlTWO ctrlSetPosition [
 ];
 
 
-_ctrlTWO ctrlSetStructuredText parseText "<t size='1' shadow='0' font='EtelkaMonospaceProBold' align='center' color='#ffffffff'>Mission erfolgreich!</t>";
+_ctrlTWO ctrlSetStructuredText parseText "<t size='1' shadow='0' font='EtelkaMonospaceProBold' align='center' color='#ffffffff'>Mission failed!</t>";
 _ctrlTWO ctrlSetBackgroundColor [0, 0, 0, 0]; 
 _ctrlTWO ctrlSetFade 1;
 _ctrlTWO ctrlCommit 0;
