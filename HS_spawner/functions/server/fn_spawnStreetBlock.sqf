@@ -20,9 +20,9 @@ for "_i" from 0 to (1 max (random 4)) do {
      _offroad animate ["StartBeaconLight", 1];
      _offroad setVehicleLock "LOCKED";
 
-     private _item = selectRandom ["RoadBarrier_long", "RoadBarrier_light", "Land_Razorwire_F"] createVehicle _position;
+     private _item = createVehicle [selectRandom ["RoadBarrier_long", "RoadBarrier_light", "Land_Razorwire_F"], _position, [], 10, "NONE"];
     {
-        _x addCuratorEditableObjects [(crew _offroad + _offroad + _item),true];
+        _x addCuratorEditableObjects [[_offroad, _item],true];
         nil
     } count allCurators;
 
