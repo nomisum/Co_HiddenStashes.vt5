@@ -27,3 +27,11 @@ Ryanzombiescanthrowtank = 1;
 Ryanzombiesfeed = 1;
 ryanzombiescivilianattacks = true;
 Ryanzombieslogicroam = 1;
+
+{
+    if (side _x == independent) then {
+        _x setVariable ["ace_map_hideBlueForceMarker", true, true];
+    } else {
+        _x setVariable ["ace_map_hideBlueForceMarker", false, true];
+    };
+} forEach allGroups;
