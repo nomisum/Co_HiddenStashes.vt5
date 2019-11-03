@@ -53,8 +53,9 @@ if (_actualThreat < 1) exitWith {
 
 
 private _effectStrength = _actualThreat / 5;
+private _customMultiplicator = 0.1; // dont die so fast from wrong loadout
 
-_curDamage = _curDamage + (_actualThreat * _delta);
+_curDamage = _curDamage + (_actualThreat * _delta * _customMultiplicator);
 _unit setVariable ["cbrn_damage", _curDamage];
 
 if (alive _unit && {_curDamage > _maxDamage}) exitWith {
