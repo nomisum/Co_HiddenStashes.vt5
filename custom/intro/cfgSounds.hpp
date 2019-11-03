@@ -73,3 +73,10 @@ class outro
     sound[] = {"custom\intro\outro.ogg", 0.5, 1, 4};
     titles[] = {};
 };
+
+class policesiren
+{
+    name = "policesiren";
+    sound[] = {"custom\intro\policesiren.ogg", 0.5, 1, 4};
+    titles[] = {};
+};
