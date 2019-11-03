@@ -29,12 +29,12 @@ class cfgMission {
     };
 
     timeBeforeFirstTrack = 1;
-    agentMarkerInterval[] = {3,3};
+    agentMarkerInterval[] = {180,180};
     agentMarkerVariance = 100;
     agentMarkerFadeout = 3;
     agentMarkerIntervalBase = 1.1;
     agentMarkerVarianceBase = 10;
-    agentMarkerFadeoutBase = 10;
+    agentMarkerFadeoutBase = 180;
 
     indepStartVehicles[] = {
         "I_Quadbike_01_F"
