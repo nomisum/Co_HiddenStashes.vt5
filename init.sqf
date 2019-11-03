@@ -21,12 +21,32 @@ TFAR_fnc_activeLRRadio = {""};
 
 ryanzombiesglow = 1;
 ryanzombiesstartinganim = 1;
+
 Ryanzombiescanthrowdemon = 1;
-Ryanzombiescanthrowdistancedemon = 30;
+
+Ryanzombiescanthrow = 1;
+Ryanzombiescanthrowdistance = 20;
+
+Ryanzombiescanthrowtankdistance = 1;
+
+Ryanzombiescanthrowdistancedemon = 150;
 Ryanzombiescanthrowtank = 1;
+
 Ryanzombiesfeed = 1;
 ryanzombiescivilianattacks = true;
 Ryanzombieslogicroam = 1;
+
+
+Ryanzombiesattackspeed = 1;
+Ryanzombiesattackdistance = 2.35;
+Ryanzombiesattackstrenth = 1.5;
+Ryanzombiesdamage = 0.15;
+Ryanzombiesdamagecar = 0.01;
+Ryanzombiesdamageair = 0.01;
+Ryanzombiesdamagetank = 0.002;
+Ryanzombiesdamagecarstrenth = 1.5;
+Ryanzombiesdamageairstrenth = 1;
+Ryanzombiesdamagetankstrenth = 0.4;
 
 {
     if (side _x == independent) then {
