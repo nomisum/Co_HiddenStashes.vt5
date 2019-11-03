@@ -61,9 +61,11 @@ player setDir (player getRelDir getMarkerPos "mrk_independent_hq");
     params ["_unit", "_oldGroup"];
     private _newGroup = group _unit;
     
-    if (side _newGroup == independent) then {
-        _newGroup setVariable ["ace_map_hideBlueForceMarker", true];
-    } else {
-        _newGroup setVariable ["ace_map_hideBlueForceMarker", false];
-    };
+    {
+        if (side _x == independent) then {
+            _x setVariable ["ace_map_hideBlueForceMarker", true];
+        } else {
+            _x setVariable ["ace_map_hideBlueForceMarker", false];
+        };
+    } forEach allGroups;
 }, true] call CBA_fnc_addPlayerEventHandler;

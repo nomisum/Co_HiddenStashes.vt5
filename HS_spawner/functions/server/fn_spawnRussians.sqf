@@ -58,4 +58,6 @@ _zombie setposATL [(getposATL _zombie select 0), (getposATL _zombie select 1), 0
     nil
 } count allCurators;
 
+_grp deleteGroupWhenEmpty true;
+
 _zombie
