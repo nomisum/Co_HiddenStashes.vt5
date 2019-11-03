@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=5079;
+		nextID=5082;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3660.5088,28.63825,1063.6404};
-		dir[]={0.45519102,-0.5596453,-0.69255567};
-		up[]={0.3074418,0.82866192,-0.46775928};
-		aside[]={-0.83567387,1.4598481e-007,-0.54925734};
+		pos[]={3671.7114,40.018566,1036.9407};
+		dir[]={0.34757742,-0.63827914,-0.68692487};
+		up[]={0.28822219,0.76971179,-0.56961888};
+		aside[]={-0.89231098,2.781162e-007,-0.45149985};
 	};
 };
 binarizationWanted=0;
@@ -3623,7 +3623,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=804;
+		items=806;
 		class Item0
 		{
 			dataType="Marker";
@@ -87770,7 +87770,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=3;
+				items=4;
 				class Item0
 				{
 					dataType="Object";
@@ -87796,6 +87796,9 @@ class Mission
 					class Effects
 					{
 					};
+					timeoutMin=20;
+					timeoutMid=20;
+					timeoutMax=20;
 					showWP="NEVER";
 					id=5076;
 					type="Move";
@@ -87803,14 +87806,24 @@ class Mission
 				class Item2
 				{
 					dataType="Waypoint";
-					position[]={3673.605,6.7373295,1028.3601};
+					position[]={3684.8157,6.9277692,1014.105};
 					type="GetOut";
 					class Effects
 					{
 					};
 					showWP="NEVER";
 					id=5075;
-					atlOffset=-5.2452087e-006;
+				};
+				class Item3
+				{
+					dataType="Waypoint";
+					position[]={3732.9019,5.7913361,966.10242};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=5081;
+					type="Move";
 				};
 			};
 			class Attributes
@@ -87888,13 +87901,47 @@ class Mission
 			class Attributes
 			{
 				condition="call{this}";
-				onActivation="call{thisTrigger say3D [""policesiren"",500];}";
+				onActivation="call{(thisList select 0) say3D [""policesiren"",500];}";
 				sizeA=10;
 				sizeB=10;
 				activationBy="WEST";
 			};
 			id=5078;
 			type="EmptyDetectorAreaR50";
+		};
+		class Item804
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3698.3889,6.8419704,1000.45};
+				angles[]={6.212255,0,0.02698279};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="introSpawner";
+			};
+			id=5079;
+			type="Land_ClutterCutter_small_F";
+		};
+		class Item805
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3736.9661,5.7414145,915.03601};
+				angles[]={6.2809515,0,6.2451196};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="introSpawnerTarget";
+			};
+			id=5080;
+			type="Land_ClutterCutter_small_F";
 		};
 	};
 	class Connections

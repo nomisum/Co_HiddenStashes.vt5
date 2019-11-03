@@ -36,7 +36,7 @@ private _camDefinitions = [
 }, [], 5] call CBA_fnc_waitAndExecute;
 
 [{
-    [getPos introCamTarget4, getPos introCamPos5, 3, "slow", 30] call HS_spawner_fnc_spawnCiviliansCrowd;
+    [getPos introSpawner, getPos introSpawnerTarget, 3, "slow", 30] call HS_spawner_fnc_spawnCiviliansCrowd;
 }, [], 110] call CBA_fnc_waitAndExecute;
 
 
