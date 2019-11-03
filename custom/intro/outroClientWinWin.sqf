@@ -14,8 +14,8 @@ terminate cbrn_breath_handle;
 // clear any CBRN zones for outro
 player setVariable ["cbrn_zones", []];
 
-setViewDistance 2500;
-setObjectViewDistance 2000;
+setViewDistance 3500;
+setObjectViewDistance 3000;
 
 cutText ["","BLACK IN", 5];
 

@@ -2,6 +2,8 @@ params ["_position", "_side"];
 
 private _type = "rhs_tigr_vdv";
 
+_position set [2,0];
+
 switch (_side) do { 
     case west : {  _type = "B_GEN_Offroad_01_comms_F"; }; 
     case east : {  _type = "rhs_tigr_vdv"; }; 

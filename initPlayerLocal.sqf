@@ -19,6 +19,7 @@ if (didJIP || !isMultiplayer) then {
     titleText ["", "BLACK IN", 0];
     player setVariable ["tf_voiceVolume", 1, true];
     [1] call acre_api_fnc_setGlobalVolume;
+    [true] call cbrn_fnc_init;
 };
 
 player setVariable ["originalSide", "INDEPENDENT", true];
@@ -44,7 +45,7 @@ player setVariable ["originalSide", "INDEPENDENT", true];
 
 
         if (player getVariable ["HS_isTranslator", false]) then {
-            ["en", "fi", "ru"] call acre_api_fnc_babelSetSpokenLanguages;
+            ["fi", "ru", "en"] call acre_api_fnc_babelSetSpokenLanguages;
             // systemChat "Du sprichst Englisch, Finnisch und Russisch fließend";
         } else {
             ["fi"] call acre_api_fnc_babelSetSpokenLanguages;

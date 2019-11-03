@@ -4,6 +4,17 @@ params ["_group","_pos"];
 
 _group setVariable ["wita_waverespawn_groupIsRespawned",true,true];
 
+if (side _group == WEST) then {
+    {
+        [{
+            params ["_unit","_pos"];
+            _respawnPos = _pos findEmptyPosition [3,40];
+            if (count _respawnPos == 0) then {_respawnPos = _pos};
+            [_unit,_respawnPos] remoteExec ["wita_waverespawn_fnc_doRespawn",0,false];
+        }, [_x,_pos], random 2] call CBA_fnc_waitAndExecute;
+    } forEach (units _group);
+};
+
 if (side _group == INDEPENDENT) then {
     {
         [{

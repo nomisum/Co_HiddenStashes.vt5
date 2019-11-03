@@ -4,3 +4,6 @@
 {
    _x setVariable ["ace_map_hideBlueForceMarker", true, true];
 } forEach (playableUnits + switchableUnits);
+
+WEST_SPIELER = createGroup west;
+publicVariable "WEST_SPIELER";

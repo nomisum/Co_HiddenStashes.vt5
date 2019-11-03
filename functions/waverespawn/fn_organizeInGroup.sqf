@@ -3,7 +3,7 @@
 params ["_side"];
 
 _deadPlayers = if (_side == INDEPENDENT) then {deadPlayersBlu} else {deadPlayersOpf};
-_deadPlayersGroup = createGroup _side;
+_deadPlayersGroup = createGroup west; // hardcoded
 _deadPlayers joinSilent _deadPlayersGroup;
 _deadPlayers resize 0;
 _numberOfGroups = ceil ((count units _deadPlayersGroup)/5);
@@ -14,7 +14,7 @@ _newGroups = [];
 for [{_i=0}, {_i<_numberOfGroups}, {_i=_i+1}] do {
     _leader = [_deadPlayersGroup] call wita_waverespawn_fnc_getHighestRanking;
 
-    _group = createGroup _side;
+    _group = createGroup west; // hardcoded
     [_leader] joinSilent _group;
     _groupName = [_side] call wita_waverespawn_fnc_generateGroupName;
     _group setGroupIDGlobal [_groupName];

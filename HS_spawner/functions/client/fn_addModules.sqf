@@ -295,15 +295,8 @@ if (!hasInterface) exitWith {};
 ["HS_Ambient", "Play Organ Music", {
     params ["_position", "_object"];
 
-    private _helper = createVehicle ["Land_ClutterCutter_small_F", _position, [], 0, "CAN_COLLIDE"];
-    [_helper] remoteExec ["HS_spawner_fnc_playOrganMusic",2];
-
-    [{
-        params ["_helper"];
-        if (!isNull _helper) then {
-            deleteVehicle _helper;
-        };
-    }, [_helper], 72] call CBA_fnc_waitAndExecute;
+    private _helper = createVehicle ["Land_ClutterCutter_small_F", _position, [], 0, "NONE"];
+    [_helper] remoteExec ["HS_spawner_fnc_playOrganMusic",0];
 
 }] call zen_custom_modules_fnc_register;
 
@@ -329,6 +322,12 @@ if (!hasInterface) exitWith {};
     
 }] call zen_custom_modules_fnc_register;
 
+["HS_MissionEnd", "Mission WIN WIN Outro", {
+    params ["_position", "_object"];
+
+    [[getMarkerPos "mrk_outro1", getMarkerPos "mrk_outro2", getMarkerPos "mrk_outro3"], "custom\intro\outroServerWinWin.sqf"] remoteExec ["BIS_fnc_execVM",2];
+    
+}] call zen_custom_modules_fnc_register;
 
 {
     _x addEventHandler ["CuratorWaypointPlaced", {

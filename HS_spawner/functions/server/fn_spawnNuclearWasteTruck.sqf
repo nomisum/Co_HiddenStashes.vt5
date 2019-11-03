@@ -40,4 +40,4 @@ private _vehicle = _classname createVehicle _pos;
   _item setObjectTextureGlobal [0, "pic\barrel.paa"];
 } forEach _objectsAndOffsets;
 
-[_vehicle, 3.9, 20, 100] call cbrn_fnc_createZone;
+[_vehicle, 3.9, 100, 300] call cbrn_fnc_createZone;
