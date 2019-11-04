@@ -22,7 +22,7 @@ cbrn_masks = ["G_AirPurifyingRespirator_02_black_F",
     "Mask_M40_OD",
     "Mask_M50"];
 cbrn_threatMeteritem = "ACE_microDAGR";
-cbrn_maxOxygenTime = 60 * 120; // 60min
+cbrn_maxOxygenTime = 60 * 180; // 60min
 
 // do not edit below here unless you know what you are doing
 if !(hasInterface) exitWith {};
