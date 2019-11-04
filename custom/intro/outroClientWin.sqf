@@ -97,7 +97,7 @@ private _playerNames = "";
     };
 } forEach allPlayers;
 
-_ctrlTWO ctrlSetStructuredText parseText "<t size='1' shadow='0' font='EtelkaMonospaceProBold' align='center' color='#ffffffff'>" + _playerNames + "</t>";
+_ctrlTWO ctrlSetStructuredText parseText ("<t size='1' shadow='0' font='EtelkaMonospaceProBold' align='center' color='#ffffffff'>" + _playerNames + "</t>");
 _ctrlTWO ctrlSetBackgroundColor [0, 0, 0, 0]; 
 _ctrlTWO ctrlSetFade 1;
 _ctrlTWO ctrlCommit 0;
