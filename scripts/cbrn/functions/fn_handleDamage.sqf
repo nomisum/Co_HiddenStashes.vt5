@@ -18,7 +18,7 @@ if ((_curDamage / _maxDamage) > 0.5 && {!(_unit getVariable ["cbrn_autoDamage", 
 
         // private _newDamage = ((_unit getVariable ["cbrn_damage", 0]) + 1) min 100;
         private _newDamage = ((_unit getVariable ["cbrn_damage", 0]) + 0.0001) min 100; // 0.0277777777777777
-        systemChat ("damage " + str _newDamage);
+        // systemChat ("damage " + str _newDamage);
         _unit setVariable ["cbrn_damage", _newDamage];
         if (_newDamage >= 100) then {
             _unit setDamage 1;
