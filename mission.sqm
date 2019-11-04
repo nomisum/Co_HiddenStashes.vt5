@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=740;
+		nextID=766;
 	};
 	class Camera
 	{
-		pos[]={3731.8223,74.74118,3581.1753};
-		dir[]={0.94639027,-0.27100101,0.17631997};
-		up[]={0.26649991,0.96251684,0.049653735};
-		aside[]={0.18317416,-2.773435e-006,-0.98319781};
+		pos[]={3707.6389,20.409082,549.69214};
+		dir[]={-0.50638133,-0.72073066,0.47342202};
+		up[]={-0.52647978,0.69321382,0.49221295};
+		aside[]={0.68293482,-4.2200554e-008,0.7304821};
 	};
 };
 binarizationWanted=0;
@@ -87992,7 +87992,7 @@ class Mission
 				class Item3
 				{
 					dataType="Waypoint";
-					position[]={3671.9731,6.3090897,1037.3104};
+					position[]={3676.3625,6.6859264,1027.3165};
 					type="GetOut";
 					class Effects
 					{
@@ -90173,8 +90173,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3700.1465,3.4640789,554.97943};
-						angles[]={0.063491918,5.3884597,6.2675071};
+						position[]={3700.146,3.464119,554.979};
+						angles[]={0.063495077,5.3884597,6.2675118};
 					};
 					side="Independent";
 					flags=6;
@@ -90182,7 +90182,7 @@ class Mission
 					{
 						rank="CAPTAIN";
 						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
-						description="Team Leader (Mosin M38)@Charlie";
+						description="Team Leader (Mosin M38)@Echo";
 						isPlayable=1;
 					};
 					id=5175;
@@ -90942,7 +90942,7 @@ class Mission
 			};
 			id=5190;
 			type="EvPhoto";
-			atlOffset=0.88983154;
+			atlOffset=0.88983202;
 		};
 		class Item887
 		{
@@ -91010,7 +91010,7 @@ class Mission
 			};
 			id=5202;
 			type="LOP_NK_Ural";
-			atlOffset=-1.9073486e-006;
+			atlOffset=-0.0024929047;
 			class CustomAttributes
 			{
 				class Attribute0
