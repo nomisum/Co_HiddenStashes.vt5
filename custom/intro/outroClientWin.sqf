@@ -71,7 +71,7 @@ _ctrlTWO ctrlCommit 3;
 
 sleep 10;
 
-_ctrlTWO ctrlSetStructuredText parseText "<t size='1' shadow='0' font='EtelkaMonospaceProBold' align='center' color='#ffffffff'>In Gedenken an die finnischen Helden 03.08.2015 / 23.10.2017:</t>";
+_ctrlTWO ctrlSetStructuredText parseText "<t size='1' shadow='0' font='EtelkaMonospaceProBold' align='center' color='#ffffffff'>Erfolgreiche Flucht! Überlebende Rebellen: </t>";
 _ctrlTWO ctrlSetBackgroundColor [0, 0, 0, 0]; 
 _ctrlTWO ctrlSetFade 1;
 _ctrlTWO ctrlCommit 0;
@@ -83,43 +83,21 @@ _ctrlTWO ctrlCommit 3;
 
 sleep 10;
 
-_ctrlTWO ctrlSetStructuredText parseText "<t size='0.7' shadow='0' font='EtelkaMonospaceProBold' align='center' color='#ffffffff'>
-Alpha-Kilo,
-Ainer,
-B4dHorse,
-bloody,
-Bobby,
-BountyHuntA,
-dave,
-DerZade,
-fraggi,
-Fridelcastro,<br/>
-form,
-Fusselwurm,
-Grumbert23,
-Jason-Miles,
-Jojo,
-Lord-DK,
-McDiod,
-nomisum,
-Odin,
-Panda,<br/>
-Promi,
-Rigged,
-Salbei,
-Shockwave,
-Shura,
-Simmax,
-Slant,
-Smile,
-Synch,
-Stefan,<br/>
-Xenon,
-Timeout,
-thimotius,
-XiviD,
-Zarrck,
-zuck</t>";
+private _playerNames = "";
+
+{
+    if (_forEachIndex == 0) then {
+        if (side _x == independent) then {
+            _playerNames = (name _x);
+        };
+    } else {
+        if (side _x == independent) then {
+            _playerNames = _playerNames + ", " + (name _x);
+        };
+    };
+} forEach allPlayers;
+
+_ctrlTWO ctrlSetStructuredText parseText "<t size='1' shadow='0' font='EtelkaMonospaceProBold' align='center' color='#ffffffff'>" + _playerNames + "</t>";
 _ctrlTWO ctrlSetBackgroundColor [0, 0, 0, 0]; 
 _ctrlTWO ctrlSetFade 1;
 _ctrlTWO ctrlCommit 0;

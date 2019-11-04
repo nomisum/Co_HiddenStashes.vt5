@@ -72,7 +72,7 @@ _ctrlTWO ctrlCommit 3;
 
 sleep 10;
 
-_ctrlTWO ctrlSetStructuredText parseText "<t size='1' shadow='0' font='EtelkaMonospaceProBold' align='center' color='#ffffffff'>In Gedenken an die finnischen Helden 03.08.2015 / 23.10.2017:</t>";
+_ctrlTWO ctrlSetStructuredText parseText "<t size='1' shadow='0' font='EtelkaMonospaceProBold' align='center' color='#ffffffff'>Erfolgreiche Flucht! In Gedenken an die finnischen Helden von 2015 und 2017:</t>";
 _ctrlTWO ctrlSetBackgroundColor [0, 0, 0, 0]; 
 _ctrlTWO ctrlSetFade 1;
 _ctrlTWO ctrlCommit 0;
