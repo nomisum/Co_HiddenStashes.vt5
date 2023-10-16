@@ -10,7 +10,7 @@ openMap [false, false];
 
 (findDisplay 46) displayRemoveEventHandler ["KeyUp", missionNamespace getVariable ["mcd_onRespawnKeyDown",-1]];
 
-[false] call acre_api_fnc_setSpectator;
+// [false] call acre_api_fnc_setSpectator;
 // [player, false] call TFAR_fnc_forceSpectator;
 // 30 call TFAR_fnc_setVoiceVolume;
 
@@ -21,4 +21,5 @@ hint "";
 [] call wita_waverespawn_fnc_resetPlayerVars;
 [PLAYERSIDE] call wita_waverespawn_fnc_respawnSelectorMarker;
 
+[player] joinSilent (createGroup west);
 execVM "custom\loadout\equipAsSpecialForce.sqf";

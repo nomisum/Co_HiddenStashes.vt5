@@ -30,9 +30,9 @@ private _camDefinitions = [
 
 
 [{
-    if (isMultiplayer) then {
+    // if (isMultiplayer) then {
         call GRAD_introCam_fnc_init;
-    };
+    // };
 }, [], 5] call CBA_fnc_waitAndExecute;
 
 [{

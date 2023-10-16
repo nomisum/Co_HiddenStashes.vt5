@@ -1,7 +1,9 @@
 
+/*
 ["ACRE_PRC152", "default2"] call acre_api_fnc_setPreset;
 ["en"] call acre_api_fnc_babelSetSpokenLanguages;
 ["en"] call acre_api_fnc_babelSetSpeakingLanguage;
+*/
 
 player setUnitLoadout [
     ["rhs_weap_vhsd2","hlc_muzzle_556NATO_KAC","acc_flashlight","rhsusf_acc_eotech_552",["rhsgref_30rnd_556x45_vhs2",30],[],""],[],
@@ -16,4 +18,4 @@ player setUnitLoadout [
 player setPos (getMarkerPos "mrk_blufor_hq");
 player setVariable ["ace_map_hideBlueForceMarker",false,true];
 
-player addItem "ACRE_PRC152";
+// player addItem "ACRE_PRC152";

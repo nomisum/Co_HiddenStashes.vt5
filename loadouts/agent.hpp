@@ -80,7 +80,7 @@ class agent {
 		class Medic_F: Soldier_F {          
             primaryWeapon = "";
             primaryWeaponMagazine = "";
-            backpack = "ga_dlc_low_messenger_coyote_medic";
+            backpack = "UK3CB_LFR_B_B_MESSENGER_MED";
             addItemsToVest[] = {};
             addItemsToBackpack[] = { 
                 LIST_20("ACE_fieldDressing"),
