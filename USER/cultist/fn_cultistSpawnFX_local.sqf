@@ -8,3 +8,4 @@ if (_owner) then {
 [_player, _sound] remoteexec ["grad_cultist_fnc_cultistTranceCreate", 2]; // singing sound, gets deleted when !manaDrain
 
 _player setMimic "dead";
+

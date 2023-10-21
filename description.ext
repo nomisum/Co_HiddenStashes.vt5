@@ -71,6 +71,7 @@ class cfgSounds {
 };
 
 #include "cfgSfx.hpp"
+#include "cfgVehicles.hpp"
 
 class CfgHints
 {
