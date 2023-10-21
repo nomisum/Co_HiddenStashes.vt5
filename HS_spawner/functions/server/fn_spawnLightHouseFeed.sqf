@@ -18,7 +18,7 @@ _targetUnit = _grpTargetUnit createUnit ["UK3CB_ADC_B_WORK_01_U", _pos, [], 0, "
 _targetUnit setHit["legs",1];
 
 _zombie reveal _targetUnit;
-[_zombie, _targetUnit] spawn RZ_fnc_zombie_engageTarget;
+[_zombie, _targetUnit] spawn HS_spawner_fnc_enemies_feedOnTargetAny;
 
 _targetUnit setDamage 1;
 createVehicle ["BloodSplatter_01_Large_New_F",_targetUnit, [], 0, "NONE"];

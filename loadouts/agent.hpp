@@ -30,12 +30,12 @@ class agent {
 		class Soldier_F {
             primaryWeapon = "rhs_weap_scorpion";
             primaryWeaponMagazine = "rhsgref_20rnd_765x17_vz61";
-            vest = "rds_pistol_holster";
+            vest = "rhs_vest_pistol_holster";
             addItemsToVest[] = { 
                 LIST_2("rhsgref_20rnd_765x17_vz61") 
             };            
-            uniform[] = {"rds_uniform_citizen1", "rds_uniform_citizen4", "rds_uniform_Functionary2", "rds_uniform_Profiteer3", "rds_uniform_Rocker2", "rds_uniform_schoolteacher", "rds_uniform_Villager3", "rds_uniform_Woodlander4", "U_C_ConstructionCoverall_Blue_F", "U_C_Mechanic_01_F", "U_I_C_Soldier_Bandit_3_F", "U_I_C_Soldier_Bandit_5_F", "U_C_Uniform_Scientist_01_F", "U_I_L_Uniform_01_tshirt_skull_F", "U_C_E_LooterJacket_01_F", "U_I_L_Uniform_01_tshirt_black_F", "U_I_L_Uniform_01_tshirt_olive_F"};
-            headgear[] = {"H_Bandanna_cbr","H_Bandanna_sgg","H_Watchcap_blk","H_Booniehat_khk","H_Cap_oli","H_Cap_tan","H_MilCap_gry","H_Shemag_olive","H_Beret_EAF_01_F","H_Booniehat_mgrn","rhsgref_hat_m43cap_heer1_tilted","rhsgref_hat_M1951","rds_rocker_hair1","rds_rocker_hair2","rds_rocker_hair3","rds_Woodlander_cap3","rds_worker_cap2","H_HeadBandage_stained_F", "H_HeadBandage_bloody_F", "H_Hat_Safari_sand_F","H_Hat_grey"};
+            uniform[] = {"UK3CB_CHC_C_U_HIKER_03","UK3CB_CHC_C_U_HIKER_04","UK3CB_CHC_C_U_HIKER_02","UK3CB_CHC_C_U_HIKER_01","UK3CB_CHC_C_U_CIT_01","UK3CB_CHC_C_U_CIT_04","UK3CB_CHC_C_U_CIT_02","UK3CB_CHC_C_U_CIT_03","UK3CB_CHC_C_U_ACTIVIST_03","UK3CB_CHC_C_U_ACTIVIST_01","UK3CB_CHC_C_U_ACTIVIST_04","UK3CB_CHC_C_U_ACTIVIST_02","UK3CB_CHC_C_U_CAN_01","UK3CB_CHC_C_U_COACH_04","UK3CB_CHC_C_U_COACH_01","UK3CB_CHC_C_U_COACH_03","UK3CB_CHC_C_U_COACH_02","UK3CB_CHC_C_U_WORK_03","UK3CB_CHC_C_U_WORK_04","UK3CB_NAP_B_U_WORK_01","UK3CB_CHC_C_U_WORK_02","UK3CB_CHC_C_U_WORK_01","UK3CB_CHC_C_U_PROF_04","UK3CB_CHC_C_U_PROF_03","UK3CB_CHC_C_U_PROF_01","UK3CB_CHC_C_U_PROF_02","UK3CB_CHC_C_U_DOC_03","UK3CB_CHC_C_U_DOC_02","UK3CB_CHC_C_U_DOC_01","UK3CB_CHC_C_U_FUNC_01","UK3CB_CHC_C_U_FUNC_02","UK3CB_CHC_C_U_VILL_01","UK3CB_CHC_C_U_VILL_03","UK3CB_CHC_C_U_VILL_04","UK3CB_CHC_C_U_VILL_02","UK3CB_CHC_C_U_WOOD_04","UK3CB_CHC_C_U_WOOD_02","UK3CB_CHC_C_U_WOOD_01","UK3CB_CHC_C_U_WOOD_03"};
+            headgear[] = {"H_Bandanna_cbr","H_Bandanna_sgg","H_Watchcap_blk","H_Booniehat_khk","H_Cap_oli","H_Cap_tan","H_MilCap_gry","H_Shemag_olive","H_Beret_EAF_01_F","H_Booniehat_mgrn","rhsgref_hat_m43cap_heer1_tilted","rhsgref_hat_M1951","H_HeadBandage_stained_F","H_HeadBandage_bloody_F","H_HeadBandage_stained_F","UK3CB_H_Cap_Back_ION_BLK","UK3CB_H_Cap_Back_ION_DES","H_HeadBandage_stained_F", "H_HeadBandage_bloody_F", "H_Hat_Safari_sand_F","H_Hat_grey"};
             goggles = "G_RegulatorMask_F";
             addItemsToUniform[] = {
                 LIST_5("ACE_morphine"),
