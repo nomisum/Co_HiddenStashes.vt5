@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=896;
+		nextID=922;
 	};
 	class Camera
 	{
 		pos[]={3284.4817,47.671738,5481.8428};
-		dir[]={0,-0.70710677,0.70710683};
-		up[]={0,0.70710677,0.70710671};
-		aside[]={0.99999994,0,-0};
+		dir[]={-0.15269005,-0.66754931,0.72874516};
+		up[]={-0.13689587,0.7445631,0.65336323};
+		aside[]={0.97874856,-4.1909516e-009,0.20507221};
 	};
 };
 binarizationWanted=0;
@@ -3569,7 +3569,7 @@ class Mission
 			};
 			id=975;
 			type="Land_FieldToilet_F";
-			atlOffset=0.0066375732;
+			atlOffset=0.0066642761;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -81599,7 +81599,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3268.0913,23.42189,5517.6084};
+				position[]={3268.0911,23.421907,5517.6079};
 				angles[]={4.712389,0,0};
 			};
 			side="Empty";
@@ -81633,7 +81633,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3279.1299,23.551664,5521.4863};
+				position[]={3279.1299,23.551687,5521.4858};
 				angles[]={4.712389,0,0};
 			};
 			side="Empty";
@@ -81644,6 +81644,7 @@ class Mission
 			};
 			id=5249;
 			type="Reflector_Cone_01_narrow_green_F";
+			atlOffset=1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -82010,8 +82011,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3265.3906,23.436886,5512.96};
-				angles[]={6.2808437,0,0.041791759};
+				position[]={3265.3911,23.436914,5512.96};
+				angles[]={4.712389,0,0};
 			};
 			side="Empty";
 			flags=4;
@@ -82044,8 +82045,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3273.105,23.468805,5520.5723};
-				angles[]={0.088838026,0,0.033588443};
+				position[]={3273.105,23.468868,5520.5718};
+				angles[]={4.712389,0,0};
 			};
 			side="Empty";
 			flags=4;
