@@ -1,6 +1,6 @@
 params ["_position", ["_type", "random"], ["_radius", 0]];
 
-private _uniform = "GRAD_SoldierZed_rhs_uniform_FROG01_wd";
+private _uniform = "GRAD_SoldierZed_Oversuit_01";
 private _classname = _uniform;
 
 switch (_type) do { 

@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=818;
+		nextID=844;
 	};
 	class Camera
 	{
-		pos[]={3676.561,26.696981,1032.9535};
-		dir[]={0.56242234,-0.32037419,-0.76227409};
-		up[]={0.19021451,0.94728959,-0.25780463};
-		aside[]={-0.80468667,4.6408968e-007,-0.5937174};
+		pos[]={3717.6575,80.230438,3292.1365};
+		dir[]={0.56258667,-0.53299683,0.6320622};
+		up[]={0.35437506,0.84610873,0.3981398};
+		aside[]={0.74700093,-2.4586916e-007,-0.66488856};
 	};
 };
 binarizationWanted=0;
@@ -5497,7 +5497,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3362.2771,43.786701,2876.156};
+				position[]={3362.2771,41.151276,2876.156};
 				angles[]={0,0.63317055,0};
 			};
 			side="Empty";
@@ -5508,7 +5508,7 @@ class Mission
 			};
 			id=1882;
 			type="Land_Bunker_01_big_F";
-			atlOffset=4.5563431;
+			atlOffset=1.9209175;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6200,7 +6200,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -6278,7 +6278,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -6353,7 +6353,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -42909,7 +42909,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -42987,7 +42987,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 					class Value
 					{
 						class data
@@ -43031,7 +43031,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -43120,7 +43120,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -43208,7 +43208,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -43297,7 +43297,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -43385,7 +43385,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -43473,7 +43473,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -43551,7 +43551,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 					class Value
 					{
 						class data
@@ -43595,7 +43595,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -43684,7 +43684,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -43772,7 +43772,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -43861,7 +43861,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -43949,7 +43949,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -44037,7 +44037,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -44115,7 +44115,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 					class Value
 					{
 						class data
@@ -44160,7 +44160,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -44249,7 +44249,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -44337,7 +44337,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -44426,7 +44426,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -44514,7 +44514,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -44602,7 +44602,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -44681,7 +44681,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 					class Value
 					{
 						class data
@@ -44725,7 +44725,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -44814,7 +44814,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -44902,7 +44902,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -44991,7 +44991,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -45079,7 +45079,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -45167,7 +45167,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -45245,7 +45245,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 					class Value
 					{
 						class data
@@ -80055,7 +80055,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -80144,7 +80144,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -80232,7 +80232,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -80321,7 +80321,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -80409,7 +80409,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -80497,7 +80497,7 @@ class Mission
 						class Attribute0
 						{
 							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+							expression="_this setVariable [""acex_headless_blacklist"",  _value,  true]";
 							class Value
 							{
 								class data
@@ -80576,7 +80576,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 					class Value
 					{
 						class data
