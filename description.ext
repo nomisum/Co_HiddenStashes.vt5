@@ -70,6 +70,8 @@ class cfgSounds {
     #include "cfgSounds.hpp"
 };
 
+#include "cfgSfx.hpp"
+
 class CfgHints
 {
    class CBRN

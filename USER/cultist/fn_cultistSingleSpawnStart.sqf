@@ -1,3 +1,9 @@
+/*
+
+deprecated - not in use
+
+*/
+
 params ["_unit", "_type"];
 
 _unit setVariable ["cultist_manaDrain", true, true];
