@@ -3408,7 +3408,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="call{this addItemCargoGlobal [""Mask_M50"",20]; this addItemCargoGlobal [""Mask_M40_OD"",20];}";
+				init="call{this addItemCargoGlobal [""G_AirPurifyingRespirator_01_F"",20]; this addItemCargoGlobal [""G_AirPurifyingRespirator_01_F"",20];}";
 				dynamicSimulation=1;
 			};
 			id=958;
@@ -55925,7 +55925,7 @@ class Mission
 					class Attributes
 					{
 						health=0.16170715;
-						init="call{this setFace ""zomboy""; [this] call HS_spawner_fnc_policeFeed;}";
+						init="call{this setFace ""RyanZombieFace4""; [this] call HS_spawner_fnc_policeFeed;}";
 					};
 					id=4685;
 					type="B_Captain_Dwarden_F";

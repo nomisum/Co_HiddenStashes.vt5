@@ -18,9 +18,9 @@ cbrn_masks = ["G_AirPurifyingRespirator_02_black_F",
     "SE_M17",
     "Hamster_PS",
     "SE_S10",
-    "Mask_M40",
-    "Mask_M40_OD",
-    "Mask_M50"];
+    "G_AirPurifyingRespirator_01_nofilter_F",
+    "gm_gc_army_facewear_schm41m",
+    "gm_ge_facewear_m65"];
 cbrn_threatMeteritem = "ACE_microDAGR";
 cbrn_maxOxygenTime = 60 * 180; // 60min
 

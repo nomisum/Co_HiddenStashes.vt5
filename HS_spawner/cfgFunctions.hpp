@@ -35,6 +35,7 @@ class HS_spawner {
 
         class playOrganMusic;
         class policeFeed;
+        class setFace;
         
         class spawnCivilians;
         class spawnCiviliansCrowd;

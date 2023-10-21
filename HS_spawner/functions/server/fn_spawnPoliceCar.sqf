@@ -14,5 +14,5 @@ _vehicle setPilotLight true;  // force switch headlights off
 
 
 {
-   _x addGoggles "Mask_M50";
+   _x addGoggles "G_AirPurifyingRespirator_01_F";
 } forEach crew _vehicle;
