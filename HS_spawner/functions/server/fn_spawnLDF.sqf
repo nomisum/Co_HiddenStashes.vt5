@@ -41,7 +41,7 @@ _zombie enableDynamicSimulation true;
 _zombie setVariable ["RZ_vehicleClass","RyanZombieC_man_1"];
 _zombie setVariable ["RZ_isDemon", false];
 _zombie setVariable ["suomen_overwriteRZ", false];
-[_zombie, selectRandom ["Zombi","Zomboy", "Infected1", "Infected2"]] remoteExec ["setFace", 0, _zombie];
+[_zombie, selectRandom ["RyanZombieFace1", "RyanZombieFace2", "RyanZombieFace3", "RyanZombieFace4", "RyanZombieFace5", "RyanZombieFace6"]] remoteExec ["setFace", 0, _zombie];
 
 _zombie setVariable ["RZ_aggressiveSoundCount",round (random 5),true];
 

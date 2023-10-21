@@ -1,6 +1,6 @@
 params ["_position", ["_type", "random"]];
 
-private _uniform = "GRAD_CivilianZed_rds_uniform_priest";
+private _uniform = "GRAD_CivilianZed_uniform_priest";
 private _classname = _uniform; // default
 
 switch (_type) do { 
