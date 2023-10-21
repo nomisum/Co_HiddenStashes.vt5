@@ -1,0 +1,28 @@
+params ["_position", "_type"];
+
+
+private _dummy = "Land_ClutterCutter_medium_F" createVehicle _position;
+[_dummy, "teleport_global"] remoteExec ["say3D"];
+
+[{
+    params ["_position", "_dummy", "_type"];
+
+    private _classname = [_type] call grad_cultist_fnc_cultistSpawnGetclassname;
+
+    [_position] remoteExec ["grad_cultist_fnc_cultistSpawnFX_spawnFlash"];
+
+    private _unit = createAgent [_classname, _position, [], 0, "NONE"];
+    _unit setDir (getDir player + 90);
+    _unit setVariable ["isCultist", true, true];
+
+    if (_type == "zombie") then {
+        [_unit] call grad_ambient_fnc_zombieRandomize;
+    };
+
+    ["grad_missionControl_curatorInfo", [_type]] call CBA_fnc_globalEvent;
+
+    [_unit] remoteExec ["grad_cultist_fnc_cultistZombieHitPart", 0, _unit];
+
+    [_dummy, ["teleport_end",500]] remoteExec ["say3D"];
+
+}, [_position, _dummy, _type], 1] call CBA_fnc_waitAndExecute;

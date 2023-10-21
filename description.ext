@@ -23,7 +23,7 @@ loadScreen="";
 
 onLoadMissionTime = True;
 respawn = 3;
-respawnDelay = 9999;
+respawnDelay = 3;
 respawnTemplates[] = {"Base"};
 respawnOnStart = -1;
 respawnDialog = 0;
@@ -46,6 +46,11 @@ class CfgFunctions
 
   #include "HS_spawner\cfgFunctions.hpp"
   #include "grad-introCam\cfgFunctions.hpp"
+
+  #include "USER\ambient\cfgFunctions.hpp"
+  #include "USER\briefing\cfgFunctions.hpp"
+  #include "USER\cultist\cfgFunctions.hpp"
+  #include "USER\zeus\cfgFunctions.hpp"
 };
 
 class CfgNotifications
@@ -62,6 +67,7 @@ class CfgNotifications
 class cfgSounds {
     #include "custom\intro\cfgSounds.hpp"
     #include "scripts\cbrn\sounds\sounds.hpp"
+    #include "cfgSounds.hpp"
 };
 
 class CfgHints

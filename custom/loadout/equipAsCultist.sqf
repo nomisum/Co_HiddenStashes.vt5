@@ -13,5 +13,5 @@ player setUnitLoadout [
 	],"","G_Bandanna_RedFlame1",[],["ItemMap","","ItemRadio","ItemCompass","ItemWatch",""]],[]
 ];
 
-player setPos (getMarkerPos "mrk_shaman_hq");
+player setPos (getMarkerPos "mrk_cultist_hq");
 player setVariable ["ace_map_hideBlueForceMarker",false,true];

@@ -3,6 +3,9 @@
 if (!(player getVariable ["HS_killedOnce", false])) then {
     player setVariable ["HS_killedOnce", true, true];
     player setVariable ["ace_map_hideBlueForceMarker", false, true];
+    
+    private _isCultist = random 2 > 1;
+    player setVariable ["GRAD_isCultist", _isCultist, true];
     [player] joinSilent (createGroup west);
 } else {
     // save stuff for clone
@@ -33,6 +36,8 @@ if (!(player getVariable ["HS_killedOnce", false])) then {
     player removeSecondaryWeaponItem _secondaryWeapon;
 };
 
+
+
 // call AFTER setting to west group
-[] call wita_waverespawn_fnc_onPlayerKilled;
+// [] call wita_waverespawn_fnc_onPlayerKilled;
 /*[player, true] call TFAR_fnc_forceSpectator;*/
