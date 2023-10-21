@@ -7,7 +7,7 @@ player addEventHandler ["Take",{_this call wita_common_fnc_handleScopeChange}];
 if (isMultiplayer && !didJIP) then {
     titleText ["","BLACK FADED",999];
     0 fadeSound 0;
-    [0] call acre_api_fnc_setGlobalVolume;
+    // [0] call acre_api_fnc_setGlobalVolume;
 };
 
 if (didJIP) then {

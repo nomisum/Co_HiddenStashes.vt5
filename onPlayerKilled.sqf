@@ -7,6 +7,18 @@ if (!(player getVariable ["HS_killedOnce", false])) then {
     private _isCultist = random 2 > 1;
     player setVariable ["GRAD_isCultist", _isCultist, true];
     [player] joinSilent (createGroup west);
+
+    ["grad_loadout_loadoutApplied", {
+		params ["_loadoutTarget", "_unitLoadout"];
+		if (_loadoutTarget != player) exitWith {};
+		
+        if (!(player getVariable ["GRAD_isCultist", false])) then {
+	        execVM "custom\loadout\equipAsSpecialForce.sqf";
+        } else {
+	        execVM "custom\loadout\equipAsCultist.sqf";
+        };
+
+	}] call CBA_fnc_addEventhandler;
 } else {
     // save stuff for clone
     private _goggles = goggles player;

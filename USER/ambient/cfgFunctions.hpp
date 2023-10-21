@@ -5,5 +5,6 @@ class grad_ambient{
            class addApacheDestruction;
            class createBloodEffect;
            class ambientFog;
+           class soundSourceHelper;
         };
 };

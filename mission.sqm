@@ -21,9 +21,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={3284.4817,47.671738,5481.8428};
-		dir[]={-0.15269005,-0.66754931,0.72874516};
-		up[]={-0.13689587,0.7445631,0.65336323};
-		aside[]={0.97874856,-4.1909516e-009,0.20507221};
+		dir[]={-0.15268947,-0.66754735,0.72874308};
+		up[]={-0.13689488,0.74456739,0.65336001};
+		aside[]={0.97874701,0,0.20507142};
 	};
 };
 binarizationWanted=0;
@@ -3569,7 +3569,7 @@ class Mission
 			};
 			id=975;
 			type="Land_FieldToilet_F";
-			atlOffset=0.0066642761;
+			atlOffset=0.0066375732;
 			class CustomAttributes
 			{
 				class Attribute0

@@ -11,7 +11,7 @@ private _dummy = "Land_ClutterCutter_medium_F" createVehicle _position;
 
     [_position] remoteExec ["grad_cultist_fnc_cultistSpawnFX_spawnFlash"];
 
-    private _unit = createAgent [_classname, _position, [], 0, "NONE"];
+    private _unit = createAgent [_classname, _position, [], 0, "CAN_COLLIDE"];
     _unit setDir (getDir player + 90);
     _unit setVariable ["isCultist", true, true];
 
