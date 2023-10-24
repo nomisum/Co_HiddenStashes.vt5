@@ -23,7 +23,7 @@ _camera cameraeffect ["terminate", "back"];
 camDestroy _camera;
 
 
-// [1] call acre_api_fnc_setGlobalVolume;
+[1] call acre_api_fnc_setGlobalVolume;
 
 titleText ["", "BLACK IN", 0];
 player setVariable ["tf_voiceVolume", 1, true];

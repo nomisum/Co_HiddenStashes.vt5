@@ -43471,7 +43471,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; this setVariable [""HS_isTranslator"", true, true]; };}";
+						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
 						description="Translator (Handgun only)";
 						isPlayable=1;
 					};
@@ -44035,7 +44035,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; this setVariable [""HS_isTranslator"", true, true]; };}";
+						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
 						description="Translator (Handgun only)";
 						isPlayable=1;
 					};
@@ -44600,7 +44600,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; this setVariable [""HS_isTranslator"", true, true]; };}";
+						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
 						description="Translator (Handgun only)";
 						isPlayable=1;
 					};
@@ -45165,7 +45165,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; this setVariable [""HS_isTranslator"", true, true]; };}";
+						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
 						description="Translator (Handgun only)";
 						isPlayable=1;
 					};
@@ -80495,7 +80495,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; this setVariable [""HS_isTranslator"", true, true]; };}";
+						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
 						description="Translator (Handgun only)";
 						isPlayable=1;
 					};

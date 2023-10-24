@@ -1,5 +1,4 @@
-// if (side player == INDEPENDENT) exitWith {[] call wita_common_fnc_startSpectator};
-
+// decide if player should continue on cultist or spec ops side
 if (!(player getVariable ["HS_killedOnce", false])) then {
     player setVariable ["HS_killedOnce", true, true];
     player setVariable ["ace_map_hideBlueForceMarker", false, true];
@@ -7,6 +6,12 @@ if (!(player getVariable ["HS_killedOnce", false])) then {
     private _isCultist = random 2 > 1;
     player setVariable ["GRAD_isCultist", _isCultist, true];
     [player] joinSilent (createGroup west);
+
+    if (_isCultist) then {
+        ["cu"] call acre_api_fnc_babelSetSpokenLanguages;   
+    } else {
+        ["en"] call acre_api_fnc_babelSetSpokenLanguages;
+    };
 
 } else {
     // save stuff for clone
@@ -36,9 +41,3 @@ if (!(player getVariable ["HS_killedOnce", false])) then {
     player removePrimaryWeaponItem _primaryWeapon;
     player removeSecondaryWeaponItem _secondaryWeapon;
 };
-
-
-
-// call AFTER setting to west group
-// [] call wita_waverespawn_fnc_onPlayerKilled;
-/*[player, true] call TFAR_fnc_forceSpectator;*/

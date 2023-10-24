@@ -6,13 +6,15 @@ class HS_spawner {
         class addModules {postInit = 1;};
 
         class assignTaskLDF;
+        class assignTaskCultist;
         class createTask1;
         class createTask2;
         class createTask3;
         class createTask4;
         class createTask5;
         class createTask6;
-        class createTaskLDF {postInit = 1;};
+        class createTaskLDF;
+        class createTaskCultist;
     };
 
   class server {
