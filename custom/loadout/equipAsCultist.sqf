@@ -24,7 +24,7 @@ player addItem "ACRE_PRC152";
 [{
     [player] call acre_api_fnc_hasRadio
 },{
-    private _radio = [“ACRE_PRC152”] call acre_api_fnc_getRadioByType;
+    private _radio = ["ACRE_PRC152", player] call acre_api_fnc_getRadioByType;
 	[_radio, 10] call acre_api_fnc_setRadioChannel;
 	["cu"] call acre_api_fnc_babelSetSpokenLanguages;
 	["cu"] call acre_api_fnc_babelSetSpeakingLanguage;

@@ -29,6 +29,7 @@ private _soundDummyAfter = createVehicle ["Land_ClutterCutter_small_F", _pos, []
 	_player setPos _pos;
 	[_flashPosBefore] remoteExec ["grad_cultist_fnc_cultistSpawnFX_spawnFlash"];
 	_player setVariable ["cultist_teleporting", false, true];
+	_player getVariable ["cultist_manaValue", 0, true];
 
 }, [_placeholderBefore, _placeholderAfter, _player, _pos], 5] call CBA_fnc_waitAndExecute;
 
