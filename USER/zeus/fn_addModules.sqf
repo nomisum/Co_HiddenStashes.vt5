@@ -126,7 +126,7 @@
 
   private _song = "music_lullaby_source";
   private _source = createSoundSource [_song, _position, [], 0];
-  [_source, _radio, true] call grad_ambient_fnc_soundSourceHelper;
+  [_source, _radio, false] call grad_ambient_fnc_soundSourceHelper;
 
   {
     _x addCuratorEditableObjects [[_radio], false];

@@ -58,7 +58,7 @@ for "_i" from 0 to 3 do {
     _unit setVariable ["RZ_vehicleClass","RyanZombieC_man_1"];
     _unit setVariable ["RZ_aggressiveSoundCount",round (random 5),true]; 
 
-    [_unit, selectRandom ["Zombi","Zomboy", "Infected1", "Infected2"]] remoteExec ["setFace", 0, _unit];
+    [_unit] call hs_spawner_fnc_setFace;
 
     {
         _x addCuratorEditableObjects [[_unit],true];
@@ -68,6 +68,16 @@ for "_i" from 0 to 3 do {
     _unit reveal _object;
     [_unit, "AinvPercMstpSnonWnonDnon"] remoteExecCall ["fnc_RyanZombies_PlayMoveNow"]; 
     _unit disableAI "ANIM";
+
+    _unit addEventHandler ["HandleDamage", {
+	    params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint", "_directHit"];
+
+        if (!isNull _projectile && !(_unit getvariable ["grad_gotHit", false])) then {
+            _unit setvariable ["grad_gotHit", true];
+            _unit setVariable ["RZ_eatingSeconds", 9999];
+        };
+
+    }];
 };
 
 _object setDamage 1;
