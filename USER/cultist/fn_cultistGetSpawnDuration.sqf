@@ -7,6 +7,7 @@ switch (_type) do {
 	case "zombie": { _duration = 5; };
 	case "spider": { _duration = 15; };
 	case "demon": { _duration = 30; };
+	case "resurrect": { _duration = 30; };
 	default { };
 };
 

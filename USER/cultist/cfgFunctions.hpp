@@ -13,6 +13,7 @@ class grad_cultist{
 
 			class cultistManaDisplay;
 			class cultistManaManager;
+			class cultistRessurectUnits;
 
 			class cultistMultiSpawnStart;      
 			
@@ -25,6 +26,7 @@ class grad_cultist{
 			class cultistSpawnFX_fog;
 			class cultistSpawnFX_hands;
 			class cultistSpawnFX_local;
+			class cultistSpawnFX_resurrectFX;
 			class cultistSpawnFX_spawnFlash;
 			class cultistSpawnFX;
 			class cultistSpawnGetClassname;
@@ -33,6 +35,7 @@ class grad_cultist{
 			class cultistTeleport;
 			class cultistTeleportSelect;
 			class cultistTranceCreate;
+			class cultistZombieForModel;
 			
 			class cultistZombieHitPart;
         };

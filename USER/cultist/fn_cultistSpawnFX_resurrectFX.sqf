@@ -1,0 +1,28 @@
+params ["_player", "_bodies"];
+
+{
+	private _position = position _x;
+	[{
+		params ["_args", "_handle"];
+		_args params ["_position", "_player"];
+
+		if (_x getVariable ["cultist_manaDrain", false, true]) exitWith {
+			[_handle] call CBA_fnc_removePerFrameHandler;
+		};
+
+		drop ["\A3\data_f\cl_basic",
+		"",
+		"Billboard",
+		1,
+		5,
+		_position,
+		[random 0.1, random 0.1, 0.1 + random 0.1],
+		5,
+		0.2,0.1568,0,[.3 + random .1],
+		[[1,1,1,0],[1,1,1,.3],[1,1,1,.4],[1,1,1,.3],[1,1,1,.3],[1,1,1,.15],[1,1,1,.05],[1,1,1,0]],
+		[0],
+		0,0,"", "",""];
+
+	}, 1, [_position, _player]] call CBA_fnc_addPerFrameHandler;
+
+} forEach _bodies;

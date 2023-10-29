@@ -16,7 +16,7 @@ if (!isServer) exitWith {};
         _player1 setVariable ["cultist_manaDrain", false, true]; 
         ["Not enough space."] remoteExec ["CBA_fnc_notify", _player1];
     };
-    private _placeholder = "Land_HelipadEmpty_F" createVehicle _position;
+    private _placeholder = createVehicle ["Land_HelipadEmpty_F", _position, [], 0, "CAN_COLLIDE"];
     _placeholder setVariable ["cultist_ritualInvolved", [_player1], true];
     _placeholder setVariable ["cultist_type", _type, true];
 
@@ -27,9 +27,15 @@ if (!isServer) exitWith {};
 
     private _duration = [_type] call grad_cultist_fnc_cultistGetSpawnDuration;
 
+    if (_type == "resurrect") then {
+        private _bodies = allDeadMen { _x distance _player1 < 50 }; 
+        [_player1, _bodies] remoteExec ["grad_cultist_fnc_cultistSpawnFX_resurrectFX"];
+        diag_log format ["found %1 dead bodies to resurrect", count _bodies];
+    };
+
     [{
         params ["_args", "_handle"];
-        _args params ["_player1", "_startTime", "_duration", "_position", "_type", "_placeholder"];
+        _args params ["_player1", "_startTime", "_duration", "_position", "_type", "_placeholder", "_bodies"];
 
         private _playersInvolved = _placeholder getVariable ["cultist_ritualInvolved", []];
         private _playersCount = count _playersInvolved;
@@ -63,7 +69,12 @@ if (!isServer) exitWith {};
         if (CBA_missionTime > (_startTime + _duration)) exitWith {
             diag_log "ritual successful: initiating " + _type + " spawn";
             { ["Ritual successful."] remoteExec ["CBA_fnc_notify", _x]; _x setVariable ["cultist_manaDrain", false, true]; } forEach _playersInvolvedNow;
-            [_position, _type] call grad_cultist_fnc_cultistSpawnUnit;
+            
+            if (_type != "resurrect") then {
+                [_position, _type] call grad_cultist_fnc_cultistSpawnUnit;
+            } else {
+                [_position, _bodies] call grad_cultist_fnc_cultistResurrectUnits;
+            };
 
             private _stringType = "spawn" + _type;
             ["grad_missionControl_curatorInfo",[_player1, _stringType]] call CBA_fnc_serverEvent;
@@ -83,6 +94,6 @@ if (!isServer) exitWith {};
         // store new player count for next cycle
         _placeholder setVariable ["cultist_ritualInvolved", _playersInvolvedNow, true];
 
-    }, 0, [_player1, _startTime, _duration, _position, _type, _placeholder]] call CBA_fnc_addPerFrameHandler;
+    }, 0, [_player1, _startTime, _duration, _position, _type, _placeholder, _bodies]] call CBA_fnc_addPerFrameHandler;
 
 }] call CBA_fnc_addEventhandler;

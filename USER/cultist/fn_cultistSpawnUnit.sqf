@@ -11,9 +11,12 @@ private _dummy =  createVehicle ["Land_ClutterCutter_medium_F", _position, [], 0
 
     [_position] remoteExec ["grad_cultist_fnc_cultistSpawnFX_spawnFlash"];
 
-    private _unit = createAgent [_classname, _position, [], 0, "CAN_COLLIDE"];
+    private _grp = creategroup east; // hardcoded for now
+    private _unit = _grp createUnit [_classname, _position, [], 0, "CAN_COLLIDE"];
+    _grp deleteGroupWhenEmpty true;
     _unit setDir (getDir player + 90);
-    _unit setVariable ["isCultist", true, true];
+
+    // _unit setVariable ["isCultist", true, true];
 
     /*
     if (_type == "zombie") then {

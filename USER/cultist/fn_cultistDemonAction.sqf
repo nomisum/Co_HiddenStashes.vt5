@@ -137,7 +137,34 @@ private _walkerAction =
 [(typeOf player), 1, ["ACE_SelfActions", "Ritual"], _walkerAction] call ace_interact_menu_fnc_addActionToClass;
 
 
+private _resurrectAction =
+[
+  "Resurrect",
+  "Resurrect dead around you (100% Mana)",
+  "data\interact_cultist.paa",
+  {
+      if (player getVariable ["cultist_manaValue", 0] < 1) exitWith {
+          ["Low on mana!"] call CBA_fnc_notify;
+      };
 
+       if (count (weapons player) > 0) exitWith {
+            ["Drop your weapons and binos to use magic!"] call CBA_fnc_notify;
+      };
+      [player, "resurrect"] call grad_cultist_fnc_cultistMultiSpawnStart;
+  },
+  {
+      player getVariable ["isCultist", false] &&
+      !(player getVariable ["cultist_manaDrain", false]) &&
+      isNull attachedTo player 
+  },
+  {}
+] call ace_interact_menu_fnc_createAction;
+
+[(typeOf player), 1, ["ACE_SelfActions", "Ritual"], _resurrectAction] call ace_interact_menu_fnc_addActionToClass;
+
+
+
+/*
 private _helpRitualAction =
 [
   "joinRitual",
@@ -170,7 +197,7 @@ private _helpRitualAction =
 ] call ace_interact_menu_fnc_createAction;
 
 [(typeOf player), 1, ["ACE_SelfActions", "Ritual"], _helpRitualAction] call ace_interact_menu_fnc_addActionToClass;
-
+*/
 
 private _nightVisionOn =
 [
@@ -211,7 +238,7 @@ private _nightVisionOff =
 [(typeOf player), 1, ["ACE_SelfActions"], _nightVisionOff] call ace_interact_menu_fnc_addActionToClass;
 
 
-
+/*
 private _action = ["exitToSpectator", "Spectator", "data\interact_cultist.paa", {
         
     },{
@@ -236,3 +263,4 @@ private _exitToSpectator =
 ] call ace_interact_menu_fnc_createAction;
 
 [(typeOf player), 1, ["ACE_SelfActions", "exitToSpectator"], _exitToSpectator] call ace_interact_menu_fnc_addActionToClass;
+*/
