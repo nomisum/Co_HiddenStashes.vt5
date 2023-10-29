@@ -13,6 +13,8 @@ private _dummy =  createVehicle ["Land_ClutterCutter_medium_F", _position, [], 0
 
     private _grp = creategroup east; // hardcoded for now
     private _unit = _grp createUnit [_classname, _position, [], 0, "CAN_COLLIDE"];
+    [_unit, "AmovPercMstpSnonWnonDnon_SaluteOut"] remoteExec ["switchmove", 0];
+
     _grp deleteGroupWhenEmpty true;
     _unit setDir (getDir player + 90);
 

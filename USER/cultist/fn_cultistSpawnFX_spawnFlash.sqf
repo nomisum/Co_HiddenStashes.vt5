@@ -1,9 +1,8 @@
 params ["_position"];
 
-[_position] call grad_cultist_fnc_cultistSpawnFX_fog;
-
-
+[_position, 3] call grad_cultist_fnc_cultistSpawnFX_fog;
  _position set [2,3];
+ 
 private _light = "#lightpoint" createVehiclelocal _position; 
 _light setLightColor [0,0.541741,1]; 
 _light setLightAmbient [0,0,0]; 

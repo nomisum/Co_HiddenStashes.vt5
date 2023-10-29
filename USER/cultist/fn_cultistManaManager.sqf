@@ -12,8 +12,8 @@
     private _manaValue = player getVariable ["cultist_manaValue", 1];
     private _isDraining = player getVariable ["cultist_manaDrain", false];
 
-    if (_manaValue < (1 - _manaRegenerationRate) && !_isDraining) then {
-        _manaValue = _manaValue + _manaRegenerationRate;
+    if (_manaValue < (1) && !_isDraining) then {
+        _manaValue = (_manaValue + _manaRegenerationRate) min 1;
     };
 
     if (_manaValue > (0) && _isDraining) then {
