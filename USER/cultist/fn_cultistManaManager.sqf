@@ -7,7 +7,7 @@
     // at least player himself
     private _playersInvolved = if (!isNull _placeholder) then { count (_placeholder getVariable ["cultist_ritualInvolved", 1]) } else { 1 };
     
-    private _manaRegenerationRate = player getVariable ["cultist_manaRegenerationRate", 0.01]; // 60s to fill up
+    private _manaRegenerationRate = player getVariable ["cultist_manaRegenerationRate", 0.005]; // 0.01 == 60s to fill up
     private _manaDrainRate = player getVariable ["cultist_manaDrainRate", (_baseValue * 10) / _playersInvolved]; // 10s to drain completely
     private _manaValue = player getVariable ["cultist_manaValue", 1];
     private _isDraining = player getVariable ["cultist_manaDrain", false];

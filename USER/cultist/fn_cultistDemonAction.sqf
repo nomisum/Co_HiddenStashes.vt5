@@ -12,15 +12,15 @@ private _action = ["Ritual", "Ritual", "data\interact_cultist.paa", {
 private _teleportAction =
 [
   "Teleport",
-  "Teleport",
+  "Teleport (needs 100% Mana)",
    "data\interact_teleport.paa",
   {
-      if (player getVariable ["cultist_manaValue", 0] < 0.9) exitWith {
+      if (player getVariable ["cultist_manaValue", 0] < 1) exitWith {
           ["Low on mana!"] call CBA_fnc_notify;
       };
 
        if (count (weapons player) > 0) exitWith {
-            ["Drop your fweapons and binos to use magic!"] call CBA_fnc_notify;
+            ["Drop your weapons and binos to use magic!"] call CBA_fnc_notify;
       };
       [] call grad_cultist_fnc_cultistTeleportSelect;
   },
@@ -36,7 +36,7 @@ private _teleportAction =
 private _zombieAction =
 [
   "Zombie",
-  "Zombie",
+  "Zombie (5% Mana)",
   "data\interact_zombie.paa",
   {
       if (player getVariable ["cultist_manaValue", 0] < 0.9) exitWith {
@@ -62,7 +62,7 @@ private _zombieAction =
 private _demonAction =
 [
   "Demon",
-  "Demon (needs help by other cultists)",
+  "Demon (30% Mana)",
   "data\interact_demon.paa",
   {
       if (player getVariable ["cultist_manaValue", 0] < 0.9) exitWith {
@@ -88,7 +88,7 @@ private _demonAction =
 private _spiderAction =
 [
   "Spider",
-  "Spider",
+  "Spider (15% Mana)",
   "data\interact_mutant.paa",
   {
       if (player getVariable ["cultist_manaValue", 0] < 0.9) exitWith {
@@ -114,7 +114,7 @@ private _spiderAction =
 private _walkerAction =
 [
   "Walker",
-  "Walker",
+  "Walker (10% Mana)",
   "data\interact_bully.paa",
   {
       if (player getVariable ["cultist_manaValue", 0] < 0.9) exitWith {

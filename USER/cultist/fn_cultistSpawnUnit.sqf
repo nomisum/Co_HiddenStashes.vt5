@@ -1,7 +1,7 @@
 params ["_position", "_type"];
 
 
-private _dummy = "Land_ClutterCutter_medium_F" createVehicle _position;
+private _dummy =  createVehicle ["Land_ClutterCutter_medium_F", _position, [], 0, "CAN_COLLIDE"];
 [_dummy, "teleport_global"] remoteExec ["say3D"];
 
 [{
@@ -15,9 +15,11 @@ private _dummy = "Land_ClutterCutter_medium_F" createVehicle _position;
     _unit setDir (getDir player + 90);
     _unit setVariable ["isCultist", true, true];
 
+    /*
     if (_type == "zombie") then {
         [_unit] call grad_ambient_fnc_zombieRandomize;
     };
+    */
 
     ["grad_missionControl_curatorInfo", [_type]] call CBA_fnc_globalEvent;
 

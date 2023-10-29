@@ -72,7 +72,7 @@ for "_i" from 0 to 3 do {
     _unit addEventHandler ["HandleDamage", {
 	    params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint", "_directHit"];
 
-        if (!isNull _projectile && !(_unit getvariable ["grad_gotHit", false])) then {
+        if (!isNil _projectile && !(_unit getvariable ["grad_gotHit", false])) then {
             _unit setvariable ["grad_gotHit", true];
             _unit setVariable ["RZ_eatingSeconds", 9999];
         };

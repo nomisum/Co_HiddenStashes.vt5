@@ -31,7 +31,7 @@ if (!(player getVariable ["GRAD_isCultist", false])) then {
 
 	["Welcome to the Special Forces!"] call CBA_fnc_notify;
 
-	player setPos getMArkerPos "mrk_cultist_hq";
 } else {
 	call grad_cultist_fnc_cultistRespawn;	
+	player setPos getMArkerPos "mrk_cultist_hq";
 };

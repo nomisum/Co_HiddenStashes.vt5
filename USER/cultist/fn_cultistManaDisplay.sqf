@@ -24,14 +24,14 @@ _manaBarControls pushback _manaBarBG;
 private _manaBar = findDisplay 46 ctrlCreate ["RscStructuredText", -1];
 
 _manaBar ctrlSetPosition [_x, _y, _w, _h];
-_manaBar ctrlSetBackgroundColor [0.02,0.44,0.81,1];
+_manaBar ctrlSetBackgroundColor [0,0,0,0.5];
 _manaBar ctrlCommit 0;
 _manaBarControls pushback _manaBar;
 
 
 private _manaText = findDisplay 46 ctrlCreate ["RscStructuredText", -1];
 _manaText ctrlSetPosition [_x, _y, _w, _h];
-_manaText ctrlSetStructuredText (parseText "<t size='1' color='#50ffffff' align='center'>MANA</t>");
+_manaText ctrlSetStructuredText (parseText "<t size='.05' color='#ffffffff' align='center'> MANA</t>");
 _manaText ctrlCommit 0;
 _manaBarControls pushback _manaText;
 
@@ -66,5 +66,9 @@ _manaBarControls pushback _manaText;
   _manaBar ctrlSetPosition [_x, _y, _w * _manaValue, _h];
   _manaBar ctrlSetBackgroundColor _manaColor;
   _manaBar ctrlCommit 0.2;
+ 
+  private _valueString = (str (_manaValue * 100)) + "%";
+  _manaText ctrlSetStructuredText (parseText ("<t size='.05' color='#ffffffff' align='center'>" + _valueString + " MANA</t>"));
+  _manaText ctrlCommit 0;
 
 }, 0.2, [_manaBarControls]] call CBA_fnc_addPerFrameHandler;
