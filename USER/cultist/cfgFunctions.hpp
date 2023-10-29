@@ -22,6 +22,7 @@ class grad_cultist{
 
 			class cultistSingleSpawnStart;
 
+			class cultistSpawnFX_fog;
 			class cultistSpawnFX_hands;
 			class cultistSpawnFX_local;
 			class cultistSpawnFX_spawnFlash;

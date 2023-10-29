@@ -1,5 +1,8 @@
 params ["_position"];
 
+[_position] call grad_cultist_fnc_cultistSpawnFX_fog;
+
+
  _position set [2,3];
 private _light = "#lightpoint" createVehiclelocal _position; 
 _light setLightColor [0,0.541741,1]; 
@@ -68,5 +71,4 @@ _light2 setLightAttenuation [0,1,0,5];
 	deleteVehicle _light2; 
 
 }, [_light2], 2] call CBA_fnc_waitAndExecute;
-
 

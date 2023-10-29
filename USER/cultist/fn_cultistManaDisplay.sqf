@@ -5,10 +5,10 @@
 
 // Create box in the top right corner, with ¼ gutter spacing
 
-  private _x = safeZoneX + safeZoneW - UI_GRID_W * 30; // Top right corner with gutter
-  private _y = safeZoneY + + safeZoneH - UI_GRID_H * 2;              // Top right corner with gutter
+  private _x = safeZoneX + safeZoneW - UI_GRID_W * 10; // Top right corner with gutter
+  private _y = safeZoneY + + safeZoneH - UI_GRID_H * 3;              // Top right corner with gutter
   private _w = UI_GRID_W * 20;                            // Width of control
-  private _h = UI_GRID_H * 1;                             // Height of control
+  private _h = UI_GRID_H * 2;                             // Height of control
 
 
 private _manaBarControls = [];
@@ -31,7 +31,7 @@ _manaBarControls pushback _manaBar;
 
 private _manaText = findDisplay 46 ctrlCreate ["RscStructuredText", -1];
 _manaText ctrlSetPosition [_x, _y, _w, _h];
-_manaText ctrlSetStructuredText (parseText "<t size='.05' color='#ffffffff' align='center'> MANA</t>");
+_manaText ctrlSetStructuredText (parseText "<t size='.1' color='#ffffffff' align='center'> MANA</t>");
 _manaText ctrlCommit 0;
 _manaBarControls pushback _manaText;
 
@@ -59,7 +59,7 @@ _manaBarControls pushback _manaText;
   private _h = UI_GRID_H * 2;                             // Height of control
 
   private _manaValue = linearConversion [0, 1, player getVariable ["cultist_manaValue", 1], 0, 1, true];
-  private _manaColor = if (_manaValue < 0.9) then { [0.02,0.44,0.81,1] } else { [0.02,0.81,0.02,1] };
+  private _manaColor = if (_manaValue < 1) then { [0.02,0.44,0.81,1] } else { [0.22,0.81,0.22,1] };
   // systemChat str _manaValue;
 
   _manaBarControls params ["", "_manaBar", "_manaText"];
@@ -68,7 +68,7 @@ _manaBarControls pushback _manaText;
   _manaBar ctrlCommit 0.2;
  
   private _valueString = (str (_manaValue * 100)) + "%";
-  _manaText ctrlSetStructuredText (parseText ("<t size='.05' color='#ffffffff' align='center'>" + _valueString + " MANA</t>"));
+  _manaText ctrlSetStructuredText (parseText ("<t size='.1' color='#ffffffff' align='center'>" + _valueString + " MANA</t>"));
   _manaText ctrlCommit 0;
 
 }, 0.2, [_manaBarControls]] call CBA_fnc_addPerFrameHandler;

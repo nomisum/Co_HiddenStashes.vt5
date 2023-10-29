@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1000;
+		nextID=1026;
 	};
 	class Camera
 	{
 		pos[]={2534.01,20.867363,2028.1295};
-		dir[]={0.83619672,-0.54121071,0.088690847};
-		up[]={0.53819191,0.84088701,0.0570831};
-		aside[]={0.10547297,3.7252903e-009,-0.9944222};
+		dir[]={0.76402038,-0.64483732,-0.021507893};
+		up[]={0.644584,0.76431811,-0.018145649};
+		aside[]={-0.028140018,2.2555469e-008,-0.99960631};
 	};
 };
 binarizationWanted=0;
@@ -3760,7 +3760,7 @@ class Mission
 			};
 			id=975;
 			type="Land_FieldToilet_F";
-			atlOffset=0.0066375732;
+			atlOffset=0.0066642761;
 			class CustomAttributes
 			{
 				class Attribute0
