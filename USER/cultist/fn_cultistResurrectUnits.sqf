@@ -8,7 +8,7 @@ params ["_position", "_bodies"];
 
 	if (!isNull _body) then {
 
-		getModelInfo _body params ["_model"];
+		(getModelInfo _body) params ["_model"];
 		
 		private _classname = [_model] call grad_cultist_fnc_cultistZombieForModel;
 

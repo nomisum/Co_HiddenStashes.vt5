@@ -13,7 +13,7 @@ class grad_cultist{
 
 			class cultistManaDisplay;
 			class cultistManaManager;
-			class cultistRessurectUnits;
+			class cultistResurrectUnits;
 
 			class cultistMultiSpawnStart;      
 			

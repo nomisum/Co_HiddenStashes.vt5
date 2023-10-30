@@ -6,10 +6,10 @@
 // todooooo remove hardcoded values
 // Create box in the top right corner, with ¼ gutter spacing
 
-  private _x = safeZoneX + safeZoneW - UI_GRID_W * 10; // Top right corner with gutter
-  private _y = safeZoneY + + safeZoneH - UI_GRID_H * 3;              // Top right corner with gutter
-  private _w = UI_GRID_W * 20;                            // Width of control
-  private _h = UI_GRID_H * 2;                             // Height of control
+private _x = safeZoneX + safeZoneW - UI_GRID_W * 30; // Top right corner with gutter
+private _y = safeZoneY + + safeZoneH - UI_GRID_H * 10;              // Top right corner with gutter
+private _w = UI_GRID_W * 20;                            // Width of control
+private _h = UI_GRID_H * 2;                             // Height of control
 
 
 private _manaBarControls = [];
@@ -70,7 +70,7 @@ _manaBarControls pushback _manaText;
  
   private _valueString = (str (_manaValue * 100)) + "%";
   _manaText ctrlSetPosition [_x, _y, _w, _h];
-  _manaText ctrlSetStructuredText (parseText ("<t size='1' color='#ffffffff' align='center'>" + _valueString + " MANA</t>"));
+  _manaText ctrlSetStructuredText (parseText ("<t size='1.2' color='#ffffffff' align='center'>" + _valueString + " MANA</t>"));
   _manaText ctrlCommit 0;
 
 }, 0.2, [_manaBarControls]] call CBA_fnc_addPerFrameHandler;

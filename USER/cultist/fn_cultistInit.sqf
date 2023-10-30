@@ -23,7 +23,7 @@ if (!isServer) exitWith {};
     [_player1, _placeholder] remoteExec ["grad_cultist_fnc_cultistRitualEH", _player1];
     
     private _sound = selectRandom ["phase1_trance_1_source", "phase1_trance_2_source"];
-    [_player1, _placeholder, _type, _sound, true] remoteExec ["grad_cultist_fnc_cultistSpawnFX_local"];
+    [_player1, _placeholder, _type, _sound, true, _type == "resurrect"] remoteExec ["grad_cultist_fnc_cultistSpawnFX_local"];
 
     private _duration = [_type] call grad_cultist_fnc_cultistGetSpawnDuration;
 
@@ -68,7 +68,8 @@ if (!isServer) exitWith {};
         // successfully incantated monster
         if (CBA_missionTime > (_startTime + _duration)) exitWith {
             diag_log "ritual successful: initiating " + _type + " spawn";
-            { ["Ritual successful."] remoteExec ["CBA_fnc_notify", _x]; _x setVariable ["cultist_manaDrain", false, true]; } forEach _playersInvolvedNow;
+            { ["Ritual successful."] remoteExec ["CBA_fnc_notify", _x]; 
+            _x setVariable ["cultist_manaDrain", false, true]; } forEach _playersInvolvedNow;
             
             if (_type != "resurrect") then {
                 [_position, _type] call grad_cultist_fnc_cultistSpawnUnit;

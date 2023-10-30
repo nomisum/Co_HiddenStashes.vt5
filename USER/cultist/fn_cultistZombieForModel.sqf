@@ -1,6 +1,6 @@
 params ["_model"];
 
-private _return = "";
+private _return = "GRAD_SoldierZed_rhs_vdv_rifleman";
 
 switch (_model) do {
 	case "rhs_emr_base_gloves.p3d": { _return = "GRAD_SoldierZed_rhs_vdv_rifleman"; };

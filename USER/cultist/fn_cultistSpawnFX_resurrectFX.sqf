@@ -6,7 +6,7 @@ params ["_player", "_bodies"];
 		params ["_args", "_handle"];
 		_args params ["_position", "_player"];
 
-		if (_x getVariable ["cultist_manaDrain", false, true]) exitWith {
+		if (!(_player getVariable ["cultist_manaDrain", false])) exitWith {
 			[_handle] call CBA_fnc_removePerFrameHandler;
 		};
 
