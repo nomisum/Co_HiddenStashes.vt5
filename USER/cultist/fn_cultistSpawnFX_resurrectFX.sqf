@@ -23,6 +23,17 @@ params ["_player", "_bodies"];
 		[0],
 		0,0,"", "",""];
 
+		drop ["\A3\data_f\ParticleEffects\Universal\Meat_ca.p3d", 1, 0, 1], "", "SpaceObject",
+		1,
+		5,
+		_position,
+		[random 0.1, random 0.1, 0.1 + random 0.1],
+		5,
+		0.2,0.1568,0,[random .5, 0],
+		[[1,1,1,0],[1,1,1,.3],[1,1,1,.4],[1,1,1,.3],[1,1,1,.3],[1,1,1,.15],[1,1,1,.05],[1,1,1,0]],
+		[0],
+		0,0,"", "",""];
+
 	}, 0.2, [_position, _player]] call CBA_fnc_addPerFrameHandler;
 
 } forEach _bodies;

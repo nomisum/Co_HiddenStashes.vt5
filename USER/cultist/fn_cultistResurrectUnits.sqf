@@ -25,7 +25,7 @@ diag_log format ["entering resurrectunits %1", _bodies];
 			private _grp = creategroup east; // hardcoded for now
 			private _unit = _grp createUnit [_classname, _position, [], 0, "CAN_COLLIDE"];
 			_unit setDir _dir;
-			 [_unit, "AmovPercMstpSnonWnonDnon_SaluteOut"] remoteExec ["switchmove", 0];
+			[_unit, "AmovPercMstpSnonWnonDnon_SaluteOut"] remoteExec ["switchmove", 0];
 			_grp deleteGroupWhenEmpty true;
 
 			deleteVehicle _body;
