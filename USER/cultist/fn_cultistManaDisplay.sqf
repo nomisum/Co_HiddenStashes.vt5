@@ -3,6 +3,7 @@
 #define UI_GUTTER_W (pixelW * 2)       // One “gutter” width
 #define UI_GUTTER_H (pixelH * 2)       // One “gutter” height
 
+// todooooo remove hardcoded values
 // Create box in the top right corner, with ¼ gutter spacing
 
   private _x = safeZoneX + safeZoneW - UI_GRID_W * 10; // Top right corner with gutter
