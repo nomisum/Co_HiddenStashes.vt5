@@ -18,11 +18,11 @@ params ["_player", "_bodies"];
 		_position,
 		[random 0.1, random 0.1, 0.1 + random 0.1],
 		5,
-		0.2,0.1568,0,[.3 + random .1],
+		0.2,0.1568,0,[random .1, .1 + random .3, .4 + random .3, .7 + random .3],
 		[[1,1,1,0],[1,1,1,.3],[1,1,1,.4],[1,1,1,.3],[1,1,1,.3],[1,1,1,.15],[1,1,1,.05],[1,1,1,0]],
 		[0],
 		0,0,"", "",""];
 
-	}, 1, [_position, _player]] call CBA_fnc_addPerFrameHandler;
+	}, 0.2, [_position, _player]] call CBA_fnc_addPerFrameHandler;
 
 } forEach _bodies;

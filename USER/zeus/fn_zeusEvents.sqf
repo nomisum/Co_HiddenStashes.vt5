@@ -40,6 +40,10 @@ if (!isServer) exitWith {};
             _message = format ["%1 got assigned %2 as a lover.", [_unit, false, true] call ace_common_fnc_getName, [_unit getVariable ["grad_missionControl_buddy", objNull], false, true] call ace_common_fnc_getName];
             _color = [0.7,0.1,0.1,1];
         };
+        case ("resurrect"): {
+            _message = format ["%1 resurrects units", [_unit, false, true] call ace_common_fnc_getName];
+            _color = [0.7,0.1,0.1,1];
+        };
         default {};
     };
 

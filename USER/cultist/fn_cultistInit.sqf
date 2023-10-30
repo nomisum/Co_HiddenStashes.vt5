@@ -27,8 +27,10 @@ if (!isServer) exitWith {};
 
     private _duration = [_type] call grad_cultist_fnc_cultistGetSpawnDuration;
 
+
+    private _bodies = [];
     if (_type == "resurrect") then {
-        private _bodies = allDeadMen select { _x distance _player1 < 50 }; 
+        _bodies = allDeadMen select { _x distance _player1 < 50 }; 
         [_player1, _bodies] remoteExec ["grad_cultist_fnc_cultistSpawnFX_resurrectFX"];
         diag_log format ["found %1 dead bodies to resurrect", count _bodies];
     };
