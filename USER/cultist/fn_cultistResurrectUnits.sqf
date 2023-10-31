@@ -2,7 +2,7 @@
 
 params ["_position", "_bodies"];
 
-diag_log format ["entering resurrectunits %1", _bodies];
+// diag_log format ["entering resurrectunits %1", _bodies];
 
 private _grp = creategroup east; // hardcoded for now
 
@@ -12,7 +12,7 @@ private _grp = creategroup east; // hardcoded for now
 	
 	[{
 		params ["_body", "_grp"];
-		diag_log format ["body %1", _body];
+		// diag_log format ["body %1", _body];
 
 		if (!isNull _body) then {
 
@@ -43,14 +43,18 @@ private _grp = creategroup east; // hardcoded for now
 				
 				_grp deleteGroupWhenEmpty true;
 
+				
+				
+				[{ 
+					params ["_unit", "_goggles"]; 
+					_unit addGoggles _goggles; 
+					diag_log _goggles;
+				}, [_unit, _googles], 1] call CBA_fnc_waitAndExecute;
+
 				_unit addHeadgear _headgear;
 				_unit addVest _vest;
 				_unit addBackpack _backpack;
-				
-				[{ params ["_unit", "_goggles"]; _unit addGoggles _goggles; }, [_unit, _googles], 1] call CBA_fnc_waitAndExecute;
-				
 
-				diag_log _goggles;
 
 				 {
 					if (_unit canAddItemToUniform [_x, 1]) then {
