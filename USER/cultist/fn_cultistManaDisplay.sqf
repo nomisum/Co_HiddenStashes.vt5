@@ -68,7 +68,7 @@ _manaBarControls pushback _manaText;
   _manaBar ctrlSetBackgroundColor _manaColor;
   _manaBar ctrlCommit 0.2;
  
-  private _valueString = (str (_manaValue * 100)) + "%";
+  private _valueString = (str (round (_manaValue * 100))) + "%";
   _manaText ctrlSetPosition [_x, _y, _w, _h];
   _manaText ctrlSetStructuredText (parseText ("<t size='1.2' color='#ffffffff' align='center'>" + _valueString + " MANA</t>"));
   _manaText ctrlCommit 0;

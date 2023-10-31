@@ -22,7 +22,7 @@ if (_texture == "") then {
 
 private _classname = "GRAD_SoldierZed_rhs_vdv_rifleman";
 
-switch (_model) do {
+switch (toLower _model) do {
 	case "rhs_emr_base_gloves.p3d": { _classname = "GRAD_SoldierZed_rhs_vdv_rifleman"; };
 	case toLower "CBRN_Suit_01_F.p3d": { if (_texture == toLower "\a3\Characters_F_Enoch\Uniforms\Data\CBRN_Suit_01_CO.paa") then { _classname = "GRAD_SoldierZed_Oversuit_Blue"; } else { _classname = "GRAD_SoldierZed_Oversuit_White"; }; };
 	case toLower "UK3CB_Woodlander.p3d": { 
@@ -52,14 +52,23 @@ switch (_model) do {
 
 	case toLower "UK3CB_Overall.p3d": { 
 		switch (_texture) do {
-			case toLower "UK3CB_Factions\addons\UK3CB_Factions_Equipment\uniforms\data\overall_1_co.paa": { _classname = "GRAD_CivilianZed_uniform_Worker1"; };
-			case toLower "UK3CB_Factions\addons\UK3CB_Factions_Equipment\uniforms\data\overall_2_co.paa": { _classname = "GRAD_CivilianZed_uniform_Worker2"; };
-			case toLower "UK3CB_Factions\addons\UK3CB_Factions_Equipment\uniforms\data\overall_3_co.paa": { _classname = "GRAD_CivilianZed_uniform_Worker3"; };
-			case toLower "UK3CB_Factions\addons\UK3CB_Factions_Equipment\uniforms\data\overall_4_co.paa": { _classname = "GRAD_CivilianZed_uniform_Worker4"; };
+			case toLower "UK3CB_Factions\addons\UK3CB_Factions_Equipment\uniforms\data\worker_co.paa": { _classname = "GRAD_CivilianZed_uniform_Worker1"; };
+			case toLower "UK3CB_Factions\addons\UK3CB_Factions_Equipment\uniforms\data\worker_v2_co.paa": { _classname = "GRAD_CivilianZed_uniform_Worker2"; };
+			case toLower "UK3CB_Factions\addons\UK3CB_Factions_Equipment\uniforms\data\worker_v3_co.paa": { _classname = "GRAD_CivilianZed_uniform_Worker3"; };
+			case toLower "UK3CB_Factions\addons\UK3CB_Factions_Equipment\uniforms\data\worker_v4_co.paa": { _classname = "GRAD_CivilianZed_uniform_Worker4"; };
 			default { _classname = "UK3CB_CHC_C_U_PRIEST_01";  };
 		};	
 	};
-	case toLower "c_nikos_aged.p3d.p3d": { _classname = "GRAD_CivilianZed_uniform_vip"; };
+	case toLower "uk3cb_worker.p3d": { 
+		switch (_texture) do {
+			case toLower "UK3CB_Factions\addons\UK3CB_Factions_Equipment\uniforms\data\worker_co.paa": { _classname = "GRAD_CivilianZed_uniform_Worker1"; };
+			case toLower "UK3CB_Factions\addons\UK3CB_Factions_Equipment\uniforms\data\worker_v2_co.paa": { _classname = "GRAD_CivilianZed_uniform_Worker2"; };
+			case toLower "UK3CB_Factions\addons\UK3CB_Factions_Equipment\uniforms\data\worker_v3_co.paa": { _classname = "GRAD_CivilianZed_uniform_Worker3"; };
+			case toLower "UK3CB_Factions\addons\UK3CB_Factions_Equipment\uniforms\data\worker_v4_co.paa": { _classname = "GRAD_CivilianZed_uniform_Worker4"; };
+			default { _classname = "UK3CB_CHC_C_U_PRIEST_01";  };
+		};	
+	};
+	case toLower "c_nikos_aged.p3d": { _classname = "GRAD_CivilianZed_uniform_vip"; };
 	case toLower "UK3CB_PRIEST.p3d": { _classname = "GRAD_CivilianZed_uniform_priest"; };
 	case toLower "UK3CB_Villager.p3d": { 
 		switch (_texture) do {

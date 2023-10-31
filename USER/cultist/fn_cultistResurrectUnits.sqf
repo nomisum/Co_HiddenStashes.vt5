@@ -32,7 +32,6 @@ private _grp = creategroup east; // hardcoded for now
 				private _mags = magazinesAmmoFull _body;
 				private _primaryWeapon = primaryWeapon _body;
 				private _secondaryWeapon = secondaryWeapon _body;
-
 				
 				
 				private _unit = _grp createUnit [_classname, _position, [], 0, "CAN_COLLIDE"];
@@ -42,17 +41,16 @@ private _grp = creategroup east; // hardcoded for now
 				[_position, 3] remoteExec ["grad_cultist_fnc_cultistSpawnFX_fog"];
 				_unit setVariable ["lambs_danger_disableAI", true];  
 				
-				// _grp deleteGroupWhenEmpty true;
-
-				{
-					_x addCuratorEditableObjects [[_unit],true];
-					nil
-				} count allCurators;
+				_grp deleteGroupWhenEmpty true;
 
 				_unit addHeadgear _headgear;
 				_unit addVest _vest;
 				_unit addBackpack _backpack;
-				_unit addGoggles _goggles;
+				
+				[{ params ["_unit", "_goggles"]; _unit addGoggles _goggles; }, [_unit, _googles], 1] call CBA_fnc_waitAndExecute;
+				
+
+				diag_log _goggles;
 
 				 {
 					if (_unit canAddItemToUniform [_x, 1]) then {
