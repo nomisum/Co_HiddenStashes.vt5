@@ -3,7 +3,7 @@ if (!(player getVariable ["HS_killedOnce", false])) then {
     player setVariable ["HS_killedOnce", true, true];
     player setVariable ["ace_map_hideBlueForceMarker", false, true];
     
-    private _isCultist = random 2 > 1;
+    private _isCultist = random 2 > 1.5; // ratio cultist to police should be kinda low
     player setVariable ["GRAD_isCultist", _isCultist, true];
     [player] joinSilent (createGroup west);
 

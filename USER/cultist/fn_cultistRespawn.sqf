@@ -15,6 +15,7 @@ if (!(player getVariable ["isCultist", false])) then {
 	}] call CBA_fnc_addPlayerEventHandler;
 };
 
+player setcaptive true; // to make Zs ignore player
 
 // new identification var
 player setVariable ["isCultist", true, true];
