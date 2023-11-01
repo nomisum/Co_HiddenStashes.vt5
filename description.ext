@@ -33,7 +33,6 @@ allowFunctionsRecompile = 1;
 
 class CfgFunctions
 {
-	#include "functions\cfgFunctions.hpp"
 	#include "buyables\cfgFunctions.hpp"
 	#include "node_modules\grad-loadout\cfgFunctions.hpp"
 	#include "node_modules\grad-listbuymenu\cfgFunctions.hpp"
@@ -51,17 +50,6 @@ class CfgFunctions
   #include "USER\briefing\cfgFunctions.hpp"
   #include "USER\cultist\cfgFunctions.hpp"
   #include "USER\zeus\cfgFunctions.hpp"
-};
-
-class CfgNotifications
-{
-    class wita_notification {
-        title = "%1";
-        iconPicture = "\A3\ui_f\data\map\markers\military\warning_CA.paa";
-        description = "%2";
-        duration = 5;
-        priority = 0;
-    };
 };
 
 class cfgSounds {
@@ -160,13 +148,6 @@ class RscTitles {
     #include "scripts\cbrn\rsctitles.hpp"
 };
 
-class Extended_Killed_EventHandlers {
-    class CAManBase {
-        class grad_common_unitKilled {
-            killed = "_this call wita_common_fnc_handleUnitKilled";
-        };
-    };
-};
 
 class Extended_PreInit_EventHandlers {
     class cbrn_preInit {
