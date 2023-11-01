@@ -8,11 +8,11 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=5330;
+		nextID=5333;
 	};
 	class MarkerIDProvider
 	{
-		nextID=41;
+		nextID=42;
 	};
 	class LayerIndexProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3174.582,9.3585682,2174.2239};
-		dir[]={-0.58235115,-0.79152817,0.1853971};
-		up[]={-0.75423002,0.61112761,0.24011646};
-		aside[]={0.3033599,4.0672603e-007,0.9528864};
+		pos[]={2912.4204,8.8663654,2200.4041};
+		dir[]={0.26430127,-0.45736513,-0.84910321};
+		up[]={0.13593288,0.8892771,-0.43670413};
+		aside[]={-0.95482183,1.0804797e-007,-0.29720795};
 	};
 };
 binarizationWanted=0;
@@ -266,13 +266,14 @@ addons[]=
 	"ryanzombiesfunctions",
 	"UK3CB_Factions_Objects_Pallets",
 	"UK3CB_Factions_Common_Editor",
-	"A3_Supplies_F_Enoch_Bags"
+	"A3_Supplies_F_Enoch_Bags",
+	"gm_characters_ge_characters"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=135;
+		items=136;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -1133,6 +1134,13 @@ class AddonsMetaData
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
+		class Item135
+		{
+			className="gm_characters_ge_characters";
+			name="gm_characters_ge_characters";
+			author="Global Mobilization";
+			url="global-mobilization.com";
+		};
 	};
 };
 class DynamicSimulation
@@ -1172,7 +1180,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -3341,7 +3349,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=971;
+		items=972;
 		class Item0
 		{
 			dataType="Marker";
@@ -83505,6 +83513,36 @@ class Mission
 			};
 			id=5329;
 			type="B_CombinationUnitRespirator_01_F";
+		};
+		class Item971
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2913.1292,7.0765071,2198.104};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=5332;
+					type="gm_ge_army_antitank_g3a3_milan_80_ols";
+					atlOffset=-4.2915344e-006;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=5331;
+			atlOffset=-4.2915344e-006;
 		};
 	};
 	class Connections

@@ -1,5 +1,6 @@
 if (!(player getVariable ["GRAD_isCultist", false])) then {
 	[player] joinSilent (createGroup east);
+	player setVariable ["originalSide", "EAST", true];
 	[{
 		player linkitem "ItemGps";
 		player enableFatigue false;
@@ -11,5 +12,6 @@ if (!(player getVariable ["GRAD_isCultist", false])) then {
 
 } else {
 	[player] joinSilent (createGroup west);
+	player setVariable ["originalSide", "WEST", true];
 	call grad_cultist_fnc_cultistRespawn;
 };

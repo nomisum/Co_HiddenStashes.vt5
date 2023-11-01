@@ -53,10 +53,7 @@
 }] call zen_custom_modules_fnc_register;
 
 
-
-
-
-["Hidden Stashes 2 - AMBIENT", "Add Gasmask Crew to vehicle (WHITE)",
+["Hidden Stashes 2 - AMBIENT", "Add Crew to vehicle (WHITE)",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -70,15 +67,16 @@
 }] call zen_custom_modules_fnc_register;
 
 
-["Hidden Stashes 2 - AMBIENT", "Add Gasmask Crew to vehicle (TINFOILS)",
+["Hidden Stashes 2 - AMBIENT", "Convert Crew in vehicle (TINFOILS)",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
   {
-      _x setUnitLoadout [[[],[],["ACE_Flashlight_Maglite_ML300L","","","",[],[],""],["U_C_ConstructionCoverall_Red_F",[["gm_ge_army_gauzeBandage",1],["gm_ge_army_burnBandage",1],["gm_ge_facewear_m65",1],["gm_ge_headgear_hat_80_m62_oli",1]]],[],["B_SCBA_01_F",[]],"H_Hat_Tinfoil_F","gm_gc_army_facewear_schm41m",["ace_dragon_sight","","","",[],[],""],["ItemMap","","ItemRadio","gm_ge_army_conat2","ItemWatch",""]],[]];   
+      _x setUnitLoadout [[],[],["ACE_Flashlight_Maglite_ML300L","","","",[],[],""],["U_C_ConstructionCoverall_Red_F",[["gm_ge_army_gauzeBandage",1],["gm_ge_army_burnBandage",1],["gm_ge_facewear_m65",1],["gm_ge_headgear_hat_80_m62_oli",1]]],[],["gm_fagot_launcher_weaponBag",[]],"H_Hat_Tinfoil_F","G_Blindfold_01_black_F",["ace_dragon_sight","","","",[],[],""],["ItemMap","","ItemRadio","gm_ge_army_conat2","ItemWatch",""]];
   } forEach crew _objectUnderCursor;
 
 }] call zen_custom_modules_fnc_register;
+
 
 ["Hidden Stashes 2 - AMBIENT", "Add Cultist Crew to vehicle",
 {
@@ -109,6 +107,15 @@
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
   diwako_ambientFogglets = false; publicVariable "diwako_ambientFogglets";
+
+}] call zen_custom_modules_fnc_register;
+
+
+["Hidden Stashes 2 - TRACKING", "Create Tracking Markers for Police Players",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+  [120] remoteExec ["grad_zeus_fnc_createTrackingMarker", 2];
 
 }] call zen_custom_modules_fnc_register;
 

@@ -1,15 +1,36 @@
-params ["_agent", "_markerPos", "_currentVariance", "_cumulatedAddedDistance", "_currentFadeout"];
+params ["_markerPosition", "_markerSize", "_fadeOutTime", "_icon"];
 
-private _centerMarker = createMarkerLocal [format ["wita_agentmarker_%1_center_%2",[name _agent] call BIS_fnc_filterString,CBA_missionTime * 1000],_markerPos];
+["New Tracking Data on map"] call CBA_fnc_notify;
+
+
+private _centerMarker = createMarkerLocal [format ["wita_agentmarker_%1_center_%2", _markerPosition, CBA_missionTime * 1000],_markerPosition];
 _centerMarker setMarkerShapeLocal "ICON";
-_centerMarker setMarkerTypeLocal "hd_dot";
-_centerMarker setMarkerColorLocal "COLORGUER";
+_centerMarker setMarkerTypeLocal _icon;
+_centerMarker setMarkerColorLocal "COLORPINK";
 _centerMarker setMarkerTextLocal (format ["%1",[daytime * 3600,"HH:MM"] call BIS_fnc_secondsToString]);
+_centerMarker setMarkerAlphaLocal 1;
 
-private _areaMarker = createMarkerLocal [format ["wita_agentmarker_%1_area_%2",[name _agent] call BIS_fnc_filterString,CBA_missionTime * 1000],_markerPos];
+private _areaMarker = createMarkerLocal [format ["wita_agentmarker_%1_area_%2",_markerPosition, CBA_missionTime * 1000],_markerPosition];
 _areaMarker setMarkerShapeLocal "ELLIPSE";
-_areaMarker setMarkerColorLocal "COLORGUER";
-_areaMarker setMarkerSizeLocal [_currentVariance + _cumulatedAddedDistance,_currentVariance + _cumulatedAddedDistance];
-_areaMarker setMarkerBrushLocal "Border";
+_areaMarker setMarkerColorLocal "COLORPINK";
+_areaMarker setMarkerSizeLocal [_markerSize, _markerSize];
+_areaMarker setMarkerBrushLocal "Cross";
+_areaMarker setMarkerAlphaLocal 1;
 
-[[_centerMarker,_areaMarker],_currentFadeout] call wita_common_fnc_fadeMarker;
+private _interval = 1/_fadeOutTime;
+
+[{
+	params ["_args", "_handle"];
+	_args params ["_centerMarker", "_areaMarker", "_interval"];	
+
+	private _alpha = markerAlpha _centerMarker;
+	if (_alpha <= 0) exitWith {
+		[_handle] call CBA_fnc_removePerFrameHandler;
+		deleteMarkerLocal _centerMarker;
+		deleteMarkerLocal _areaMarker;
+
+		diag_log "deleted unit marker for tracking";
+	};
+	_areaMarker setMarkerAlphaLocal (_alpha - _interval);
+
+}, 1, [_centerMarker, _areaMarker, _interval]] call CBA_fnc_addPerFrameHandler;
