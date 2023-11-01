@@ -13,6 +13,27 @@ if (!(player getVariable ["HS_killedOnce", false])) then {
         ["en"] call acre_api_fnc_babelSetSpokenLanguages;
     };
 
+    // add eh before respawn already so it catches the loadout event reliably
+    private _id = ["grad_loadout_loadoutApplied",
+    {
+        params ["_unit","_loadout"];
+        if (_unit != player) exitWith {};
+        
+        DIAG_LOG format ["loadout applied %1", _loadout];
+
+        // override any potential faction stuff after its set
+        [{
+            if (!(player getVariable ["GRAD_isCultist", false])) then {
+                [] execVM "custom\loadout\equipAsSpecialForce.sqf";
+            } else {
+                [] execVM "custom\loadout\equipAsCultist.sqf";
+            };
+        }] call CBA_fnc_execNextFrame;
+        
+    }] call CBA_fnc_addEventhandler;
+    diag_log format ["loadout applied eh added %1", _id];
+
+
 } else {
     // save stuff for clone
     private _goggles = goggles player;
