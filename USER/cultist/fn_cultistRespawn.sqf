@@ -2,20 +2,18 @@
 	
 player setPos getMarkerPos "mrk_cultist_hq";
 
-if (!(player getVariable ["GRAD_isCultist", false])) then {
 
-	 ["cameraView", {
-		
-		private _currentNVGState = player getVariable ["cultist_nvg", false];
-		
-		if (_currentNVGState) then {
-			(player) action ["nvGoggles", (player)];
-		} else {
-			(player) action ["nvGogglesOff", (player)];
-		};
-		
-	}] call CBA_fnc_addPlayerEventHandler;
-};
+["cameraView", {
+
+	private _currentNVGState = player getVariable ["cultist_nvg", false];
+
+	if (_currentNVGState) then {
+		(player) action ["nvGoggles", (player)];
+	} else {
+		(player) action ["nvGogglesOff", (player)];
+	};
+
+}] call CBA_fnc_addPlayerEventHandler;
 
 // new identification var
 player setVariable ["GRAD_isCultist", true, true];
@@ -36,7 +34,6 @@ if (!isNil "cbrn_mask_abberation") then {
 (group player) setVariable ["ACE_map_hideBlueForceMarker", true, true];
 [{
 	call grad_cultist_fnc_cultistLoadout;
-	player linkitem "TFAR_fadak";
 	player linkitem "ItemGps";
 	player enableFatigue false;
 
