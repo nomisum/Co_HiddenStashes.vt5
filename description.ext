@@ -1,11 +1,6 @@
 #define MODULES_DIRECTORY node_modules
 
 #include "cfgParams.hpp"
-#include "cfgCacheContents.hpp"
-#include "cfgCacheStories.hpp"
-#include "cfgCaches.hpp"
-#include "cfgCivilians.hpp"
-#include "cfgMission.hpp"
 #include "buyables\cfgBuyables.hpp"
 #include "loadouts\loadouts.hpp"
 
@@ -33,23 +28,23 @@ allowFunctionsRecompile = 1;
 
 class CfgFunctions
 {
-	#include "buyables\cfgFunctions.hpp"
-	#include "node_modules\grad-loadout\cfgFunctions.hpp"
-	#include "node_modules\grad-listbuymenu\cfgFunctions.hpp"
-  #include "node_modules\grad-moneymenu\cfgFunctions.hpp"
-	#include "node_modules\grad-scoreboard\cfgFunctions.hpp"
-	#include "node_modules\grad-civs\cfgFunctions.hpp"
-	#include "node_modules\grad-gpsTracker\cfgFunctions.hpp"
-	#include "node_modules\grad-fortifications\cfgFunctions.hpp"
-  #include "scripts\cbrn\funcs.hpp"
+    #include "buyables\cfgFunctions.hpp"
+    #include "node_modules\grad-loadout\cfgFunctions.hpp"
+    #include "node_modules\grad-listbuymenu\cfgFunctions.hpp"
+    #include "node_modules\grad-moneymenu\cfgFunctions.hpp"
+    #include "node_modules\grad-scoreboard\cfgFunctions.hpp"
+    #include "node_modules\grad-civs\cfgFunctions.hpp"
+    #include "node_modules\grad-gpsTracker\cfgFunctions.hpp"
+    #include "node_modules\grad-fortifications\cfgFunctions.hpp"
+    #include "scripts\cbrn\funcs.hpp"
 
-  #include "HS_spawner\cfgFunctions.hpp"
-  #include "grad-introCam\cfgFunctions.hpp"
+    #include "HS_spawner\cfgFunctions.hpp"
+    #include "grad-introCam\cfgFunctions.hpp"
 
-  #include "USER\ambient\cfgFunctions.hpp"
-  #include "USER\briefing\cfgFunctions.hpp"
-  #include "USER\cultist\cfgFunctions.hpp"
-  #include "USER\zeus\cfgFunctions.hpp"
+    #include "USER\ambient\cfgFunctions.hpp"
+    #include "USER\briefing\cfgFunctions.hpp"
+    #include "USER\cultist\cfgFunctions.hpp"
+    #include "USER\zeus\cfgFunctions.hpp"
 };
 
 class cfgSounds {
@@ -115,34 +110,6 @@ class CfgHints
    };
 };
 
-class CfgGradMoneymenu {
-    canGiveDefault = 0;
-    canTransferToSidesDefault[] = {};
-    canTakeFromDeadDefault = 0;
-    canSendDirectlyDefault = 0;
-    canTakeFromSurrenderedDefault = 1;
-    startMoney = 0;
-    startBankBalance = 0;
-    atmObjects[] = {};
-};
-
-class CfgGradCivs {
-    autoInit = 0;
-    maxCivsOnFoot = 0;
-    maxCivsResidents = 0;
-    maxCivsInVehicles = 0;
-    spawnDistancesOnFoot[] = {1000,4500};
-    spawnDistancesInVehicles[] = {1000,4500};
-    debugCivState = 0;
-    debugFps = 0;
-    minCivUpdateTime = 3;
-	  minFps = 35;
-    automaticVehicleGroupSize = 1;
-    exitOn = "";
-    onSpawn = "";
-    onHeldUp = "";
-    backpackProbability = 0.2;
-};
 
 class RscTitles {
     #include "scripts\cbrn\rsctitles.hpp"

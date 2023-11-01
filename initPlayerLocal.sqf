@@ -9,7 +9,9 @@ if (isMultiplayer && !didJIP) then {
     [0] call acre_api_fnc_setGlobalVolume;
 };
 
-if (didJIP) then {
+private _skipIntro = (["SKIP_INTRO", 0] call BIS_fnc_getParamValue) == 0;
+
+if (didJIP || _skipIntro) then {
     waitUntil {
       !isNull player
     };
