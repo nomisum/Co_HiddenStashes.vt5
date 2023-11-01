@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=5333;
+		nextID=5344;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2912.4204,8.8663654,2200.4041};
-		dir[]={0.26430127,-0.45736513,-0.84910321};
-		up[]={0.13593288,0.8892771,-0.43670413};
-		aside[]={-0.95482183,1.0804797e-007,-0.29720795};
+		pos[]={237.81323,36.798252,442.26343};
+		dir[]={-0.80658418,-0.59101516,-0.011399248};
+		up[]={-0.59095913,0.80665791,-0.0083518978};
+		aside[]={-0.014131315,-5.4273187e-008,0.99990368};
 	};
 };
 binarizationWanted=0;
@@ -267,7 +267,7 @@ addons[]=
 	"UK3CB_Factions_Objects_Pallets",
 	"UK3CB_Factions_Common_Editor",
 	"A3_Supplies_F_Enoch_Bags",
-	"gm_characters_ge_characters"
+	"UK3CB_Factions_ION_B_Woodland"
 };
 class AddonsMetaData
 {
@@ -1136,10 +1136,10 @@ class AddonsMetaData
 		};
 		class Item135
 		{
-			className="gm_characters_ge_characters";
-			name="gm_characters_ge_characters";
-			author="Global Mobilization";
-			url="global-mobilization.com";
+			className="UK3CB_Factions_ION";
+			name="3CB Factions - ION Services";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
 		};
 	};
 };
@@ -1180,7 +1180,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Scenario";
 		class Attribute0
@@ -38797,34 +38797,69 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={244.04637,22.410305,405.93317};
-				angles[]={6.2710223,1.0837728,6.2422457};
+				position[]={244.04628,22.410484,405.93289};
+				angles[]={6.2710204,1.0837797,6.2422395};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="[this] execvm ""custom\helpers\respawnVehicleManager.sqf"";";
 			};
 			id=3038;
 			type="I_E_Offroad_01_comms_F";
-			atlOffset=-0.0011787415;
+			atlOffset=-0.00099945068;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""arifle_MSBS65_F"",""FirstAidKit""],[2,4]],[[""SmokeShell"",""HandGrenade"",""30Rnd_65x39_caseless_msbs_mag""],[4,4,8]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item317
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={266.89471,21.269949,410.94089};
-				angles[]={0.0095994528,4.2140017,6.2506628};
+				position[]={266.89481,21.269897,410.94122};
+				angles[]={0.0095993113,4.2140102,6.2506695};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="[this] execvm ""custom\helpers\respawnVehicleManager.sqf"";";
 			};
 			id=3039;
 			type="I_E_Offroad_01_covered_F";
-			atlOffset=4.3869019e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""arifle_MSBS65_F"",""FirstAidKit""],[2,4]],[[""SmokeShell"",""HandGrenade"",""30Rnd_65x39_caseless_msbs_mag""],[4,4,8]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item318
 		{
@@ -83516,33 +83551,38 @@ class Mission
 		};
 		class Item971
 		{
-			dataType="Group";
-			side="West";
-			class Entities
+			dataType="Object";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2913.1292,7.0765071,2198.104};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-					};
-					id=5332;
-					type="gm_ge_army_antitank_g3a3_milan_80_ols";
-					atlOffset=-4.2915344e-006;
-				};
+				position[]={222.44087,23.387299,452.9306};
+				angles[]={0.012793263,2.7110722,6.2252226};
 			};
+			side="Empty";
+			flags=4;
 			class Attributes
 			{
+				init="[this] execvm ""custom\helpers\respawnVehicleManager.sqf"";";
 			};
-			id=5331;
-			atlOffset=-4.2915344e-006;
+			id=5342;
+			type="UK3CB_ION_B_Woodland_Bell412_FLIR";
+			atlOffset=-0.0048885345;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""FirstAidKit""],[1]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
