@@ -28,9 +28,10 @@ private _camDefinitions = [
 } forEach _camDefinitions;
 
 
+private _skipIntro = (["SKIP_INTRO", 0] call BIS_fnc_getParamValue) == 0;
 
 [{
-    if (isMultiplayer) then {
+    if (isMultiplayer && !_skipIntro) then {
         call GRAD_introCam_fnc_init;
     };
 }, [], 5] call CBA_fnc_waitAndExecute;
