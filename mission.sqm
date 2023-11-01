@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1208;
+		nextID=1234;
 	};
 	class Camera
 	{
@@ -263,6 +263,7 @@ addons[]=
 	"A3_Supplies_F_Heli_CargoNets",
 	"A3_Structures_F_Exp_Cultural_AncientRelics",
 	"A3_Structures_F_Enoch_VR_Helpers",
+	"ryanzombiesfunctions",
 	"UK3CB_Factions_Objects_Pallets",
 	"UK3CB_Factions_Common_Editor",
 	"A3_Supplies_F_Enoch_Bags"
@@ -271,7 +272,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=136;
+		items=135;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -1081,43 +1082,42 @@ class AddonsMetaData
 		};
 		class Item127
 		{
-			className="RHS_US_A2_AirImport";
-			name="RHSUSF A2 Air Ports";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
-		class Item128
-		{
 			className="A3_Data_F_Curator";
 			name="Arma 3 Zeus Update - Main Configuration";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item129
+		class Item128
 		{
 			className="CUP_CAMP_Armory_Misc_Laptop";
 			name="CUP_CAMP_Armory_Misc_Laptop";
 		};
-		class Item130
+		class Item129
 		{
 			className="A3_Weapons_F_Orange";
 			name="Arma 3 Orange - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item131
+		class Item130
 		{
 			className="rhs_c_air";
 			name="AFRF Planes";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item132
+		class Item131
 		{
 			className="A3_Supplies_F_Enoch";
 			name="Arma 3 Contact Platform - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item132
+		{
+			className="ryanzombiesfunctions";
+			name="ryanzombiesfunctions";
+			author="Ryan";
 		};
 		class Item133
 		{
@@ -1127,13 +1127,6 @@ class AddonsMetaData
 			url="www.3commandobrigade.com";
 		};
 		class Item134
-		{
-			className="UK3CB_Factions_Objects_Pallets";
-			name="3CB Factions - Pallets";
-			author="3 Commando Brigade";
-			url="www.3commandobrigade.com";
-		};
-		class Item135
 		{
 			className="UK3CB_Factions_Common";
 			name="3CB Factions - Common";
@@ -78419,34 +78412,6 @@ class Mission
 			description="Zeus";
 			id=5085;
 			type="VirtualCurator_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="TFAR_freq_lr";
-					expression="if !(_value isEqualTo []) then {_value=[str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput;_this setVariable ['TFAR_freq_lr',_value,true];}";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="TFAR_freq_sr";
-					expression="if !(_value isEqualTo []) then {_value=[str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput;_this setVariable ['TFAR_freq_sr',_value,true];}";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-						};
-					};
-				};
-				nAttributes=2;
-			};
 		};
 		class Item805
 		{
@@ -78460,34 +78425,6 @@ class Mission
 			description="Zeus";
 			id=5086;
 			type="VirtualCurator_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="TFAR_freq_lr";
-					expression="if !(_value isEqualTo []) then {_value=[str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput;_this setVariable ['TFAR_freq_lr',_value,true];}";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="TFAR_freq_sr";
-					expression="if !(_value isEqualTo []) then {_value=[str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput;_this setVariable ['TFAR_freq_sr',_value,true];}";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-						};
-					};
-				};
-				nAttributes=2;
-			};
 		};
 		class Item806
 		{
@@ -83559,7 +83496,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3173.7383,6.8238482,2175.3992};
-				angles[]={-0,3.892117,0};
+				angles[]={0,3.892117,0};
 			};
 			side="Empty";
 			flags=4;

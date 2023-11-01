@@ -41,10 +41,10 @@ Ryanzombiesattackspeed = 1;
 Ryanzombiesattackdistance = 2.35;
 Ryanzombiesattackstrenth = 1.5;
 Ryanzombiesdamage = 0.15;
-Ryanzombiesdamagecar = 0.01;
+Ryanzombiesdamagecar = 0.1;
 Ryanzombiesdamageair = 0.01;
 Ryanzombiesdamagetank = 0.002;
-Ryanzombiesdamagecarstrenth = 1.5;
+Ryanzombiesdamagecarstrenth = 3;
 Ryanzombiesdamageairstrenth = 1;
 Ryanzombiesdamagetankstrenth = 0.4;
 

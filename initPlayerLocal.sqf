@@ -9,7 +9,9 @@ if (isMultiplayer && !didJIP) then {
     [0] call acre_api_fnc_setGlobalVolume;
 };
 
-if (didJIP) then {
+private _skipIntro = (["SKIP_INTRO", 0] call BIS_fnc_getParamValue) == 0;
+
+if (didJIP || _skipIntro) then {
     waitUntil {
       !isNull player
     };
@@ -29,8 +31,6 @@ player setVariable ["originalSide", "INDEPENDENT", true];
 0 enableChannel false;
 [true, true] call acre_api_fnc_setupMission;
 
-// init babel after variables are set in init
-[ [west, "English", "French"], [east, "Russian"], [civilian, "French"] ] call acre_api_fnc_babelSetupMission;
 
 ["en","English"] call acre_api_fnc_babelAddLanguageType;
 ["fi","Finnish"] call acre_api_fnc_babelAddLanguageType;
