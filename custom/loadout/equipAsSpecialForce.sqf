@@ -12,15 +12,9 @@ player setUnitLoadout [
 player setPos (getMarkerPos "mrk_blufor_hq");
 player setVariable ["ace_map_hideBlueForceMarker",false,true];
 
+["ACRE_PRC152", "default2"] call acre_api_fnc_setPreset;
+
 player addItem "ACRE_PRC152";
 
-// wait till player has radio assigned, set channels and languages
-[{
-    [player] call acre_api_fnc_hasRadio
-},{
-    private _radio = ["ACRE_PRC152", player] call acre_api_fnc_getRadioByType;
-    [_radio, 7] call acre_api_fnc_setRadioChannel;
-    ["en"] call acre_api_fnc_babelSetSpokenLanguages;
-    ["en"] call acre_api_fnc_babelSetSpeakingLanguage;
-
-}] call CBA_fnc_waitUntilAndExecute;
+["en"] call acre_api_fnc_babelSetSpokenLanguages;
+["en"] call acre_api_fnc_babelSetSpeakingLanguage;

@@ -23,12 +23,13 @@ if (!(player getVariable ["HS_killedOnce", false])) then {
 
         // override any potential faction stuff after its set
         [{
-            if (!(player getVariable ["GRAD_isCultist", false])) then {
+             if (!(player getVariable ["GRAD_isCultist", false])) then {
                 [] execVM "custom\loadout\equipAsSpecialForce.sqf";
             } else {
                 [] execVM "custom\loadout\equipAsCultist.sqf";
             };
-        }] call CBA_fnc_execNextFrame;
+        }, [], 1] call CBA_fnc_waitAndExecute;
+       
         
     }] call CBA_fnc_addEventhandler;
     diag_log format ["loadout applied eh added %1", _id];
