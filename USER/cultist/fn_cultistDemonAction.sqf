@@ -2,7 +2,7 @@ if (!hasInterface) exitWith {};
 private _action = ["Ritual", "Ritual", "data\interact_cultist.paa", {
         
     },{
-        player getVariable ["isCultist", false] &&
+        player getVariable ["GRAD_isCultist", false] &&
         !(player getVariable ["cultist_manaDrain", false]) &&
         isNull attachedTo player 
     }] call ace_interact_menu_fnc_createAction;
@@ -25,7 +25,7 @@ private _teleportAction =
       [] call grad_cultist_fnc_cultistTeleportSelect;
   },
   {
-      player getVariable ["isCultist", false] &&
+      player getVariable ["GRAD_isCultist", false] &&
       !(player getVariable ["cultist_manaDrain", false])
   },
   {}
@@ -49,7 +49,7 @@ private _zombieAction =
       [player, "zombie"] call grad_cultist_fnc_cultistMultiSpawnStart;
   },
   {
-      player getVariable ["isCultist", false] &&
+      player getVariable ["GRAD_isCultist", false] &&
       !(player getVariable ["cultist_manaDrain", false]) &&
       isNull attachedTo player 
   },
@@ -75,7 +75,7 @@ private _demonAction =
       [player, "demon"] call grad_cultist_fnc_cultistMultiSpawnStart;
   },
   {
-      player getVariable ["isCultist", false] &&
+      player getVariable ["GRAD_isCultist", false] &&
       !(player getVariable ["cultist_manaDrain", false]) &&
       isNull attachedTo player 
   },
@@ -101,7 +101,7 @@ private _spiderAction =
       [player, "spider"] call grad_cultist_fnc_cultistMultiSpawnStart;
   },
   {
-      player getVariable ["isCultist", false] &&
+      player getVariable ["GRAD_isCultist", false] &&
       !(player getVariable ["cultist_manaDrain", false]) &&
       isNull attachedTo player 
   },
@@ -127,7 +127,7 @@ private _walkerAction =
       [player, "walker"] call grad_cultist_fnc_cultistMultiSpawnStart;
   },
   {
-      player getVariable ["isCultist", false] &&
+      player getVariable ["GRAD_isCultist", false] &&
       !(player getVariable ["cultist_manaDrain", false]) &&
       isNull attachedTo player 
   },
@@ -153,7 +153,7 @@ private _resurrectAction =
       [player, "resurrect"] call grad_cultist_fnc_cultistMultiSpawnStart;
   },
   {
-      player getVariable ["isCultist", false] &&
+      player getVariable ["GRAD_isCultist", false] &&
       !(player getVariable ["cultist_manaDrain", false]) &&
       isNull attachedTo player 
   },
@@ -188,7 +188,7 @@ private _helpRitualAction =
       [player, _existingRitual, _type, _sound, false] remoteExec ["grad_cultist_fnc_cultistSpawnFX_local"];
   },
   {
-      player getVariable ["isCultist", false] &&
+      player getVariable ["GRAD_isCultist", false] &&
       !(player getVariable ["cultist_manaDrain", false]) &&
       isNull attachedTo player &&
       { !isNull ([player] call grad_cultist_fnc_cultistGetNearestRitual) }
@@ -209,7 +209,7 @@ private _nightVisionOn =
       player setVariable ["cultist_nvg", true, true];
   },
   {
-      player getVariable ["isCultist", false] &&
+      player getVariable ["GRAD_isCultist", false] &&
       currentVisionMode player == 0 &&
       isNull attachedTo player
   },
@@ -228,7 +228,7 @@ private _nightVisionOff =
       player setVariable ["cultist_nvg", false, true];
   },
   {
-      player getVariable ["isCultist", false] &&
+      player getVariable ["GRAD_isCultist", false] &&
       currentVisionMode player == 1 &&
       isNull attachedTo player
   },
@@ -242,7 +242,7 @@ private _nightVisionOff =
 private _action = ["exitToSpectator", "Spectator", "data\interact_cultist.paa", {
         
     },{
-        player getVariable ["isCultist", false]
+        player getVariable ["GRAD_isCultist", false]
     }] call ace_interact_menu_fnc_createAction;
     
 [(typeOf player), 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToClass;
@@ -257,7 +257,7 @@ private _exitToSpectator =
       ["Initialize", [player, [], true]] call BIS_fnc_EGSpectator;
   },
   {
-      player getVariable ["isCultist", false]
+      player getVariable ["GRAD_isCultist", false]
   },
   {}
 ] call ace_interact_menu_fnc_createAction;

@@ -1,6 +1,8 @@
 // initialize cultist
+	
+player setPos getMarkerPos "mrk_cultist_hq";
 
-if (!(player getVariable ["isCultist", false])) then {
+if (!(player getVariable ["GRAD_isCultist", false])) then {
 
 	 ["cameraView", {
 		
@@ -15,21 +17,11 @@ if (!(player getVariable ["isCultist", false])) then {
 	}] call CBA_fnc_addPlayerEventHandler;
 };
 
-player setcaptive true; // to make Zs ignore player
-
 // new identification var
-player setVariable ["isCultist", true, true];
+player setVariable ["GRAD_isCultist", true, true];
 
 // new role for briefing
 player setVariable ["missionControl_role", "cultist", true];
-
-// new group
-private _buddy = player getVariable ["grad_missionControl_buddy", objNull];
-if (isNull _buddy) then {
-	[player] joinSilent (createGroup west);
-} else {
-	[player, _buddy] joinSilent (createGroup west);
-};
 
 player setVariable ["cbrn_mask_on", false, true];
 if (!isNil "cbrn_mask_abberation") then {

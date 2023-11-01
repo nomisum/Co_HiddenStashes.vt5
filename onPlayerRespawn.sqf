@@ -1,11 +1,6 @@
-[player] joinSilent (createGroup west);
-
-
-
 if (!(player getVariable ["GRAD_isCultist", false])) then {
-
+	[player] joinSilent (createGroup east);
 	[{
-		player linkitem "TFAR_fadak";
 		player linkitem "ItemGps";
 		player enableFatigue false;
 
@@ -15,6 +10,6 @@ if (!(player getVariable ["GRAD_isCultist", false])) then {
 	["Welcome to the Special Forces!"] call CBA_fnc_notify;
 
 } else {
-	call grad_cultist_fnc_cultistRespawn;	
-	player setPos getMArkerPos "mrk_cultist_hq";
+	[player] joinSilent (createGroup west);
+	call grad_cultist_fnc_cultistRespawn;
 };

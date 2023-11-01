@@ -19,7 +19,7 @@ private _dummy =  createVehicle ["Land_ClutterCutter_medium_F", _position, [], 0
     _grp deleteGroupWhenEmpty true;
     _unit setDir (getDir player + 90);
 
-    // _unit setVariable ["isCultist", true, true];
+    // _unit setVariable ["GRAD_isCultist", true, true];
 
     /*
     if (_type == "zombie") then {
