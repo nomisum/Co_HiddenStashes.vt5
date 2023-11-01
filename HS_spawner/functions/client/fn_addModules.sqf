@@ -175,24 +175,6 @@ if (!hasInterface) exitWith {};
 }] call zen_custom_modules_fnc_register;
 
 
-["HS_BluforBuyOptions", "Allow Heli (LVL 1)", {
-    params ["_position", "_object"];
-
-    {[player, 1] call grad_lbm_fnc_setPermissionLevel} remoteExec ["call",WEST,true];
-    ["wita_notification",["VEHICLES UNLOCKED","BLUFOR now has access to lvl 1 vehicles."]] remoteExec ["bis_fnc_showNotification",west,false];
-    systemChat "level 1 unlocked";
-
-}] call zen_custom_modules_fnc_register;
-
-["HS_BluforBuyOptions", "Allow APC (LVL 2)", {
-    params ["_position", "_object"];
-
-    {[player, 2] call grad_lbm_fnc_setPermissionLevel} remoteExec ["call",WEST,true];
-    ["wita_notification",["VEHICLES UNLOCKED","BLUFOR now has access to lvl 2 vehicles."]] remoteExec ["bis_fnc_showNotification",west,false];
-    systemChat "level 2 unlocked";
-
-}] call zen_custom_modules_fnc_register;
-
 
 ["HS_Tasks_Independent", "Task 1 (Polizeistation)", {
     params ["_position", "_object"];
