@@ -6,7 +6,7 @@ _book setDir (random 360);
 
 _book setObjectTextureGlobal [0, "pic\book.paa"];
 
-/*
+
 [
     _book,                                          // Object the action is attached to
     "Buch lesen",                                      // Title of the action
@@ -24,4 +24,3 @@ _book setObjectTextureGlobal [0, "pic\book.paa"];
     false,                                               // Remove on completion
     false                                               // Show in unconscious state 
 ] remoteExec ["BIS_fnc_holdActionAdd", 0, _book];   // MP compatible implementation
-*/

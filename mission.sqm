@@ -251,7 +251,6 @@ addons[]=
 	"rhs_c_a2port_car",
 	"CUP_Editor_Buildings_Config",
 	"RHS_US_A2_AirImport",
-	"grad_extras_c130SoundFix",
 	"A3_Data_F_Curator_Virtual",
 	"A3_Structures_F_Heli_Furniture",
 	"CUP_CAMP_Armory_Misc_Laptop",
@@ -264,7 +263,6 @@ addons[]=
 	"A3_Supplies_F_Heli_CargoNets",
 	"A3_Structures_F_Exp_Cultural_AncientRelics",
 	"A3_Structures_F_Enoch_VR_Helpers",
-	"ryanzombiesfunctions",
 	"UK3CB_Factions_Objects_Pallets",
 	"UK3CB_Factions_Common_Editor",
 	"A3_Supplies_F_Enoch_Bags"
@@ -1083,10 +1081,10 @@ class AddonsMetaData
 		};
 		class Item127
 		{
-			className="grad_extras_c130SoundFix";
-			name="grad_extras_c130SoundFix";
-			author="Gruppe Adler";
-			url="https://www.gruppe-adler.de/international/";
+			className="RHS_US_A2_AirImport";
+			name="RHSUSF A2 Air Ports";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
 		};
 		class Item128
 		{
@@ -1123,9 +1121,10 @@ class AddonsMetaData
 		};
 		class Item133
 		{
-			className="ryanzombiesfunctions";
-			name="ryanzombiesfunctions";
-			author="Ryan";
+			className="UK3CB_Factions_Objects_Pallets";
+			name="3CB Factions - Pallets";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
 		};
 		class Item134
 		{
