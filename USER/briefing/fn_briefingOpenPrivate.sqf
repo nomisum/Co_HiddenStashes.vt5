@@ -42,12 +42,6 @@ private _titleCultist =  if ((player getVariable ["missionControl_role", "none"]
 private _textCultist= if ((player getVariable ["missionControl_role", "none"]) == "cultist") then { "<t size='1.0' color='#ffffffff'>You are part of the cultist faction now. <br/><br/>You dont need a mask, you can perform a ritual to spawn a horse for travel, zombies or other monsters. You can even teleport. Beware all those actions can be seen and heard and need Mana. Your Mana slowly replenishes automatically. Self Interact to activate NVG.<br/><br/>Prevent those zombie hating invaders from leaving the area alive! Please dont pick up weapons.<br/><br/>If you are bored or just want to spectate, you can do so. Beware there is no way back.</t><br/><br/>" } else { "" };
 
 
-// LOVER SYSTEM 
-private _titleBuddy = "<t size='1.5' color='#99ffffff'>Lover System</t><br/><br/>";
-private _textBuddy = if (isNull _buddy) then { "<t size='1.0' color='#ffffffff'>You dont have a lover.</t><br/><br/>" } else {
-  "<t size='1.0' color='#ffffffff'>You feel like your own heart would break too if " + (name _buddy) + " dies, keep him safe at all costs.</t><br/><br/>"
-};
-
 [ parseText
   (
 	_titleCommon +
@@ -56,8 +50,6 @@ private _textBuddy = if (isNull _buddy) then { "<t size='1.0' color='#ffffffff'>
     _titlePTL +
     _textPTL +
     _titleCultist +
-    _textCultist +
-    _titleBuddy +
-    _textBuddy
+    _textCultist
   )
 ] call grad_briefing_fnc_briefingScrollView;

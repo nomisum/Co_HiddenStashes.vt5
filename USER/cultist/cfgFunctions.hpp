@@ -18,7 +18,6 @@ class grad_cultist{
 			class cultistMultiSpawnStart;      
 			
 			class cultistRespawn;
-			class cultistRespawnManager;
 			class cultistRitualEH;
 
 			class cultistSingleSpawnStart;

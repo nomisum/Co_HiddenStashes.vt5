@@ -34,24 +34,6 @@
 //////////////
 
 
-    
-
-["Hidden Stashes 2 - SETUP", "List players without lover",
-{
-  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-
-  [_objectUnderCursor] call grad_ambient_fnc_getPlayersWithoutBuddy;
-
-}] call zen_custom_modules_fnc_register;
-
-["Hidden Stashes 2 - FIXES", "Assign lovers for loveless players",
-{
-  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-
-  [] remoteExec ["grad_ambient_fnc_loversAssignRemaining", 2];      
-
-}] call zen_custom_modules_fnc_register;
-
 
 ["Hidden Stashes 2 - AMBIENT", "Add Crew to vehicle (WHITE)",
 {
