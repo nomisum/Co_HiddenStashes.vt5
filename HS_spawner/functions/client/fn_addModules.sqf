@@ -290,24 +290,17 @@ if (!hasInterface) exitWith {};
 }] call zen_custom_modules_fnc_register;
 
 
-["HS_MissionEnd", "Mission WON Outro", {
+["HS_MissionEnd", "Outro 1+ survivors", {
     params ["_position", "_object"];
 
     [[getMarkerPos "mrk_outro1", getMarkerPos "mrk_outro2", getMarkerPos "mrk_outro3"], "custom\intro\outroServerWin.sqf"] remoteExec ["BIS_fnc_execVM",2];
     
 }] call zen_custom_modules_fnc_register;
 
-["HS_MissionEnd", "Mission LOST Outro", {
+["HS_MissionEnd", "Outro no survivors", {
     params ["_position", "_object"];
 
     [[], "custom\intro\outroServerLost.sqf"] remoteExec ["BIS_fnc_execVM",2];
-    
-}] call zen_custom_modules_fnc_register;
-
-["HS_MissionEnd", "Mission WIN WIN Outro", {
-    params ["_position", "_object"];
-
-    [[getMarkerPos "mrk_outro1", getMarkerPos "mrk_outro2", getMarkerPos "mrk_outro3"], "custom\intro\outroServerWinWin.sqf"] remoteExec ["BIS_fnc_execVM",2];
     
 }] call zen_custom_modules_fnc_register;
 

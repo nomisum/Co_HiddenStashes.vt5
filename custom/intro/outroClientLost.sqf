@@ -5,6 +5,9 @@ sleep 5;
 setViewDistance 3500;
 setObjectViewDistance 3000;
 
+player enableSimulation false;
+player allowDamage false;
+
 // remove mask overlay and breathing sounds
 player setVariable ["cbrn_mask_on", false, true];
 cbrn_mask_abberation ppEffectEnable true;

@@ -3,6 +3,9 @@ params ["_vehicle", "_targetPos", "_zombie", "_isLost"];
 cutText ["","BLACK OUT", 5];
 sleep 5;
 
+player enableSimulation false;
+player allowDamage false;
+
 setViewDistance 3500;
 setObjectViewDistance 3000;
 // remove mask overlay and breathing sounds
