@@ -1,7 +1,6 @@
 #define MODULES_DIRECTORY node_modules
 
 #include "cfgParams.hpp"
-#include "buyables\cfgBuyables.hpp"
 #include "loadouts\loadouts.hpp"
 
 #include "node_modules\grad-listBuymenu\grad_listBuymenu.hpp"
@@ -28,7 +27,6 @@ allowFunctionsRecompile = 1;
 
 class CfgFunctions
 {
-    #include "buyables\cfgFunctions.hpp"
     #include "node_modules\grad-loadout\cfgFunctions.hpp"
     #include "node_modules\grad-listbuymenu\cfgFunctions.hpp"
     #include "node_modules\grad-moneymenu\cfgFunctions.hpp"
