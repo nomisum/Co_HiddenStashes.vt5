@@ -8,7 +8,7 @@ if (!isServer) exitWith {};
 [
     independent, 
     ["ind_task5"], 
-    ["Verstrahltes Material finden und zum Schrottplatz bringen", "Verstrahltes finden", ""], 
+    ["Find radioactive material and bring it to Igor", "Find radioactive material", ""], 
     objNull,
     1, 
     2, 

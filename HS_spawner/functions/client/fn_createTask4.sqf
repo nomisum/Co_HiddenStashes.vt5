@@ -12,7 +12,7 @@ if (!isServer) exitWith {};
     [
         independent, 
         ["ind_task4"], 
-        ["Schrottplatz aufsuchen", "Schrottplatz", ""], 
+        ["Get to scrapyard and help Igor", "Scrapyard", ""], 
         getMarkerPos "mrk_scrapyard",
         1, 
         2, 

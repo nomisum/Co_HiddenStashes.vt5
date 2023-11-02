@@ -8,7 +8,7 @@ if (!isServer) exitWith {};
 [
     independent, 
     ["ind_task6"], 
-    ["Flugzeug finden und flüchten", "Flüchten", ""], 
+    ["Find a plane and get out", "Flee", ""], 
     getMarkerPos "mrk_escapeplane",
     1, 
     2, 

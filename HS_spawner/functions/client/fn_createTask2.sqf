@@ -8,7 +8,7 @@ if (!isServer) exitWith {};
 [
     independent, 
     ["ind_task2"], 
-    ["Krankenhaus aufsuchen und CBRN Equipment suchen.", "Krankenhaus", ""], 
+    ["Visit hospital to search for CBRN equipment.", "Hospital", ""], 
     getMarkerPos "mrk_hospital",
     1, 
     2, 

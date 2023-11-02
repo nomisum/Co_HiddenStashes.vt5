@@ -3,7 +3,7 @@ if (!isServer) exitWith {};
 [
     independent, 
     ["ind_task1"], 
-    ["Polizeistation aufsuchen", "Polizeistation", ""], 
+    ["Visit police station", "Police Station", ""], 
     getMarkerPos "mrk_policestation",
     1, 
     2, 

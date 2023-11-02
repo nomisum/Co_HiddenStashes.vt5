@@ -1,10 +1,8 @@
 "blu_task_ldf" call BIS_fnc_taskSetCurrent;
 
+["Use self interact to see your briefing!"] call CBA_fnc_notify;
 
-hint "Gentlemens Agreement: Schalten Sie Licht und Warnleuchte an Fahrzeugen an und nutzen Sie dauerhaft das Flashlight der Primärwaffe. Detailliertere Hinweise zur Task im Map-Screen.";
-
-player createDiaryRecord ["Auftrag", ["Ihr Auftrag", "
-    Spüren Sie die Rebellen auf und eliminieren Sie so viele, dass Sie sie zur Aufgabe ihrer Waffen überreden können. Bringen Sie die Überlebenden zur C-130 auf ihrem Flugfeld.
-    In regelmäßigen Abständen werden Wärmebilder unserer Flugzeuge ausgewertet und potentielle Feindareale markiert.
-    Bestellen Sie notwendige Fahrzeuge am Terminal am Ausgang der Basis (ACE-Interact).
-    Achtung: Die Russen werden das Übertreten der Grenze als feindlichen Akt werten und entsprechend gegen Sie vorgehen!"], taskNull, "", false];
+player createDiaryRecord ["Mission", ["Your mission", "
+Hunt down the rebels and eliminate them. Sometimes our planes might give you indications on the map where our thermals picked up signals.
+New vehicles will be delivered to your base automatically. Be aware the russians will see entering their territory as an act of aggression and act accordingly.
+Attention: Growing rumors suggest there is an apocalyptic sect active in the border area. Treat them as any enemy and eliminate any threat."], taskNull, "", false];
