@@ -59,30 +59,6 @@ private _zombieAction =
 [(typeOf player), 1, ["ACE_SelfActions", "Ritual"], _zombieAction] call ace_interact_menu_fnc_addActionToClass;
 
 
-private _demonAction =
-[
-  "Demon",
-  "Demon (40% Mana)",
-  "data\interact_demon.paa",
-  {
-      if (player getVariable ["cultist_manaValue", 0] < 0.4) exitWith {
-          ["Low on mana!"] call CBA_fnc_notify;
-      };
-
-       if (count (weapons player) > 0) exitWith {
-            ["Drop your weapons and binos to use magic!"] call CBA_fnc_notify;
-      };
-      [player, "demon"] call grad_cultist_fnc_cultistMultiSpawnStart;
-  },
-  {
-      player getVariable ["GRAD_isCultist", false] &&
-      !(player getVariable ["cultist_manaDrain", false]) &&
-      isNull attachedTo player 
-  },
-  {}
-] call ace_interact_menu_fnc_createAction;
-
-[(typeOf player), 1, ["ACE_SelfActions", "Ritual"], _demonAction] call ace_interact_menu_fnc_addActionToClass;
 
 
 private _spiderAction =
