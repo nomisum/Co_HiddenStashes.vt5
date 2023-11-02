@@ -86,7 +86,11 @@ if (!_clientExecution) then {
             if (!(_unit getVariable ["cbrn_backpack_on", false]) && {_hasBackpack}) then {
                 _unit setVariable ["cbrn_backpack_on", true, true];
 
-                [["CBRN", "Sauerstoff"], 25, "", 25, "", true, true, true, true] call BIS_fnc_advHint;
+                [{
+                    [["CBRN", "Sauerstoff"], 25, "", 25, "", true, true, true, true] call BIS_fnc_advHint;
+                }, [], 20] call CBA_fnc_waitAndExecute;
+                
+
             };
             if (_unit getVariable ["cbrn_backpack_on", false] && {!_hasBackpack}) then {
                 _unit setVariable ["cbrn_backpack_on", false, true];

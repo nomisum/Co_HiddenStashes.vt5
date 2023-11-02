@@ -52,8 +52,9 @@ private _titleLDF =  if ((player getVariable ["missionControl_role", "none"]) ==
 private _textLDF= if ((player getVariable ["missionControl_role", "none"]) == "ldf") then { 
 	"<t size='1.0' color='#ffffffff'>You are part of the special forces faction now. <br/><br/>
 	Hunt down the rebels and eliminate them. Sometimes our planes might give you indications on the map where our thermals picked up signals.<br/><br/>
-New vehicles will be delivered to your base automatically. Be aware the russians will see entering their territory as an act of aggression and act accordingly.<br/><br/>
-Attention: Growing rumors suggest there is an apocalyptic sect active in the border area. Treat them as any enemy and eliminate any threat.</t><br/><br/>" } else { "" };
+New vehicles and helicopters will be delivered to your base automatically. Be aware the russians will see entering their territory as an act of aggression and act accordingly.<br/><br/>
+Attention: Growing rumors suggest there is an apocalyptic sect active in the border area. Treat them as any enemy and eliminate the threat.<br/><br/>
+Tip: Dont leave your preset radio channel to coordinate with reinforcements.</t><br/><br/>" } else { "" };
 
 
 [ parseText
