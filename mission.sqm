@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1364;
+		nextID=1390;
 	};
 	class Camera
 	{
-		pos[]={3688.8037,13.13921,548.11993};
-		dir[]={0.3476643,-0.54774946,0.76098907};
-		up[]={0.22761564,0.83664185,0.49821922};
-		aside[]={0.90957451,5.0931703e-009,-0.41554695};
+		pos[]={3700.5251,13.13921,561.77679};
+		dir[]={-0.52019387,-0.59139681,-0.61616808};
+		up[]={-0.38150957,0.80637646,-0.45189649};
+		aside[]={-0.76411396,4.5678462e-008,0.64509529};
 	};
 };
 binarizationWanted=0;
@@ -4050,7 +4050,7 @@ class Mission
 			};
 			id=975;
 			type="Land_FieldToilet_F";
-			atlOffset=0.0066642761;
+			atlOffset=0.0066375732;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -43422,7 +43422,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""ptl"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="Boss@Boss";
 						isPlayer=1;
 						isPlayable=1;
@@ -43545,7 +43545,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
 						description="Team Leader (Mosin M38)@Alpha";
 						isPlayable=1;
 					};
@@ -43634,7 +43634,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="MP7";
 						isPlayable=1;
 					};
@@ -43722,7 +43722,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="Pumpgun";
 						isPlayable=1;
 					};
@@ -43811,7 +43811,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="Medic (Handgun only)";
 						isPlayable=1;
 					};
@@ -43899,7 +43899,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="Scorpion";
 						isPlayable=1;
 					};
@@ -43987,7 +43987,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
 						description="Dumbass (Handgun only)";
 						isPlayable=1;
 					};
@@ -44109,7 +44109,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
 						description="Team Leader (Mosin M38)@Bravo";
 						isPlayable=1;
 					};
@@ -44198,7 +44198,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="MP7";
 						isPlayable=1;
 					};
@@ -44286,7 +44286,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="Pumpgun";
 						isPlayable=1;
 					};
@@ -44375,7 +44375,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="Medic (Handgun only)";
 						isPlayable=1;
 					};
@@ -44463,7 +44463,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="Scorpion";
 						isPlayable=1;
 					};
@@ -44551,7 +44551,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
 						description="Dumbass (Handgun only)";
 						isPlayable=1;
 					};
@@ -44673,7 +44673,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
 						description="Team Leader (Mosin M38)@Charlie";
 						isPlayable=1;
 					};
@@ -44763,7 +44763,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="MP7";
 						isPlayable=1;
 					};
@@ -44851,7 +44851,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="Pumpgun";
 						isPlayable=1;
 					};
@@ -44940,7 +44940,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="Medic (Handgun only)";
 						isPlayable=1;
 					};
@@ -45028,7 +45028,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="Scorpion";
 						isPlayable=1;
 					};
@@ -45116,7 +45116,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
 						description="Dumbass (Handgun only)";
 						isPlayable=1;
 					};
@@ -45239,7 +45239,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
 						description="Team Leader (Mosin M38)@Delta";
 						isPlayable=1;
 					};
@@ -45328,7 +45328,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="MP7";
 						isPlayable=1;
 					};
@@ -45416,7 +45416,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="Pumpgun";
 						isPlayable=1;
 					};
@@ -45505,7 +45505,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="Medic (Handgun only)";
 						isPlayable=1;
 					};
@@ -45593,7 +45593,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="Scorpion";
 						isPlayable=1;
 					};
@@ -45681,7 +45681,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
 						description="Dumbass (Handgun only)";
 						isPlayable=1;
 					};
@@ -80523,7 +80523,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
 						description="Team Leader (Mosin M38)@Echo";
 						isPlayable=1;
 					};
@@ -80613,7 +80613,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="MP7";
 						isPlayable=1;
 					};
@@ -80701,7 +80701,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="Pumpgun";
 						isPlayable=1;
 					};
@@ -80790,7 +80790,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="Medic (Handgun only)";
 						isPlayable=1;
 					};
@@ -80878,7 +80878,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; }; }";
 						description="Scorpion";
 						isPlayable=1;
 					};
@@ -80966,7 +80966,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
+						init="call{if (local this) then { this setVariable [""missionControl_role"",""none"", true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
 						description="Dumbass (Handgun only)";
 						isPlayable=1;
 					};
@@ -83818,7 +83818,7 @@ class Mission
 			};
 			id=5344;
 			type="Land_RepairDepot_01_civ_F";
-			atlOffset=0.0069465637;
+			atlOffset=0.0051517487;
 		};
 		class Item973
 		{
@@ -83837,7 +83837,7 @@ class Mission
 			};
 			id=5346;
 			type="Land_MobileCrane_01_hook_F";
-			atlOffset=-0.20000076;
+			atlOffset=-0.20000267;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -83871,6 +83871,7 @@ class Mission
 			};
 			id=5347;
 			type="Land_EngineCrane_01_F";
+			atlOffset=-2.8610229e-005;
 		};
 		class Item975
 		{

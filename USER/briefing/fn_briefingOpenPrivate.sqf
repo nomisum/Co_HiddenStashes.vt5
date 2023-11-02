@@ -32,7 +32,7 @@ private _textNone = if ((player getVariable ["missionControl_role", "none"]) == 
 // PTL
 private _titlePTL =  if ((player getVariable ["missionControl_role", "none"]) == "ptl") then {
   "<t size='1.5' color='#99ffffff'>PTL</t><br/><br/>" } else { "" };
-private _textPTL = if ((player getVariable ["missionControl_role", "none"]) == "ptl") then { "<t size='1.0' color='#ffffffff'>You are truely fucked. Your rebel team is a bunch of idiots, special forces are out to hunt you and there are rumors of more bad things in the woods. Adapt, survive, win.</t><br/><br/>" } else { "" };
+private _textPTL = if ((player getVariable ["missionControl_role", "none"]) == "ptl") then { "<t size='1.0' color='#ffffffff'>You are truely fucked. Your rebel team is a bunch of idiots, special forces are out to hunt you and there are rumors of more bad things in the woods.<br/><br/>Your best bet is to keep your team together and prevent infighting. Adapt, survive, win.</t><br/><br/>" } else { "" };
 
 
 // CULTIST
@@ -61,6 +61,8 @@ Attention: Growing rumors suggest there is an apocalyptic sect active in the bor
 	_titleCommon +
 	_titleNone +
 	_textNone +
+	_titlePTL +
+	_textPTL +
     _titleCultist +
     _textCultist +
 	_titleLDF +
