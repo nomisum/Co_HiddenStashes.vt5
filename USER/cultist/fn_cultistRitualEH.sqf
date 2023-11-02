@@ -1,3 +1,7 @@
+/*
+	runs on client
+*/
+
 params ["_unit", "_placeholder"];
 
 _unit setVariable ["cultist_manaDrain", true, true];
