@@ -18,38 +18,52 @@ Parameter(s):
 
 */
 
-private _buddy = player getVariable ["grad_missionControl_buddy", objNull];
 
 // TEXTS
 
 // COMMON
 private _titleCommon = "<t size='2.0' font='Caveat' color='#ffff3333'>Please keep this personal briefing secret.</t><br/><br/>";
 
-// SABOTEUR
-private _titleSaboteur =  if ((player getVariable ["missionControl_role", "none"]) == "saboteur") then {
-  "<t size='1.5' color='#99ffffff'>Saboteur!</t><br/><br/>" } else { "" };
-private _textSaboteur = if ((player getVariable ["missionControl_role", "none"]) == "saboteur") then { "<t size='1.0' color='#ffffffff'>Zombies have rights too! You secretly sympathize with Zombies and their supporting cultist faction. Try to covertly sabotage the mission by deflating tires, sabotaging engines or fuel tanks and shutting off power (ACE Interact). _Wait till the third objective for this!_ Be aware of others watching you. Dont trust anyone, not even your buddy!</t><br/><br/>" } else { "" };
+// None
+private _titleNone =  if ((player getVariable ["missionControl_role", "none"]) == "none") then {
+  "<t size='1.5' color='#99ffffff'>Sorry, no special role</t><br/><br/>" } else { "" };
+private _textSaboteur = if ((player getVariable ["missionControl_role", "none"]) == "none") then { "<t size='1.0' color='#ffffffff'>You are just an ordinary rebel. Keep your head down and stay alive. Try to accomplish all tasks to win this mission.</t><br/><br/>" } else { "" };
 
 // PTL
 private _titlePTL =  if ((player getVariable ["missionControl_role", "none"]) == "ptl") then {
   "<t size='1.5' color='#99ffffff'>PTL</t><br/><br/>" } else { "" };
-private _textPTL = if ((player getVariable ["missionControl_role", "none"]) == "ptl") then { "<t size='1.0' color='#ffffffff'>There is a cultist faction that sympathizes with Zombies and might try to sabotage your mission. They might be even inside your forces. Prevent this at all costs and dont trust anyone!</t><br/><br/>" } else { "" };
+private _textPTL = if ((player getVariable ["missionControl_role", "none"]) == "ptl") then { "<t size='1.0' color='#ffffffff'>You are truely fucked. Your rebel team is a bunch of idiots, special forces are out to hunt you and there are rumors of more bad things in the woods. Adapt, survive, win.</t><br/><br/>" } else { "" };
 
 
 // CULTIST
 private _titleCultist =  if ((player getVariable ["missionControl_role", "none"]) == "cultist") then {
   "<t size='1.5' color='#99ff0000'>Cultist</t><br/><br/>" } else { "" };
-private _textCultist= if ((player getVariable ["missionControl_role", "none"]) == "cultist") then { "<t size='1.0' color='#ffffffff'>You are part of the cultist faction now. <br/><br/>You dont need a mask, you can perform a ritual to spawn a horse for travel, zombies or other monsters. You can even teleport. Beware all those actions can be seen and heard and need Mana. Your Mana slowly replenishes automatically. Self Interact to activate NVG.<br/><br/>Prevent those zombie hating invaders from leaving the area alive! Please dont pick up weapons.<br/><br/>If you are bored or just want to spectate, you can do so. Beware there is no way back.</t><br/><br/>" } else { "" };
+private _textCultist= if ((player getVariable ["missionControl_role", "none"]) == "cultist") then { 
+	"<t size='1.0' color='#ffffffff'>You are part of the cultist faction now. <br/><br/>
+	You can perform rituals to spawn zombies. You can resurrect fallen enemies or minions. You can even teleport.<br/><br/>
+	Beware all those actions can be seen and heard and need Mana.<br/><br/>
+	Your Mana slowly replenishes automatically. Self Interact to activate NVG.<br/><br/>
+	Prevent those zombie hating invaders from leaving the area alive!<br/><br/>Please dont pick up weapons.</t><br/><br/>" } else { "" };
+
+
+// LDF
+private _titleLDF =  if ((player getVariable ["missionControl_role", "none"]) == "ldf") then {
+  "<t size='1.5' color='#99ff0000'>Special Forces</t><br/><br/>" } else { "" };
+private _textLDF= if ((player getVariable ["missionControl_role", "none"]) == "ldf") then { 
+	"<t size='1.0' color='#ffffffff'>You are part of the special forces faction now. <br/><br/>
+	Hunt down the rebels and eliminate them. Sometimes our planes might give you indications on the map where our thermals picked up signals.<br/><br/>
+New vehicles will be delivered to your base automatically. Be aware the russians will see entering their territory as an act of aggression and act accordingly.<br/><br/>
+Attention: Growing rumors suggest there is an apocalyptic sect active in the border area. Treat them as any enemy and eliminate any threat.</t><br/><br/>" } else { "" };
 
 
 [ parseText
   (
 	_titleCommon +
-    _titleSaboteur +
-    _textSaboteur +
-    _titlePTL +
-    _textPTL +
+	_titleNone +
+	_textNone +
     _titleCultist +
-    _textCultist
+    _textCultist +
+	_titleLDF +
+	_textLDF
   )
 ] call grad_briefing_fnc_briefingScrollView;

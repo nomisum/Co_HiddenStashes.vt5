@@ -10,6 +10,9 @@ if (!(player getVariable ["GRAD_isCultist", false])) then {
 
 	["Welcome to the Special Forces!"] call CBA_fnc_notify;
 
+	// new role for briefing
+	player setVariable ["missionControl_role", "ldf", true];
+
 } else {
 	[player] joinSilent (createGroup west);
 	player setVariable ["originalSide", "WEST", true];

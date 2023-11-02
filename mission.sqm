@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4214.5239,46.568691,2181.2869};
-		dir[]={-0.84583873,-0.51705104,0.13210349};
-		up[]={-0.51083666,0.85595971,0.079780787};
-		aside[]={0.15432997,7.7042205e-007,0.98813766};
+		pos[]={3688.8037,13.13921,548.11993};
+		dir[]={0.3476643,-0.54774946,0.76098907};
+		up[]={0.22761564,0.83664185,0.49821922};
+		aside[]={0.90957451,5.0931703e-009,-0.41554695};
 	};
 };
 binarizationWanted=0;
@@ -43988,7 +43988,7 @@ class Mission
 					class Attributes
 					{
 						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
-						description="Translator (Handgun only)";
+						description="Dumbass (Handgun only)";
 						isPlayable=1;
 					};
 					id=4508;
@@ -44544,15 +44544,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3697.3252,3.6428771,570.67371};
-						angles[]={6.2370291,2.1371729,6.2478905};
+						position[]={3697.325,3.6429043,570.67401};
+						angles[]={6.2370214,2.1371729,6.2478948};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
 						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
-						description="Translator (Handgun only)";
+						description="Dumbass (Handgun only)";
 						isPlayable=1;
 					};
 					id=4509;
@@ -45109,15 +45109,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3703.2957,3.3226244,567.61908};
-						angles[]={6.2739081,2.1371729,6.2572713};
+						position[]={3703.2959,3.3226233,567.61896};
+						angles[]={6.2739,2.1371729,6.2572675};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
 						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
-						description="Translator (Handgun only)";
+						description="Dumbass (Handgun only)";
 						isPlayable=1;
 					};
 					id=4511;
@@ -45674,15 +45674,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3701.1287,3.7491374,578.86108};
-						angles[]={6.246613,2.1371729,6.2401166};
+						position[]={3701.1289,3.7491169,578.86096};
+						angles[]={6.2466207,2.1371729,6.2401109};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
 						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
-						description="Translator (Handgun only)";
+						description="Dumbass (Handgun only)";
 						isPlayable=1;
 					};
 					id=4510;
@@ -80959,15 +80959,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3701.8521,3.328675,557.60754};
-						angles[]={0.0022375863,2.1371729,6.2675071};
+						position[]={3701.8521,3.3286741,557.60797};
+						angles[]={0.0022340214,2.1371729,6.2675118};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
 						init="call{if (local this) then { this setVariable [""wita_isAgent"",true, true]; this setVariable [""ace_map_hideBlueForceMarker"", true, true]; };}";
-						description="Translator (Handgun only)";
+						description="Dumbass (Handgun only)";
 						isPlayable=1;
 					};
 					id=5180;
