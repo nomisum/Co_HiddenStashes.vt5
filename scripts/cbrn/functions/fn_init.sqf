@@ -240,7 +240,7 @@ if (!_clientExecution) then {
             };
             titleText ["You are feeling <t color='#ff0000'>really fucking bad</t>! The end is near..." , "PLAIN DOWN", -1, false, true];
         },{true},{},[], [0,0,0], 3] call ace_interact_menu_fnc_createAction;
-        ["CAManBase", 1, ["ACE_SelfActions","Medical"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+        [player, 1, ["ACE_SelfActions","Medical"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
         /*
         _action = ["cbrn_turn_on_threatmeter", "Turn on threatmeter","",{
