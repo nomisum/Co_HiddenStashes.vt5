@@ -27,7 +27,7 @@ private _titleCommon = "<t size='2.0' font='Caveat' color='#ffff3333'>Please kee
 // None
 private _titleNone =  if ((player getVariable ["missionControl_role", "none"]) == "none") then {
   "<t size='1.5' color='#99ffffff'>Sorry, no special role</t><br/><br/>" } else { "" };
-private _textSaboteur = if ((player getVariable ["missionControl_role", "none"]) == "none") then { "<t size='1.0' color='#ffffffff'>You are just an ordinary rebel. Keep your head down and stay alive. Try to accomplish all tasks to win this mission.</t><br/><br/>" } else { "" };
+private _textNone = if ((player getVariable ["missionControl_role", "none"]) == "none") then { "<t size='1.0' color='#ffffffff'>You are just an ordinary rebel. Keep your head down and stay alive. Try to accomplish all tasks to win this mission.</t><br/><br/>" } else { "" };
 
 // PTL
 private _titlePTL =  if ((player getVariable ["missionControl_role", "none"]) == "ptl") then {

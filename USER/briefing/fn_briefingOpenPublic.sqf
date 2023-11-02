@@ -22,11 +22,17 @@ Parameter(s):
 
 // STORY
 private _titleStory = "<t size='1.5' color='#99ffffff'>Story</t><br/>";
-private _textStory = "<t size='1.0' color='#ffffffff'>In SUOMEN SANKARI an exploding nuclear plant unleashed hordes zombies. Rebels were responsible and are now hunted down by government troops. There is a apocalyptic sect active that seeks to destroy mankind. And dont forget the russians that want to keep defend their borders.</t><br/><br/>";
+private _textStory = "<t size='1.0' color='#ffffffff'>In SUOMEN SANKARI an exploding nuclear plant unleashed hordes zombies. Rebels were responsible and are now hunted down by government troops. And dont forget the russians that want to keep defend their borders.</t><br/><br/>";
 
 // TASK
 private _titleTask = "<t size='1.5' color='#99ffffff'>Main Task</t><br/>";
-private _textTask = "<t size='1.0' color='#ffffffff'>Your main task is to survive and flee.</t><br/><br/>";
+private _textTask = "<t size='1.0' color='#ffffffff'>Your main task is kill all enemies.</t><br/><br/>";
+
+// TASK
+if ((player getVariable ["missionControl_role", "none"]) == "none" || (player getVariable ["missionControl_role", "none"]) == "ptl") then {
+	_titleTask = "<t size='1.5' color='#99ffffff'>Main Task</t><br/>";
+	_textTask = "<t size='1.0' color='#ffffffff'>Your main task is to survive and flee.<br/><br/>Tasks will be broadcasted to anyone in your group.</t><br/><br/>";
+};
 
 
 [ parseText
