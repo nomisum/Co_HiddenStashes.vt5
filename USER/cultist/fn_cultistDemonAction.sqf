@@ -153,7 +153,7 @@ private _senseEnemy =
             ["Drop your weapons and binos to use magic!"] call CBA_fnc_notify;
       };
       
-      ["grad_cultistSpawnMulti", [player, "sense"]] call CBA_fnc_serverEvent;
+      [player, "sense"] call grad_cultist_fnc_cultistMultiSpawnStart;
   },
   {
       player getVariable ["GRAD_isCultist", false] &&
