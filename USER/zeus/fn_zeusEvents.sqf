@@ -8,12 +8,20 @@ if (!isServer) exitWith {};
     private _color = [0,0,0,1];
 
     switch (_type) do {
-        case ("spawn_demon"): {
+        case ("demon"): {
             _message = format ["%1 spawned a demon.", [_unit, false, true] call ace_common_fnc_getName];
             _color = [0.5,0,0.5,1];
         };
-        case ("spawn_zombie"): {
+        case ("zombie"): {
             _message = format ["%1 spawned a zombie.", [_unit, false, true] call ace_common_fnc_getName];
+            _color = [0,0.5,0.5,1];
+        };
+        case ("walker"): {
+            _message = format ["%1 spawned a walker.", [_unit, false, true] call ace_common_fnc_getName];
+            _color = [0,0.5,0.5,1];
+        };
+        case ("spider"): {
+            _message = format ["%1 spawned a spider.", [_unit, false, true] call ace_common_fnc_getName];
             _color = [0,0.5,0.5,1];
         };
         case ("unconscious"): {
@@ -38,6 +46,10 @@ if (!isServer) exitWith {};
         };
         case ("resurrect"): {
             _message = format ["%1 resurrects units", [_unit, false, true] call ace_common_fnc_getName];
+            _color = [0.7,0.1,0.1,1];
+        };
+        case ("sense"): {
+            _message = format ["%1 senses nearest enemy", [_unit, false, true] call ace_common_fnc_getName];
             _color = [0.7,0.1,0.1,1];
         };
         default {};

@@ -36,10 +36,10 @@ private _teleportAction =
 private _zombieAction =
 [
   "Zombie",
-  "Zombie (5% Mana)",
+  "Zombie (20% Mana)",
   "data\interact_zombie.paa",
   {
-      if (player getVariable ["cultist_manaValue", 0] < 0.9) exitWith {
+      if (player getVariable ["cultist_manaValue", 0] < 0.2) exitWith {
           ["Low on mana!"] call CBA_fnc_notify;
       };
 
@@ -62,10 +62,10 @@ private _zombieAction =
 private _demonAction =
 [
   "Demon",
-  "Demon (30% Mana)",
+  "Demon (40% Mana)",
   "data\interact_demon.paa",
   {
-      if (player getVariable ["cultist_manaValue", 0] < 0.9) exitWith {
+      if (player getVariable ["cultist_manaValue", 0] < 0.4) exitWith {
           ["Low on mana!"] call CBA_fnc_notify;
       };
 
@@ -88,10 +88,10 @@ private _demonAction =
 private _spiderAction =
 [
   "Spider",
-  "Spider (15% Mana)",
+  "Spider (30% Mana)",
   "data\interact_mutant.paa",
   {
-      if (player getVariable ["cultist_manaValue", 0] < 0.9) exitWith {
+      if (player getVariable ["cultist_manaValue", 0] < 0.3) exitWith {
           ["Low on mana!"] call CBA_fnc_notify;
       };
 
@@ -114,10 +114,10 @@ private _spiderAction =
 private _walkerAction =
 [
   "Walker",
-  "Walker (10% Mana)",
+  "Walker (20% Mana)",
   "data\interact_bully.paa",
   {
-      if (player getVariable ["cultist_manaValue", 0] < 0.9) exitWith {
+      if (player getVariable ["cultist_manaValue", 0] < 0.2) exitWith {
           ["Low on mana!"] call CBA_fnc_notify;
       };
 
@@ -163,6 +163,32 @@ private _resurrectAction =
 [(typeOf player), 1, ["ACE_SelfActions", "Ritual"], _resurrectAction] call ace_interact_menu_fnc_addActionToClass;
 
 
+private _senseEnemy =
+[
+  "Sense",
+  "Sense nearest enemy (75% Mana)",
+  "data\interact_sense.paa",
+  {
+      if (player getVariable ["cultist_manaValue", 0] < 0.75) exitWith {
+          ["Low on mana!"] call CBA_fnc_notify;
+      };
+
+       if (count (weapons player) > 0) exitWith {
+            ["Drop your weapons and binos to use magic!"] call CBA_fnc_notify;
+      };
+      
+      ["grad_cultistSpawnMulti", [player, "sense"]] call CBA_fnc_serverEvent;
+      [] call GRAD_cultist_fnc_cultistSenseNearestEnemy;
+  },
+  {
+      player getVariable ["GRAD_isCultist", false] &&
+      !(player getVariable ["cultist_manaDrain", false]) &&
+      isNull attachedTo player 
+  },
+  {}
+] call ace_interact_menu_fnc_createAction;
+
+[(typeOf player), 1, ["ACE_SelfActions", "Ritual"], _senseEnemy] call ace_interact_menu_fnc_addActionToClass;
 
 /*
 private _helpRitualAction =
@@ -236,6 +262,25 @@ private _nightVisionOff =
 ] call ace_interact_menu_fnc_createAction;
 
 [(typeOf player), 1, ["ACE_SelfActions"], _nightVisionOff] call ace_interact_menu_fnc_addActionToClass;
+
+private _senseEnemy =
+[
+  "DisableNightVision",
+  "Disable Night Vision",
+  "",
+  {
+      player action ["nvGogglesOff", player];
+      player setVariable ["cultist_nvg", false, true];
+  },
+  {
+      player getVariable ["isCultist", false] &&
+      currentVisionMode player == 1 &&
+      isNull attachedTo player
+  },
+  {}
+] call ace_interact_menu_fnc_createAction;
+
+[(typeOf player), 1, ["ACE_SelfActions"], _senseEnemy] call ace_interact_menu_fnc_addActionToClass;
 
 
 /*

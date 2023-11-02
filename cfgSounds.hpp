@@ -40,6 +40,12 @@ class teleport_global
     titles[]={};
 };
 
+class whispers
+{
+    name = "whispers";
+    sound[] = {"sounds\whispers.ogg", VOLUME, 1, 10.000};
+    titles[]={};
+};
 
 class owl_1
 {

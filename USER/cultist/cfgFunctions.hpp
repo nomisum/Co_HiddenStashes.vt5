@@ -37,5 +37,7 @@ class grad_cultist{
 			class cultistZombieForModel;
 			
 			class cultistZombieHitPart;
+
+			class cultistSenseNearestEnemy {};
         };
 };

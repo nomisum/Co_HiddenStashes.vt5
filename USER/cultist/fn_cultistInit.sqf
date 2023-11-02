@@ -72,15 +72,18 @@ if (!isServer) exitWith {};
             diag_log "ritual successful: initiating " + _type + " spawn";
             { ["Ritual successful."] remoteExec ["CBA_fnc_notify", _x]; 
             _x setVariable ["cultist_manaDrain", false, true]; } forEach _playersInvolvedNow;
-            
-            if (_type != "resurrect") then {
-                [_position, _type] call grad_cultist_fnc_cultistSpawnUnit;
-            } else {
-                [_position, _bodies] call grad_cultist_fnc_cultistResurrectUnits;
+
+            switch (_type) do {
+                case "resurrect": {
+                    [_position, _bodies] call grad_cultist_fnc_cultistResurrectUnits;
+                };
+                case "sense": { };
+                default {
+                    [_position, _type] call grad_cultist_fnc_cultistSpawnUnit;
+                };
             };
 
-            private _stringType = "spawn" + _type;
-            ["grad_missionControl_curatorInfo",[_player1, _stringType]] call CBA_fnc_serverEvent;
+            ["grad_missionControl_curatorInfo",[_player1, _type]] call CBA_fnc_serverEvent;
             deleteVehicle _placeholder;
             [_handle] call CBA_fnc_removePerFrameHandler;
             
