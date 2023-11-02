@@ -20,7 +20,6 @@ if (isPlayer _nearest) then {
 
 		private _endTime = _startTime + _duration;
 		if (CBA_missionTime > _endTime) exitWith {
-			systemChat "removing sense-pfh";
 			[_handle] call CBA_fnc_removePerFrameHandler;
 		};
 
