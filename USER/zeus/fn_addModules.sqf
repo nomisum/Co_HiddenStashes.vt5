@@ -35,7 +35,7 @@
 
 
 
-["Hidden Stashes 2 - AMBIENT", "Add Crew to vehicle (WHITE)",
+["HS_AMBIENT", "Add Crew to vehicle (WHITE)",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -49,7 +49,7 @@
 }] call zen_custom_modules_fnc_register;
 
 
-["Hidden Stashes 2 - AMBIENT", "Convert Crew in vehicle (TINFOILS)",
+["HS_AMBIENT", "Convert Crew in vehicle (TINFOILS)",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -60,7 +60,7 @@
 }] call zen_custom_modules_fnc_register;
 
 
-["Hidden Stashes 2 - AMBIENT", "Add Cultist Crew to vehicle",
+["HS_AMBIENT", "Add Cultist Crew to vehicle",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -75,7 +75,7 @@
 
 
 
-["Hidden Stashes 2 - AMBIENT", "Start lower Fog Script",
+["HS_AMBIENT", "Start lower Fog Script",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -84,7 +84,7 @@
 }] call zen_custom_modules_fnc_register;
 
 
-["Hidden Stashes 2 - AMBIENT", "STOP lower Fog Script",
+["HS_AMBIENT", "STOP lower Fog Script",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -93,7 +93,7 @@
 }] call zen_custom_modules_fnc_register;
 
 
-["Hidden Stashes 2 - TRACKING", "Create Tracking Markers for Police Players",
+["HS_TRACKING", "Create Tracking Markers for Police Players",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -102,7 +102,7 @@
 }] call zen_custom_modules_fnc_register;
 
 
-["Hidden Stashes 2 MUSIC", "Lullaby",
+["HS_MUSIC", "Lullaby",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -125,7 +125,7 @@
 
 
 
-["Hidden Stashes 2 MUSIC", "Evil Laugh (object)",
+["HS_MUSIC", "Evil Laugh (object)",
 {
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 

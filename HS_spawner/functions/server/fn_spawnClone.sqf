@@ -7,18 +7,8 @@ params ["_deadBody", "_position", "_goggles", "_headgear", "_vest", "_backpack",
 
     deleteVehicle _deadBody;
 
-    private _grp = creategroup east;
-    private _zombie = _grp createUnit ["RyanZombieB_Soldier_base_F", _position, [], 0, "CAN_COLLIDE"];
-
-    _zombie enableDynamicSimulation true;
-    _zombie setVariable ["RZ_vehicleClass","RyanZombieC_man_1"];
-    _zombie setVariable ["RZ_isDemon", false];
-    _zombie setVariable ["suomen_overwriteRZ", false];
-    
-
-    _zombie setVariable ["RZ_aggressiveSoundCount",round (random 5),true];
-
-    [_zombie] joinSilent _grp;
+    private _zombie = grad_globalzombiegroup createUnit ["RyanZombieB_Soldier_base_F", _position, [], 0, "CAN_COLLIDE"];
+    [_zombie] call HS_spawner_fnc_zombieInit;
 
     _zombie setposATL [(getposATL _zombie select 0), (getposATL _zombie select 1), 0];
     // _zombie setVariable ["suomen_smells", true];

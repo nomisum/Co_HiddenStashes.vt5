@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1312;
+		nextID=1338;
 	};
 	class Camera
 	{
@@ -4049,7 +4049,7 @@ class Mission
 			};
 			id=975;
 			type="Land_FieldToilet_F";
-			atlOffset=0.0066375732;
+			atlOffset=0.0066642761;
 			class CustomAttributes
 			{
 				class Attribute0

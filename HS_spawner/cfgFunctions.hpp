@@ -20,16 +20,6 @@ class HS_spawner {
   class server {
         file = HS_spawner\functions\server;
 
-        class enemies_aceDamage;
-        class enemies_attackHuman;
-        class enemies_attackHumanOriginal;
-        class enemies_engageTarget;
-        class enemies_engageTargetOriginal;
-        class enemies_feedOnTargetAny;
-        class enemies_feedOnTargetOriginal;
-        class enemies_findTargetLoopOriginal;
-        class enemies_overwriteRZfunction {preInit = 1;};
-
         class equipWithGasMask;
 
         class loadoutLDF;
@@ -42,7 +32,6 @@ class HS_spawner {
         class spawnCivilians;
         class spawnCiviliansCrowd;
         class spawnClone;
-        class spawnDemon;
         class spawnLDF;
 
         class spawnLightHouseFeed;
@@ -57,5 +46,7 @@ class HS_spawner {
         class spawnRussians;
         class spawnStreetBlock;
         class spawnTranslationBook;
+
+        class zombieInit;
     };
 };

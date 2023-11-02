@@ -146,34 +146,6 @@ if (!hasInterface) exitWith {};
 }] call zen_custom_modules_fnc_register;
 
 
-["HS_Spawner", "Demon", {
-
-    params ["_position", "_object"];
-
-    ["HS Spawner", [
-            [
-                "COMBO", 
-                ["Pick Side", ""], [
-                [
-                    "west", "east","civilian"
-                ], [
-                    ["West", "Finnish"],
-                    ["East", "Russian"],
-                    ["Civilian", "Civilian"]
-            ], 0], true]
-        ], {
-            params ["_dialogValues", "_args"];
-            _args params ["_position"];
-
-            _dialogValues params ["_side"];
-
-            // hint str _position;
-            ["HS_SpawnerDemon", [_position, _side]] call CBA_fnc_globalEvent;
-            
-        }, {hint "aborted";}, [_position]] call zen_dialog_fnc_create;
-
-}] call zen_custom_modules_fnc_register;
-
 
 
 ["HS_Tasks_Independent", "Task 1 (Polizeistation)", {

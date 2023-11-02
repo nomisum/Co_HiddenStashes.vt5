@@ -51,19 +51,8 @@ private _allTypes = [
 ];
 
 for "_i" from 0 to 3 do {
-    private _unit = _grpUnit createUnit [selectRandom _allTypes, _position, [], 0, "NONE"];
-    _grpUnit setVariable ["ace_map_hideBlueForceMarker", true, true];
-    _unit setVariable ["suomen_overwriteRZ", true];
-    _unit setVariable ["RZ_isDemon", false];
-    _unit setVariable ["RZ_vehicleClass","RyanZombieC_man_1"];
-    _unit setVariable ["RZ_aggressiveSoundCount",round (random 5),true]; 
-
-    [_unit] call hs_spawner_fnc_setFace;
-
-    {
-        _x addCuratorEditableObjects [[_unit],true];
-        nil
-    } count allCurators;
+    private _unit = grad_globalzombiegroup createUnit [selectRandom _allTypes, _position, [], 0, "NONE"];
+    [_unit] call HS_spawner_fnc_zombieInit;
 
     _unit reveal _object;
     [_unit, "AinvPercMstpSnonWnonDnon"] remoteExecCall ["fnc_RyanZombies_PlayMoveNow"]; 

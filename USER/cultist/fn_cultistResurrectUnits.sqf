@@ -34,8 +34,8 @@ private _grp = creategroup east; // hardcoded for now
 				private _secondaryWeapon = secondaryWeapon _body;
 				
 				
-				private _unit = _grp createUnit [_classname, _position, [], 0, "CAN_COLLIDE"];
-				[_unit] remoteExecCall ["grad_cultist_fnc_cultistAddZombieToZeus", 2];
+				private _unit = grad_globalzombiegroup createUnit [_classname, _position, [], 0, "CAN_COLLIDE"];
+				[_unit] call HS_spawner_fnc_zombieInit;
 				
 				private _spawnedZombies = player getVariable ["grad_cultist_zombiesSpawned", []];
 				_spawnedZombies pushBack _unit;
@@ -44,9 +44,7 @@ private _grp = creategroup east; // hardcoded for now
 				_unit setDir _dir;
 				[_unit, "AmovPercMstpSnonWnonDnon_SaluteOut"] remoteExec ["switchmove", 0];
 				[_position, 3] remoteExec ["grad_cultist_fnc_cultistSpawnFX_fog"];
-				_unit setVariable ["lambs_danger_disableAI", true];  
 				
-				_grp deleteGroupWhenEmpty true;
 
 				
 				

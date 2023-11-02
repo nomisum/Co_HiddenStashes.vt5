@@ -5,7 +5,6 @@ class grad_cultist{
             class cultistBeamCreate;
 			class cultistDemonAction { postInit = 1; };
 			class cultistDemonBuddySpawnStart;
-			class cultistDemonSpawnEnd;
 			class cultistgetNearestRitual;
 			class cultistGetSpawnDuration;
 

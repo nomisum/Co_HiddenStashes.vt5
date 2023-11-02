@@ -11,19 +11,14 @@ private _dummy =  createVehicle ["Land_ClutterCutter_medium_F", _position, [], 0
 
     [_position] remoteExec ["grad_cultist_fnc_cultistSpawnFX_spawnFlash"];
 
-    private _grp = creategroup east; // hardcoded for now
-    private _unit = _grp createUnit [_classname, _position, [], 0, "CAN_COLLIDE"];
-
-    [_unit] remoteExecCall ["grad_cultist_fnc_cultistAddZombieToZeus", 2];
+    private _unit = grad_globalzombiegroup createUnit [_classname, _position, [], 0, "CAN_COLLIDE"];
+    [_unit] call hs_spawner_fnc_zombieInit;
 
     private _spawnedZombies = player getVariable ["grad_cultist_zombiesSpawned", []];
     _spawnedZombies pushBack _unit;
     player setVariable ["grad_cultist_zombiesSpawned", _spawnedZombies];
 
     [_unit, "AmovPercMstpSnonWnonDnon_SaluteOut"] remoteExec ["switchmove", 0];
-    _unit setVariable ["lambs_danger_disableAI", true];  
-
-    _grp deleteGroupWhenEmpty true;
     _unit setDir (getDir player + 90);
 
     // _unit setVariable ["GRAD_isCultist", true, true];

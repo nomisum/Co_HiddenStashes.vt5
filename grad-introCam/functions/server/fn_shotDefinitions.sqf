@@ -37,7 +37,7 @@ private _skipIntro = (["SKIP_INTRO", 0] call BIS_fnc_getParamValue) == 0;
 }, [], 5] call CBA_fnc_waitAndExecute;
 
 [{
-    [getPos introSpawner, getPos introSpawnerTarget, 3, "slow", 30] call HS_spawner_fnc_spawnCiviliansCrowd;
+    [getPos introSpawner, getPos introSpawnerTarget, 3, "slow", 30] remoteExec ["HS_spawner_fnc_spawnCiviliansCrowd", 2];
 }, [], 110] call CBA_fnc_waitAndExecute;
 
 
