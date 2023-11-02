@@ -4,10 +4,10 @@ params ["_deadBody", "_position", "_goggles", "_headgear", "_vest", "_backpack",
     params ["_deadBody", "_position", "_goggles", "_headgear", "_vest", "_backpack", "_items", "_mags"];
 
     if (isNull _deadBody) exitWith {};
-
+    private _classname = [_deadBody] call grad_cultist_fnc_cultistZombieForModel;
     deleteVehicle _deadBody;
 
-    private _zombie = grad_globalzombiegroup createUnit ["RyanZombieB_Soldier_base_F", _position, [], 0, "CAN_COLLIDE"];
+    private _zombie = grad_globalzombiegroup createUnit [_classname, _position, [], 0, "CAN_COLLIDE"];
     [_zombie] call HS_spawner_fnc_zombieInit;
 
     _zombie setposATL [(getposATL _zombie select 0), (getposATL _zombie select 1), 0];
