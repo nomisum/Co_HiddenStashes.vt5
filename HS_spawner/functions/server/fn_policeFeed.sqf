@@ -6,10 +6,14 @@ _position set [2,2];
 
 if (!isServer) exitWith {};
 
+if (!canSuspend) exitWith {
+    [_object] spawn hs_spawner_fnc_policefeed;
+};
+
 if (missionNamespace getVariable ["policeFeed", false]) exitWith {};
 missionNamespace setVariable ["policeFeed", true, true];
 
-private _grpUnit = createGroup east;
+waitUntil {!isNil "grad_globalzombiegroup"};
 
 private _allTypes = [
     "GRAD_CivilianZed_uniform_Woodlander1",

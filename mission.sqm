@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={237.48894,42.622078,443.25888};
-		dir[]={-0.65965974,-0.69224572,0.29265177};
-		up[]={-0.6327709,0.72166187,0.2807228};
-		aside[]={0.40552479,0,0.9140842};
+		pos[]={3552.0344,33.829716,1529.6741};
+		dir[]={-0.53175354,-0.69661713,-0.48162517};
+		up[]={-0.51631773,0.71744305,-0.46764451};
+		aside[]={-0.6713078,1.4901161e-008,0.74117863};
 	};
 };
 binarizationWanted=0;
@@ -4049,7 +4049,7 @@ class Mission
 			};
 			id=975;
 			type="Land_FieldToilet_F";
-			atlOffset=0.0066642761;
+			atlOffset=0.0066375732;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -78582,7 +78582,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
-				init="call{if (isServer) then { [this] call HS_spawner_fnc_spawnPoliceCar; this limitSpeed 24; this allowDamage false; };}";
+				init="call{if (isServer) then { [this] call HS_spawner_fnc_spawnPoliceCar; this limitSpeed 24; };}";
 			};
 			id=5073;
 			type="B_GEN_Offroad_01_gen_F";
