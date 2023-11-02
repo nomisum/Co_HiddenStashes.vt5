@@ -46,6 +46,7 @@ if (!isNil "cbrn_mask_abberation") then {
 // setup cultist displays and loadout
 call grad_cultist_fnc_cultistManaDisplay;
 call grad_cultist_fnc_cultistManaManager;
+call grad_cultist_fnc_cultistZombieRangeHandler;
 
 // inform zeus
 ["grad_missionControl_curatorInfo", [player, "respawned"]] call CBA_fnc_serverEvent;

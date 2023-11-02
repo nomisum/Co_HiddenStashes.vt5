@@ -13,6 +13,13 @@ private _dummy =  createVehicle ["Land_ClutterCutter_medium_F", _position, [], 0
 
     private _grp = creategroup east; // hardcoded for now
     private _unit = _grp createUnit [_classname, _position, [], 0, "CAN_COLLIDE"];
+
+    [_unit] remoteExecCall ["grad_cultist_fnc_cultistAddZombieToZeus", 2];
+
+    private _spawnedZombies = player getVariable ["grad_cultist_zombiesSpawned", []];
+    _spawnedZombies pushBack _unit;
+    player setVariable ["grad_cultist_zombiesSpawned", _spawnedZombies];
+
     [_unit, "AmovPercMstpSnonWnonDnon_SaluteOut"] remoteExec ["switchmove", 0];
     _unit setVariable ["lambs_danger_disableAI", true];  
 

@@ -77,7 +77,9 @@ if (!isServer) exitWith {};
                 case "resurrect": {
                     [_position, _bodies] call grad_cultist_fnc_cultistResurrectUnits;
                 };
-                case "sense": { };
+                case "sense": {
+                    [] remoteExec ["grad_cultist_fnc_cultistSenseNearestEnemy", _player1];
+                };
                 default {
                     [_position, _type] call grad_cultist_fnc_cultistSpawnUnit;
                 };

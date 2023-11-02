@@ -178,7 +178,6 @@ private _senseEnemy =
       };
       
       ["grad_cultistSpawnMulti", [player, "sense"]] call CBA_fnc_serverEvent;
-      [] call GRAD_cultist_fnc_cultistSenseNearestEnemy;
   },
   {
       player getVariable ["GRAD_isCultist", false] &&
