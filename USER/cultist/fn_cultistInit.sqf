@@ -6,7 +6,6 @@ if (!isServer) exitWith {};
     private _startTime = CBA_missionTime;
     
     private _position = (_player1) getPos [5, getDir _player1];
-    private _classname = [_type] call grad_cultist_fnc_cultistSpawnGetClassname;
     private _begPos = positionCameraToWorld [0,0,0];
 	private _begPosASL = AGLToASL _begPos;
 	private _endPos = positionCameraToWorld [0,0,5];
@@ -38,6 +37,8 @@ if (!isServer) exitWith {};
     [{
         params ["_args", "_handle"];
         _args params ["_player1", "_startTime", "_duration", "_position", "_type", "_placeholder", "_bodies"];
+
+        diag_log format ["pfh doing magic type: %1", _type];
 
         private _playersInvolved = _placeholder getVariable ["cultist_ritualInvolved", []];
         private _playersCount = count _playersInvolved;
