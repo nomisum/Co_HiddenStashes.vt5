@@ -39,6 +39,5 @@ class grad_cultist{
 
 			class cultistSenseNearestEnemy {};
 			class cultistZombieRangeHandler {};
-			class cultistAddZombieToZeus {};
         };
 };
