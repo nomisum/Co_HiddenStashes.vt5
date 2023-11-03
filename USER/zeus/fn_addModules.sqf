@@ -137,3 +137,13 @@
 
 }] call zen_custom_modules_fnc_register;
 
+
+["HS_NOTFALL", "Purge all Zombie routines",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+  [] remoteExec ["purgeZombieLoopsServer", 2];
+
+  ["Purging all zombie loops"] call CBA_fnc_notify;
+
+}] call zen_custom_modules_fnc_register;

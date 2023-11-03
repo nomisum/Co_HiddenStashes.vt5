@@ -9,5 +9,6 @@ class grad_zeus {
 		class zeusEvents { postInit = 1; };
 		class zeusKillFuel;
 		class zeusKillTire;
+		class purgeZombieLoopsServer;
 	};
 };
