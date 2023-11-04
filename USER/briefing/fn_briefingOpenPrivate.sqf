@@ -32,7 +32,7 @@ private _textNone = if ((player getVariable ["missionControl_role", "none"]) == 
 // PTL
 private _titlePTL =  if ((player getVariable ["missionControl_role", "none"]) == "ptl") then {
   "<t size='1.5' color='#99ffffff'>PTL</t><br/><br/>" } else { "" };
-private _textPTL = if ((player getVariable ["missionControl_role", "none"]) == "ptl") then { "<t size='1.0' color='#ffffffff'>You are truely fucked. Your rebel team is a bunch of idiots, special forces are out to hunt you and there are rumors of more bad things in the woods.<br/><br/>Your best bet is to keep your team together and prevent infighting. Adapt, survive, win.</t><br/><br/>" } else { "" };
+private _textPTL = if ((player getVariable ["missionControl_role", "none"]) == "ptl") then { "<t size='1.0' color='#ffffffff'>You are truely fucked. Your rebel team is a bunch of idiots, special forces are out to hunt you and there are rumors of eldritch evil in the woods.<br/><br/>Your best bet is to keep your team together and prevent infighting. Adapt, survive, win.</t><br/><br/>" } else { "" };
 
 
 // CULTIST
@@ -43,6 +43,7 @@ private _textCultist= if ((player getVariable ["missionControl_role", "none"]) =
 	You can perform rituals to spawn zombies. You can resurrect fallen enemies or minions. You can even teleport.<br/><br/>
 	Beware all those actions can be seen and heard and need Mana.<br/><br/>
 	Your Mana slowly replenishes automatically. Self Interact to activate NVG.<br/><br/>
+	Keep in mind that the minions you spawn need you closeby to survive. If you move too far away (more than 300m), they will wither.<br/><br/>
 	Prevent those zombie hating invaders from leaving the area alive!<br/><br/>Please dont pick up weapons.</t><br/><br/>" } else { "" };
 
 
