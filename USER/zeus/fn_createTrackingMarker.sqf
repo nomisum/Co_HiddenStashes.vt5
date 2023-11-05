@@ -15,7 +15,13 @@ private _independents = _allPlayers select { side _x == independent };
 
 	{
 		[_markerPosition, _markerSize, _fadeOutTime, _icon] remoteExec ["grad_zeus_fnc_createTrackingMarkerLocal", getAssignedCuratorUnit _x];
-		["New Tracking Data on map"] remoteExec ["CBA_fnc_notify", getAssignedCuratorUnit _x];
 	} forEach allCurators;
 	
+	
 } forEach _independents;
+
+["New Tracking Data on map"] remoteExec ["CBA_fnc_notify", west];
+
+{
+	["New Tracking Data on map"] remoteExec ["CBA_fnc_notify", getAssignedCuratorUnit _x];
+} forEach allCurators;

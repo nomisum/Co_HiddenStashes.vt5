@@ -15,12 +15,15 @@ _areaMarker setMarkerBrushLocal "Cross";
 _areaMarker setMarkerAlphaLocal 1;
 
 private _interval = 1/_fadeOutTime;
+private _duration = CBA_missionTime + _fadeOutTime;
 
 [{
 	params ["_args", "_handle"];
 	_args params ["_centerMarker", "_areaMarker", "_interval"];	
 
-	private _alpha = markerAlpha _centerMarker;
+	private _alpha = markerAlpha _areaMarker;
+	systemchat str _alpha;
+
 	if (_alpha <= 0) exitWith {
 		[_handle] call CBA_fnc_removePerFrameHandler;
 		deleteMarkerLocal _centerMarker;
@@ -28,6 +31,8 @@ private _interval = 1/_fadeOutTime;
 
 		diag_log "deleted unit marker for tracking";
 	};
+	
+	_centerMarker setMArkerAlphaLocal (_alpha*2 min 1);
 	_areaMarker setMarkerAlphaLocal (_alpha - _interval);
 
 }, 1, [_centerMarker, _areaMarker, _interval]] call CBA_fnc_addPerFrameHandler;

@@ -8,22 +8,22 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=5355;
+		nextID=5357;
 	};
 	class MarkerIDProvider
 	{
-		nextID=42;
+		nextID=44;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1442;
+		nextID=1468;
 	};
 	class Camera
 	{
 		pos[]={5857.7891,31.386606,1794.0288};
-		dir[]={-0.64603293,-0.62393963,-0.43973729};
-		up[]={-0.51579982,0.78146154,-0.35109165};
-		aside[]={-0.56269848,1.4388934e-007,0.82667953};
+		dir[]={-0.45753503,-0.65397418,-0.60250825};
+		up[]={-0.39551264,0.75650322,-0.52083462};
+		aside[]={-0.79641557,2.9569492e-008,0.60478258};
 	};
 };
 binarizationWanted=0;
@@ -1180,7 +1180,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Scenario";
 		class Attribute0
@@ -3629,7 +3629,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=975;
+		items=977;
 		class Item0
 		{
 			dataType="Marker";
@@ -4119,7 +4119,7 @@ class Mission
 			};
 			id=975;
 			type="Land_FieldToilet_F";
-			atlOffset=0.0066642761;
+			atlOffset=0.0066375732;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -84057,6 +84057,26 @@ class Mission
 			{
 			};
 			id=5353;
+		};
+		class Item975
+		{
+			dataType="Marker";
+			position[]={3684.47,3.4660001,560.026};
+			name="marker_42";
+			text=" Start";
+			type="mil_start";
+			colorName="ColorGUER";
+			id=5355;
+			atlOffset=-7.5817108e-005;
+		};
+		class Item976
+		{
+			dataType="Marker";
+			position[]={5845.4209,14.933,1783.5861};
+			name="respawn_civilian";
+			type="Empty";
+			id=5356;
+			atlOffset=0.0003862381;
 		};
 	};
 	class Connections
