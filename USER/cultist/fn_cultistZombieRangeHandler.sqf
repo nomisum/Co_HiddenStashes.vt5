@@ -8,7 +8,8 @@
 		private _aliveZombies = _spawnedZombies select { alive _x };
 		{
 			if ((_x distance2D player) > MAX_ZOMBIE_RANGE) then {
-				_x setDamage 1;				
+				_x setDamage 1;
+				[position _x, 3] remoteExec ["grad_cultist_fnc_cultistSpawnFX_fog", 0];
 			};
 		} forEach _aliveZombies;
 	},
