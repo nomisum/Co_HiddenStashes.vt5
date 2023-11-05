@@ -22,7 +22,7 @@ private _duration = CBA_missionTime + _fadeOutTime;
 	_args params ["_centerMarker", "_areaMarker", "_interval"];	
 
 	private _alpha = markerAlpha _areaMarker;
-	systemchat str _alpha;
+	// systemchat str _alpha;
 
 	if (_alpha <= 0) exitWith {
 		[_handle] call CBA_fnc_removePerFrameHandler;
@@ -32,7 +32,6 @@ private _duration = CBA_missionTime + _fadeOutTime;
 		diag_log "deleted unit marker for tracking";
 	};
 	
-	_centerMarker setMArkerAlphaLocal (_alpha*2 min 1);
 	_areaMarker setMarkerAlphaLocal (_alpha - _interval);
 
 }, 1, [_centerMarker, _areaMarker, _interval]] call CBA_fnc_addPerFrameHandler;

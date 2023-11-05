@@ -42,6 +42,8 @@ if (!hasInterface) exitWith {};
 
             _dialogValues params ["_speed", "_count"];
 
+             _position = ASLToAGL _position;
+
             // hint str _position;
 
             ["HS_SpawnerRandomCivilian", [_position, [], 5, _speed, _count]] call CBA_fnc_globalEvent;
@@ -93,6 +95,8 @@ if (!hasInterface) exitWith {};
 
             _dialogValues params ["_speed", "_count"];
 
+             _position = ASLToAGL _position;
+
             // hint str _position;
 
             ["HS_SpawnerRandomRussian", [_position, [], 5, _speed, _count]]call CBA_fnc_globalEvent;
@@ -143,6 +147,8 @@ if (!hasInterface) exitWith {};
 
             _dialogValues params ["_speed", "_count"];
 
+             _position = ASLToAGL _position;
+
             // hint str _position;
 
             ["HS_SpawnerRandomLDF",  [_position, [], 5, _speed, _count]] call CBA_fnc_globalEvent;
@@ -184,6 +190,38 @@ if (!hasInterface) exitWith {};
 
 }] call zen_custom_modules_fnc_register;
 
+
+
+["HS_Spawner", "Spawn CBRN White Z", {
+
+    params ["_position", "_object"];
+
+        ["HS Spawner", [
+            [
+                "COMBO", 
+                ["Pick Speed", ""], [
+                [
+                    "random", "slow","crawler","walker","fast","spider"
+                ], [
+                    ["Random", "Random"],
+                    ["Slow", "Slow"],
+                    ["Crawler", "Crawler"],
+                    ["Walker", "Walker"],
+                    ["Fast", "Fast"],
+                    ["Spider", "Spider"]
+            ], 0], true]
+        ], {
+            params ["_dialogValues", "_args"];
+            _args params ["_position"];
+
+            _dialogValues params ["_speed"];
+
+            // hint str _position;
+            ["HS_SpawnerCBRNWhite", [_position, _speed]] call CBA_fnc_globalEvent;
+            
+        }, {hint "aborted";}, [_position]] call zen_dialog_fnc_create;
+
+}] call zen_custom_modules_fnc_register;
 
 
 
@@ -251,6 +289,12 @@ if (!hasInterface) exitWith {};
 
 }] call zen_custom_modules_fnc_register;
 
+["HS_Tasks_Independent", "Task 7 (Bonus: Military Base)", {
+    params ["_position", "_object"];
+
+    [] remoteExecCall ["HS_spawner_fnc_createTask7",2];
+
+}] call zen_custom_modules_fnc_register;
 
 
 ["HS_Police", "Equip Police Car with Gasmasks and Beacons", {
@@ -320,7 +364,7 @@ if (!hasInterface) exitWith {};
     params ["_position", "_object"];
 
     private _group = createGroup west;
-    [_object] joinSilent _group;
+    (units group _object) joinSilent _group;
     _group deleteGroupWhenEmpty true;
     
 }] call zen_custom_modules_fnc_register;
@@ -329,7 +373,7 @@ if (!hasInterface) exitWith {};
     params ["_position", "_object"];
 
     private _group = createGroup east;
-    [_object] joinSilent _group;
+    (units group _object) joinSilent _group;
     _group deleteGroupWhenEmpty true;
     
 }] call zen_custom_modules_fnc_register;

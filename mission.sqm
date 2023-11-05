@@ -5,25 +5,25 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=521;
+	toggles=649;
 	class ItemIDProvider
 	{
-		nextID=5357;
+		nextID=5358;
 	};
 	class MarkerIDProvider
 	{
-		nextID=44;
+		nextID=45;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1468;
+		nextID=1494;
 	};
 	class Camera
 	{
-		pos[]={5857.7891,31.386606,1794.0288};
-		dir[]={-0.45752683,-0.65396214,-0.60249716};
-		up[]={-0.39549822,0.75652725,-0.52081442};
-		aside[]={-0.7963984,1.4901161e-008,0.60477233};
+		pos[]={4986.0972,43.934879,4022.7437};
+		dir[]={-0.11153172,-0.55348694,0.82535911};
+		up[]={-0.074120037,0.83285624,0.54850394};
+		aside[]={0.99099559,-2.2319e-008,0.13391426};
 	};
 };
 binarizationWanted=0;
@@ -3734,7 +3734,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=977;
+		items=978;
 		class Item0
 		{
 			dataType="Marker";
@@ -84182,6 +84182,15 @@ class Mission
 			type="Empty";
 			id=5356;
 			atlOffset=0.0003862381;
+		};
+		class Item977
+		{
+			dataType="Marker";
+			position[]={4982.0298,30.266001,4031.9241};
+			name="mrk_militarybase";
+			type="Empty";
+			id=5357;
+			atlOffset=-0.00010490417;
 		};
 	};
 	class Connections

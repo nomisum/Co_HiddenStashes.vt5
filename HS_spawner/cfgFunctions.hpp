@@ -13,6 +13,7 @@ class HS_spawner {
         class createTask4;
         class createTask5;
         class createTask6;
+        class createTask7;
         class createTaskLDF;
         class createTaskCultist;
     };
@@ -34,6 +35,7 @@ class HS_spawner {
         class spawnCivilians;
         class spawnCiviliansCrowd;
         class spawnClone;
+        class spawnDocZ;
         class spawnLDF;
         class spawnLDFCrowd;
 

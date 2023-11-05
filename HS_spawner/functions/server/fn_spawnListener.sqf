@@ -13,16 +13,23 @@ grad_globalzombiegroup setVariable ["ace_map_hideBlueForceMarker", true, true];
 
 
 ["HS_SpawnerRandomRussian", {
-    params ["_position", "_speed"];
+   params ["_position", "_targetPosition", "_radius", "_speed", "_count"];
 
-    [_position, _speed, _count] call HS_spawner_fnc_spawnRussianCrowd;
+    [_position, _targetPosition, _radius, _speed, _count] call HS_spawner_fnc_spawnRussianCrowd;
 
 }] call CBA_fnc_addEventhandler;
 
 
 ["HS_SpawnerRandomLDF", {
-    params ["_position", "_speed"];
+   params ["_position", "_targetPosition", "_radius", "_speed", "_count"];
 
-    [_position, _speed, _count] call HS_spawner_fnc_spawnLDFCrowd;
+    [_position, _targetPosition, _radius, _speed, _count] call HS_spawner_fnc_spawnLDFCrowd;
+
+}] call CBA_fnc_addEventhandler;
+
+["HS_SpawnerCBRNWhite", {
+   params ["_position", "_targetPosition", "_radius", "_speed", "_count"];
+
+    [_position, _speed] call HS_spawner_fnc_spawnDocZ;
 
 }] call CBA_fnc_addEventhandler;
