@@ -26,7 +26,7 @@ _waypoint setWaypointStatements [
 private _zombie = objNull;
 
 for "_i" from 0 to 30 do {
-     _zombie = [getMarkerPos "mrk_russia", east, "fast"] call HS_spawner_fnc_spawnDemon;
+     _zombie = [getMarkerPos "mrk_russia", "fast"] call HS_spawner_fnc_spawnRussians;
      sleep 0.5;
 };
 

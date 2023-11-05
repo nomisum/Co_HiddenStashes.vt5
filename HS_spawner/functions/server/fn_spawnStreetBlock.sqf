@@ -10,8 +10,7 @@ switch (_side) do {
     default {}; 
 };
 
-private _logicGroup = createGroup sideLogic;
-private _lightsLogic = _logicGroup createUnit ["Logic", _position, [], 0, "NONE"];
+private _lightsLogic = (createGroup sideLogic) createUnit ["Logic", _position, [], 0, "NONE"];
 
 for "_i" from 0 to (1 max (random 4)) do {
      private _offroad = createVehicle [_type, _position, [], 10, "NONE"];
@@ -22,7 +21,7 @@ for "_i" from 0 to (1 max (random 4)) do {
      _offroad animate ["Beacons", 1];
      _offroad animate ["StartBeaconLight", 1];
      _offroad setVehicleLock "LOCKED";
-     _lightsLogic action ["lightOn", _offroad];
+     [{ params ["_lightsLogic", "_offroad"]; _lightsLogic action ["lightOn", _offroad]; }, [_lightsLogic, _offroad], 1] call CBA_fnc_waitAndExecute;
 
      private _item = createVehicle [selectRandom ["RoadBarrier_long", "RoadBarrier_light", "Land_Razorwire_F"], _position, [], 10, "NONE"];
     {

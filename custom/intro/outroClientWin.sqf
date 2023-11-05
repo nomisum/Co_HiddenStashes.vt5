@@ -1,4 +1,4 @@
-params ["_vehicle", "_targetPos", "_zombie", "_isLost"];
+params ["_vehicle", "_targetPos", "_zombie", ["_isLost", false]];
 
 cutText ["","BLACK OUT", 5];
 sleep 5;
