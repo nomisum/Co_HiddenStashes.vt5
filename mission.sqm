@@ -21,9 +21,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={5857.7891,31.386606,1794.0288};
-		dir[]={-0.45753503,-0.65397418,-0.60250825};
-		up[]={-0.39551264,0.75650322,-0.52083462};
-		aside[]={-0.79641557,2.9569492e-008,0.60478258};
+		dir[]={-0.45752683,-0.65396214,-0.60249716};
+		up[]={-0.39549822,0.75652725,-0.52081442};
+		aside[]={-0.7963984,1.4901161e-008,0.60477233};
 	};
 };
 binarizationWanted=0;
@@ -1210,7 +1210,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=67;
+									items=70;
 									class Item0
 									{
 										class data
@@ -1747,6 +1747,30 @@ class CustomAttributes
 											value="ace_medical_treatment_allowgravedigging";
 										};
 									};
+									class Item67
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ace_vehicle_damage_enabled";
+										};
+									};
+									class Item68
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ace_vehicle_damage_removeammoduringcookoff";
+										};
+									};
+									class Item69
+									{
+										class data
+										{
+											singleType="STRING";
+											value="ace_vehicle_damage_enablecardamage";
+										};
+									};
 								};
 							};
 						};
@@ -1757,7 +1781,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=67;
+									items=70;
 									class Item0
 									{
 										class data
@@ -3554,6 +3578,87 @@ class CustomAttributes
 													{
 														singleType="SCALAR";
 														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item67
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item68
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item69
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
 													};
 												};
 												class Item1
