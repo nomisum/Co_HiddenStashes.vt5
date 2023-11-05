@@ -35,6 +35,7 @@ class HS_spawner {
         class spawnCiviliansCrowd;
         class spawnClone;
         class spawnLDF;
+        class spawnLDFCrowd;
 
         class spawnLightHouseFeed;
         class spawnListener {postInit = 1;};
@@ -45,6 +46,7 @@ class HS_spawner {
         class spawnPoliceCar;
 
         class spawnPriest;
+        class spawnRussianCrowd;
         class spawnRussians;
         class spawnStreetBlock;
         class spawnTranslationBook;

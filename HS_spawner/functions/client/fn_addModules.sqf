@@ -68,16 +68,34 @@ if (!hasInterface) exitWith {};
                     ["Walker", "Walker"],
                     ["Fast", "Fast"],
                     ["Spider", "Spider"]
-            ], 0], true]
+            ], 0], true],
+            [
+                "COMBO", 
+                ["Count", ""], [
+                [
+                    1,3,6,9,12,15,18,21,30,40,50
+                ], [
+                    ["1", "1"],
+                    ["3", "3"],
+                    ["6", "6"],
+                    ["9", "9"],
+                    ["12", "12"],
+                    ["15", "15"],
+                    ["18", "18"],
+                    ["21", "21"],
+                    ["30", "30"],
+                    ["40", "40"],
+                    ["50", "50"]
+            ], 0], true]    
         ], {
             params ["_dialogValues", "_args"];
             _args params ["_position"];
 
-            _dialogValues params ["_speed"];
+            _dialogValues params ["_speed", "_count"];
 
             // hint str _position;
 
-            ["HS_SpawnerRandomRussian", [_position, _speed]] call CBA_fnc_globalEvent;
+            ["HS_SpawnerRandomRussian", [_position, [], 5, _speed, _count]]call CBA_fnc_globalEvent;
             
         }, {hint "aborted";}, [_position]] call zen_dialog_fnc_create;
 
@@ -100,16 +118,34 @@ if (!hasInterface) exitWith {};
                     ["Walker", "Walker"],
                     ["Fast", "Fast"],
                     ["Spider", "Spider"]
-            ], 0], true]
+            ], 0], true],
+            [
+                "COMBO", 
+                ["Count", ""], [
+                [
+                    1,3,6,9,12,15,18,21,30,40,50
+                ], [
+                    ["1", "1"],
+                    ["3", "3"],
+                    ["6", "6"],
+                    ["9", "9"],
+                    ["12", "12"],
+                    ["15", "15"],
+                    ["18", "18"],
+                    ["21", "21"],
+                    ["30", "30"],
+                    ["40", "40"],
+                    ["50", "50"]
+            ], 0], true]    
         ], {
             params ["_dialogValues", "_args"];
             _args params ["_position"];
 
-            _dialogValues params ["_speed"];
+            _dialogValues params ["_speed", "_count"];
 
             // hint str _position;
 
-            ["HS_SpawnerRandomLDF", [_position, _speed]] call CBA_fnc_globalEvent;
+            ["HS_SpawnerRandomLDF",  [_position, [], 5, _speed, _count]] call CBA_fnc_globalEvent;
             
         }, {hint "aborted";}, [_position]] call zen_dialog_fnc_create;
 
@@ -278,6 +314,26 @@ if (!hasInterface) exitWith {};
     [[], "custom\intro\outroServerLost.sqf"] remoteExec ["BIS_fnc_execVM",2];
     
 }] call zen_custom_modules_fnc_register;
+
+
+["HS_Sidechange", "Make Unit Blufor", {
+    params ["_position", "_object"];
+
+    private _group = createGroup west;
+    [_object] joinSilent _group;
+    _group deleteGroupWhenEmpty true;
+    
+}] call zen_custom_modules_fnc_register;
+
+["HS_Sidechange", "Make Blufor Opfor", {
+    params ["_position", "_object"];
+
+    private _group = createGroup east;
+    [_object] joinSilent _group;
+    _group deleteGroupWhenEmpty true;
+    
+}] call zen_custom_modules_fnc_register;
+
 
 {
     _x addEventHandler ["CuratorWaypointPlaced", {

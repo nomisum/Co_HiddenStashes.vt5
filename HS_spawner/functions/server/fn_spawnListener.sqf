@@ -15,7 +15,7 @@ grad_globalzombiegroup setVariable ["ace_map_hideBlueForceMarker", true, true];
 ["HS_SpawnerRandomRussian", {
     params ["_position", "_speed"];
 
-    [_position, _speed] call HS_spawner_fnc_spawnRussians;
+    [_position, _speed, _count] call HS_spawner_fnc_spawnRussianCrowd;
 
 }] call CBA_fnc_addEventhandler;
 
@@ -23,6 +23,6 @@ grad_globalzombiegroup setVariable ["ace_map_hideBlueForceMarker", true, true];
 ["HS_SpawnerRandomLDF", {
     params ["_position", "_speed"];
 
-    [_position, _speed] call HS_spawner_fnc_spawnLDF;
+    [_position, _speed, _count] call HS_spawner_fnc_spawnLDFCrowd;
 
 }] call CBA_fnc_addEventhandler;
