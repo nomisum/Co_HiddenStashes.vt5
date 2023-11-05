@@ -27,5 +27,5 @@ for "_i" from 0 to _count do {
             }, [_zombie, _targetPosition], 5] call CBA_fnc_waitAndExecute;
         };
 
-    }, [_position, _targetPosition, _radius, _speed], (random _count min 10)] call CBA_fnc_waitAndExecute;
+    }, [_position, _targetPosition, _radius, _speed], (random _count)] call CBA_fnc_waitAndExecute;
 };
