@@ -6,7 +6,7 @@ params [
     ["_count",9]
 ];
 
-for "_i" from 0 to _count do {
+for "_i" from 1 to _count do {
     
     [{
         params ["_position", "_targetPosition", "_radius", "_speed"];

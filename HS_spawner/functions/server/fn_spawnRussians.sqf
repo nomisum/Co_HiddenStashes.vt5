@@ -39,7 +39,7 @@ private _zombie = grad_globalzombiegroup createUnit [_classname, _position, [], 
 [_zombie] call HS_spawner_fnc_loadoutRussian;
 [_zombie] call HS_spawner_fnc_zombieInit;
 _zombie setposATL [(getposATL _zombie select 0), (getposATL _zombie select 1), 0];
-
+[_zombie, "AmovPercMstpSnonWnonDnon_SaluteOut"] remoteExec ["switchmove", 0];
 
 
 // _zombie setVariable ["suomen_smells", true];
