@@ -98,6 +98,8 @@
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
   [120] remoteExec ["grad_zeus_fnc_createTrackingMarker", 2];
+  
+  systemChat "created tracking marker";
 
 }] call zen_custom_modules_fnc_register;
 

@@ -1,8 +1,5 @@
 params ["_markerPosition", "_markerSize", "_fadeOutTime", "_icon"];
 
-["New Tracking Data on map"] call CBA_fnc_notify;
-
-
 private _centerMarker = createMarkerLocal [format ["wita_agentmarker_%1_center_%2", _markerPosition, CBA_missionTime * 1000],_markerPosition];
 _centerMarker setMarkerShapeLocal "ICON";
 _centerMarker setMarkerTypeLocal _icon;

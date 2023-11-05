@@ -17,7 +17,7 @@ loadScreen="";
 
 onLoadMissionTime = True;
 respawn = 3;
-respawnDelay = 3;
+respawnDelay = 10;
 respawnTemplates[] = {"Base"};
 respawnOnStart = -1;
 respawnDialog = 0;

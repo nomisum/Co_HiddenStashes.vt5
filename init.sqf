@@ -25,7 +25,7 @@ ryanzombiesstartinganim = 1;
 Ryanzombiescanthrowdemon = 1;
 
 Ryanzombiescanthrow = 1;
-Ryanzombiescanthrowdistance = 20;
+Ryanzombiescanthrowdistance = 50;
 
 Ryanzombiescanthrowtankdistance = 1;
 
@@ -41,10 +41,10 @@ Ryanzombiesattackspeed = 1;
 Ryanzombiesattackdistance = 2.35;
 Ryanzombiesattackstrenth = 1.5;
 Ryanzombiesdamage = 0.15;
-Ryanzombiesdamagecar = 0.1;
+Ryanzombiesdamagecar = 1;
 Ryanzombiesdamageair = 0.01;
 Ryanzombiesdamagetank = 0.002;
-Ryanzombiesdamagecarstrenth = 3;
+Ryanzombiesdamagecarstrenth = 5;
 Ryanzombiesdamageairstrenth = 1;
 Ryanzombiesdamagetankstrenth = 0.4;
 
